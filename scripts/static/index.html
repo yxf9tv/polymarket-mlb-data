@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLB Live Sentiment</title>
+<link rel="stylesheet" href="/static/styles.css?v=6">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>&#x26BE; MLB Live Sentiment</h1>
+      <span class="data-range" id="dataRange"></span>
+    </div>
+    <div class="header-meta">
+      <span class="live-indicator" id="liveIndicator">&#x26A0; No data</span>
+      <span class="last-updated" id="lastUpdated"></span>
+      <button class="btn-refresh" id="btnRefresh" onclick="triggerPoll()">&#x21bb; Poll Now</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="live" onclick="switchTab('live')">Live</button>
+    <button class="tab" data-tab="overview" onclick="switchTab('overview')">History</button>
+    <button class="tab" data-tab="traders" onclick="switchTab('traders')">Traders</button>
+    <button class="tab" data-tab="tracking" onclick="switchTab('tracking')">Tracking</button>
+    <button class="tab" data-tab="backtest" onclick="switchTab('backtest')">Backtest</button>
+  </nav>
+
+  <!-- LIVE TAB -->
+  <div class="tab-content active" id="tab-live">
+    <div class="live-filters">
+      <div class="live-stats" id="liveStats"></div>
+      <div class="filters">
+        <select id="liveDate" onchange="renderLive()">
+          <option value="today">Today only</option>
+          <option value="tomorrow">Tomorrow</option>
+          <option value="3" selected>Next 3 days</option>
+          <option value="7">Next 7 days</option>
+          <option value="">All upcoming</option>
+        </select>
+        <select id="liveType" onchange="renderLive()">
+          <option value="">All types</option>
+        </select>
+        <select id="liveMinT" onchange="renderLive()">
+          <option value="1">Min 1 trader</option>
+          <option value="2" selected>Min 2 traders</option>
+          <option value="3">Min 3 traders</option>
+          <option value="5">Min 5 traders</option>
+        </select>
+        <input type="text" id="liveSearch" placeholder="Search teams..." oninput="renderLive()">
+      </div>
+    </div>
+    <div id="recPanel" style="margin-bottom:16px"></div>
+    <div class="signals-grid" id="liveGrid"></div>
+  </div>
+
+  <!-- OVERVIEW / HISTORY TAB -->
+  <div class="tab-content" id="tab-overview">
+    <div class="stats-row" id="statsRow"></div>
+    <nav class="sub-tabs" style="display:flex;gap:4px;margin-bottom:12px;border-bottom:1px solid var(--border)">
+      <button class="sub-tab active" data-otab="signals" onclick="switchOTab('signals')">Signals</button>
+      <button class="sub-tab" data-otab="games" onclick="switchOTab('games')">Games</button>
+    </nav>
+    <div class="otab-content active" id="otab-signals">
+      <div class="filters">
+        <select id="sigType" onchange="renderSignals()"><option value="">All Types</option></select>
+        <select id="sigDays" onchange="renderSignals()">
+          <option value="">All time</option><option value="3">Last 3 days</option>
+          <option value="7">Last 7 days</option><option value="14">Last 14 days</option>
+          <option value="30">Last 30 days</option>
+        </select>
+        <select id="sigMinTraders" onchange="renderSignals()">
+          <option value="1">Min 1 trader</option><option value="3" selected>Min 3 traders</option>
+          <option value="5">Min 5 traders</option><option value="10">Min 10 traders</option>
+        </select>
+        <input type="range" id="sigMinConv" min="0" max="100" value="0" oninput="renderSignals()">
+        <label>Min conviction: <span id="sigMinConvLabel">0%</span></label>
+        <input type="text" id="sigSearch" placeholder="Search..." oninput="renderSignals()">
+      </div>
+      <div class="table-wrap" id="signalsTable"></div>
+    </div>
+    <div class="otab-content" id="otab-games">
+      <div class="filters"><input type="text" id="gameSearch" placeholder="Search games..." oninput="renderGames()"></div>
+      <div id="gameList"></div>
+    </div>
+  </div>
+
+  <!-- TRADERS TAB -->
+  <div class="tab-content" id="tab-traders">
+    <div class="filters">
+      <select id="trTier" onchange="renderTraders()"><option value="">All tiers</option><option value="top">Top tier</option><option value="watch">Watchlist</option></select>
+      <select id="trSort" onchange="renderTraders()"><option value="pnl">Sort by PnL</option><option value="wr">Win rate</option><option value="sharpe">Sharpe</option><option value="trades">Trades</option></select>
+    </div>
+    <div class="table-wrap" id="tradersTable"></div>
+  </div>
+
+  <!-- TRACKING TAB -->
+  <div class="tab-content" id="tab-tracking">
+    <div class="tracking-header" id="trackingHeader"></div>
+    <div class="tracking-grid" id="trackingGrid"></div>
+  </div>
+
+  <!-- BACKTEST TAB -->
+  <div class="tab-content" id="tab-backtest">
+    <div class="bt-header" id="btHeader"></div>
+    <div class="bt-section" id="btThresholds"></div>
+    <div class="bt-section" id="btByType"></div>
+    <div class="bt-section" id="btBands"></div>
+    <div class="bt-section" id="btDetails"></div>
+  </div>
+</div>
+<script src="/static/app.js?v=12"></script>
+</body>
+</html>

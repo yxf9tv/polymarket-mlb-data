@@ -1,0 +1,1 @@
+{"wallet": "0x6d8c4e9adf5748af82dabe2c6225207770d6b4fa", "mlb_total_realized_pnl_90d": -0.41, "total_invested_90d": 4.0, "realized_pnl_series": [{"date": "2026-03-31T00:00:00Z", "invested": "4.00", "losses": 2, "pnl": "-0.41", "proxy_wallet": "0x6d8c4e9adf5748af82dabe2c6225207770d6b4fa", "trades": 4, "win_rate": "50.00", "wins": 2}]}

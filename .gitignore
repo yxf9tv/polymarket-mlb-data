@@ -1,0 +1,35 @@
+# Secrets — NEVER commit (API key lives here)
+.env
+
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# Rebuildable bulk data — regenerate via analysis/ingest/* + build_lake.py (~12h, resumable).
+# raw/orderbooks/ is intentionally NOT ignored: the upstream API retains only ~3 months
+# of depth history, so that raw data is irreplaceable.
+data/lake/raw/trades/
+data/lake/raw/candles/
+data/lake/raw/markets/
+data/lake/raw/schedule/
+data/lake/raw/_parsed_cache/
+data/lake/raw/_duckdb_tmp/
+
+# Large derived parquets — rebuild from raw with build_lake.py / trader_metrics.py /
+# portfolio_selection.py (small analysis-grade parquets ARE committed)
+data/lake/trades.parquet
+data/lake/positions.parquet
+data/lake/pregame_fills.parquet
+
+# Ingestion checkpoints — tied to the local raw/ contents; committing them would make
+# fresh clones silently skip re-ingestion. If you transfer raw/ to another machine,
+# transfer data/lake/state/ alongside it.
+data/lake/state/
+
+# Local run logs and temp
+data/lake/logs/
+data/lake/.duckdb_tmp/
+data/lake/.tmp_trades/
+nohup.out
+.DS_Store

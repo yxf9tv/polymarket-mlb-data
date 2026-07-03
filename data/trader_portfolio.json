@@ -1,0 +1,755 @@
+{
+  "generated_at": "2026-07-03T18:31:37.026072+00:00",
+  "status": "no_portfolio_beat_baselines",
+  "note": "No selector+weighting combination beat market-favorite / all-wallets-equal / current-134-list on both walk-forward protocols with ROI CI excluding zero. Recommendation: do NOT deploy a wallet-selection-based copy-trading portfolio off this analysis; keep market-favorite (or the existing pipeline) as the working baseline pending Phase 3 (liquidity/orderbook) features. 'closest_contender' below is the most cross-protocol-consistent candidate (maximizes the worse of its season/rolling ROIs), included for reference only, NOT a recommendation to deploy it; its members list is retrained on all available data (2025 + 2026-to-date).",
+  "closest_contender": {
+    "selector": "topk_clv",
+    "k": 100,
+    "weighting": "equal",
+    "season_fold_backtest": {
+      "selector": "topk_clv",
+      "k": 100,
+      "weighting": "equal",
+      "n_members": 100,
+      "n_signals": 4757,
+      "n_total_markets": 34129,
+      "coverage": 0.1393829294734683,
+      "n_priced": 4752,
+      "accuracy": 0.5490855581248686,
+      "accuracy_ci": [
+        0.5354214841286525,
+        0.5635904982131595
+      ],
+      "roi_mean": 0.03147443222951947,
+      "roi_ci": [
+        0.0004484952790344971,
+        0.06396893873189284
+      ],
+      "by_market_type": {
+        "moneyline": {
+          "n": 1074,
+          "roi_mean": 0.026735554364715933
+        },
+        "nrfi": {
+          "n": 198,
+          "roi_mean": 0.10987171759847932
+        },
+        "prop": {
+          "n": 3,
+          "roi_mean": 0.2233953410423999
+        },
+        "spread": {
+          "n": 1653,
+          "roi_mean": 0.023620601146796566
+        },
+        "total": {
+          "n": 1824,
+          "roi_mean": 0.03255640173447957
+        }
+      }
+    },
+    "rolling_folds_pooled_backtest": {
+      "selector": "topk_clv",
+      "k": 100,
+      "weighting": "equal",
+      "n_members": 100,
+      "n_signals": 3422,
+      "n_total_markets": 23188,
+      "coverage": 0.14757633258582026,
+      "n_priced": 3414,
+      "accuracy": 0.5245470485096435,
+      "accuracy_ci": [
+        0.5090590298071304,
+        0.5412039742840444
+      ],
+      "roi_mean": 0.03382956059670357,
+      "roi_ci": [
+        -0.001357932488410609,
+        0.06935878505947349
+      ],
+      "by_market_type": {
+        "moneyline": {
+          "n": 915,
+          "roi_mean": -0.015999052997302518
+        },
+        "nrfi": {
+          "n": 575,
+          "roi_mean": -0.006759058035164491
+        },
+        "prop": {
+          "n": 1,
+          "roi_mean": 1.4999999999999998
+        },
+        "spread": {
+          "n": 694,
+          "roi_mean": 0.06656788202394875
+        },
+        "total": {
+          "n": 1229,
+          "roi_mean": 0.07023726738427741
+        }
+      }
+    },
+    "n_members": 100,
+    "members_reference_only": [
+      {
+        "wallet": "0xad5353afe30c2da57709e2704ef3ccdcf67eef24",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xde7462b17e15764e7f03ce167d8fc9d3e0d077ab",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x75dcd6528aad470d76dabc85210ae44012d94f82",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x26aa6eec2ccf20f53bd0c8810c11b8df9e079d4d",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x60bcae2cbaa9b5814a8130a6f6514d7df4f546ac",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x74957ea27ac4fbdee46d861fdae357859ff67fcf",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x976adbd06fa70877d9e11a732e549f0e4214e8ec",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xd4f325200bc0541289ceb8e8ed75b0e75826b430",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x7ae4b06fca9162214525cf4c592b21dc6153fc82",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x3978a99e028eb590c98d8e9ddbe513298fa92f24",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x6b6017aad92663e20336b8c39172245a13da9c7e",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x88a0e375faa7930ccb6a385284492d718783f673",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xcf5edc08e6e5ae61d05f3ae5e96c3f9a3ebd95e3",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x50b977391c4b3dd88b0a0bef03c3434fe4284298",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x4acd63bcc0546eec7a402af2262f7d1f8c7266d4",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x30a0c0554c1f86675123d2a09be36e999585a458",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x85b87f40ee6adfa4b5b3f94bb8719dc379689d57",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x226bf1220731af372b1e7d572959414f31b4cad6",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x7a3fb8c5ad2af4c621b2138d9579410343976712",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xf4f88a1e25ff5dfae68326eb62049d6a1b7c5bf1",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xdfaacceff09ac2c037393eee387e81ea024679a7",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x5c5c2f9483dfc3996f6c196ec79d2ad885c7e316",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xa3e11a5801e97c9b3071efb1edaa2907b533f17f",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x2ecb34e1cb95b3c8d9d3e2905668d3eee03a7645",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xfb681e23db8d1cca8a6b7e2a70a29e000ddfa240",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x3f4f9145904c7b3261c3bbe05fcea64d9d91b4b3",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xaf5f4cf7bf2bde9ee7e92538fdc5170348102184",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x8900a062fb8726522bbbf484c6c576c2d665a444",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xbf90871f0577dae646d1fac666ba794f68048e17",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x54a6d4f254b2d81a5a21ccf77cf8edf1b3867401",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x43857162c8a68c6b876bb8268a95b1d5eb6bf4b1",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x558f2f82cf0394c28ce3c8e117ee747aeab51a56",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x51608380dffa9080cd25e4ce9bc249d3dd2fb803",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x700fb5d4b7cc772dad0457d99c9df0937f0ba69b",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x7fd58dc1923ec08ad29d9711fa893ba7cef0a9fb",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x2b5298893783e19500a3208894824a59a750354e",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xaa81efdc21ae5511553e76d60fb1a845f999aaf7",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x9079e3b10d8422844afd9cb7f36468a3c6a0b19b",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x1df231bd33dae91463e1682927e8096b82c289a0",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xdf68907087aa5f854d634e12fef1d82ed4c7ed10",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xdb01484575303e92918d3e6231f56dff291f8f3a",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x033f0346c007323030eb420305ffede19a95618e",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x48d5e92ff6dfedd701941a27bd979dd7352359e2",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x15c5e4d885bc4ecd95d2b477bbb3a9eb612d4692",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xc33d6aa3eb972639f31e46a6a02201cece380d40",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xeb59f24c7b171eff5382ff9d1a42b29cf9770036",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x26a087faf434b42c422df2ffe5b3f721ee7e3f00",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xfa15bed0e055226c999e5d4ceef5aceb196895e3",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x9422f0e5a2c4358bdd2a901aa2a31f58e04ef273",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x55ab6191d1d3609f6ffb12f17d56fe9453da4f88",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xa9f5e5c9c761a0c7d692ba479028f778a5dd937f",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xaa73ec84807c68b87752ca1ca71d11806f01c2c4",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x2db18c3a4f5b20d2a8c3d289ccbe752f7cab45e5",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xce068d47942f535e390ee3f613c7a982294ac99d",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xb4d250f58c26840e09723a83ce9c8149aa32ce99",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x8dd8f566b50f54a7a8ec02412723974b40679a1c",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x68bf5d786bf88ac5d6c0ec61cdf218fb2fb13e67",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xdbdd45150249e229eb4ca8aa48a30dca21faa5de",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x009be3130784c6c601b59efd81ab16aa00bce769",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x0767aa79d578aead1c849fd9f0fdc6cdb50336b0",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x2bb69eb8b9d2d395b711346bc5736d5513da838b",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xee5a9084b2e10a596fa5bf30914ceb8460f99f70",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xc6c7a0bf51c805064b4e33771aae5816756acb87",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xf40fc32be4aa7cd567686a0f0513924ebac6ef2d",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xc2494b32d65dea3a3a80712589d10bc5733f8a61",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x92603675eac91ad4d0c00fb562aef54294051068",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xdd23771aa1ce34915a530bbff1205634b7fbe31f",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xfb4e0b082976beed18de77526c319dbd725dd00a",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x7a04152bd2f8dada203fbd42fc2fe1fb5d866cb7",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xc676679416e4b234de28c4db991c07c9480af35c",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x960d3885480e29be6eaa02c2e7a820012e214629",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x1b8fd32e5e171c8f07f05f3b0ef904be732ff31b",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xa5595d804a23b869cbf241214edc074fe8026dbb",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xedf01e2d7cdcd4139d757863255d5cd4ecee1e2a",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x67327ef4880d4050ead195ca23203c61d8c1d7f0",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x70b6df66fe5c3815ba22f0b526b861d830fe7f9d",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x17338df30635b5dd167ebf78428775c6c7ac1e15",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x0fce7c54120bfc84407035579f942a83290263d5",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x44dbc50017fe6c76b33134a2fbc2582fa8bce66f",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x3f975d4186c87b3b4a39997cc37e71cc70ca4059",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xc4dbd5631f003f3f7d10bc31338b1fe5c6ff7e0c",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x3c9b3ca52eb1ad72b8d632e2ca1d9290ccfaa556",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xbf26dab70589441b7e7c98fa2404bf5ad6496fe2",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x6bb33bdb14cea8f53766539efc6019b55e8a758e",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xa75b2fa9f1b228a3bb8c77094de7cf354e9f3e65",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xe42d8289bd0e3cff2ac6c5ac5e7bfdc7097862fe",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x80e9be6b9de4d26a61872a37607dd7c328ff5105",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x433829b9bf2d9f2996afc3fa1856272733cdebb6",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x4aaee7f740433c593d25fb74f5ba4d46a5fe954d",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xb55199f9f0aef8c44f8362ca93dd4fd223dfa2f3",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x2ada299aaaf27c806424ec6dcb0c169d1a9c2f28",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xecd8dc99a6f78619def9ec5419f45ff7dd55ac23",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x00ad3f05572e1792b1aa85b0f10e216e5911a87d",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xa6dc3ca172a2a5a163feae2b24cc54223868f07a",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xe07f299716113905e2b58dd62a9a272245a908d6",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0x4721ce643eb980515e8ee59ec701bb324bc8e221",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xc3d8b500df6821f561124f11527600a548b3c0f2",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xa67f6b468af56c165e98dc941d6b6248b8c67e02",
+        "weight": 0.01
+      },
+      {
+        "wallet": "0xfddf6dd5a5002afb3d9a66b37eac8824fba73ce9",
+        "weight": 0.01
+      }
+    ]
+  },
+  "baselines": {
+    "season_fold": {
+      "baseline_current_list": {
+        "selector": "baseline_current_list",
+        "k": null,
+        "weighting": "legacy_formula",
+        "n_members": 134,
+        "n_signals": 8136,
+        "n_total_markets": 34129,
+        "coverage": 0.238389639309678,
+        "n_priced": 8116,
+        "accuracy": 0.5580137659783677,
+        "accuracy_ci": [
+          0.547566371681416,
+          0.5691986234021632
+        ],
+        "roi_mean": 0.024193086259275083,
+        "roi_ci": [
+          0.0014835737216688759,
+          0.046474325283352776
+        ],
+        "by_market_type": {
+          "moneyline": {
+            "n": 1272,
+            "roi_mean": 0.036476986900798
+          },
+          "nrfi": {
+            "n": 156,
+            "roi_mean": 0.15786903378607073
+          },
+          "prop": {
+            "n": 2,
+            "roi_mean": -1.0
+          },
+          "spread": {
+            "n": 2944,
+            "roi_mean": 0.025695541493700978
+          },
+          "total": {
+            "n": 3742,
+            "roi_mean": 0.01381002600598045
+          }
+        }
+      },
+      "baseline_market_favorite": {
+        "selector": "baseline_market_favorite",
+        "k": null,
+        "weighting": "n/a",
+        "n_members": 0,
+        "n_signals": 17818,
+        "n_total_markets": 34129,
+        "coverage": 0.5220779981833631,
+        "n_priced": 17818,
+        "accuracy": 0.6600628577842631,
+        "accuracy_ci": [
+          0.6531036030979908,
+          0.666574531372769
+        ],
+        "roi_mean": 8.648851481595441e-05,
+        "roi_ci": [
+          -0.01114230717042252,
+          0.01108960710473853
+        ],
+        "by_market_type": {
+          "moneyline": {
+            "n": 1457,
+            "roi_mean": 0.004111376954904946
+          },
+          "nrfi": {
+            "n": 1135,
+            "roi_mean": -0.0022231197025548302
+          },
+          "prop": {
+            "n": 419,
+            "roi_mean": -0.04493638835811288
+          },
+          "spread": {
+            "n": 5468,
+            "roi_mean": -0.01756485604176323
+          },
+          "total": {
+            "n": 9339,
+            "roi_mean": 0.01209412105734067
+          }
+        }
+      },
+      "baseline_all_wallets_equal": {
+        "selector": "baseline_all_wallets_equal",
+        "k": null,
+        "weighting": "equal",
+        "n_members": 66899,
+        "n_signals": 13770,
+        "n_total_markets": 34129,
+        "coverage": 0.40346919042456564,
+        "n_priced": 13739,
+        "accuracy": 0.6540305010893246,
+        "accuracy_ci": [
+          0.6461129266521424,
+          0.6620206971677559
+        ],
+        "roi_mean": 0.020378383725150512,
+        "roi_ci": [
+          0.007149856945001699,
+          0.03397656829566638
+        ],
+        "by_market_type": {
+          "moneyline": {
+            "n": 1362,
+            "roi_mean": -0.0025774415963187537
+          },
+          "nrfi": {
+            "n": 1198,
+            "roi_mean": -0.013954726376545452
+          },
+          "prop": {
+            "n": 141,
+            "roi_mean": -0.015621818059248277
+          },
+          "spread": {
+            "n": 4453,
+            "roi_mean": -0.007119377098165864
+          },
+          "total": {
+            "n": 6585,
+            "roi_mean": 0.05073836206797526
+          }
+        }
+      }
+    },
+    "rolling_folds_pooled": {
+      "baseline_current_list": {
+        "selector": "baseline_current_list",
+        "k": null,
+        "weighting": "legacy_formula",
+        "n_members": 134,
+        "n_signals": 6825,
+        "n_total_markets": 23188,
+        "coverage": 0.29433327583232705,
+        "n_priced": 6816,
+        "accuracy": 0.5661538461538461,
+        "accuracy_ci": [
+          0.5544285714285714,
+          0.5777289377289377
+        ],
+        "roi_mean": 0.02699809057478531,
+        "roi_ci": [
+          0.0009190510876127722,
+          0.05094577065042604
+        ],
+        "by_market_type": {
+          "moneyline": {
+            "n": 912,
+            "roi_mean": 0.027187967742797546
+          },
+          "nrfi": {
+            "n": 133,
+            "roi_mean": 0.1459431502294913
+          },
+          "prop": {
+            "n": 1,
+            "roi_mean": -1.0
+          },
+          "spread": {
+            "n": 2565,
+            "roi_mean": 0.02516321815817157
+          },
+          "total": {
+            "n": 3205,
+            "roi_mean": 0.023797025029663913
+          }
+        }
+      },
+      "baseline_market_favorite": {
+        "selector": "baseline_market_favorite",
+        "k": null,
+        "weighting": "n/a",
+        "n_members": 0,
+        "n_signals": 13581,
+        "n_total_markets": 23188,
+        "coverage": 0.5856908745903053,
+        "n_priced": 13581,
+        "accuracy": 0.6688756350784184,
+        "accuracy_ci": [
+          0.661289669391061,
+          0.677197923569693
+        ],
+        "roi_mean": 0.008342302509083249,
+        "roi_ci": [
+          -0.0037220049345596646,
+          0.021432458395266717
+        ],
+        "by_market_type": {
+          "moneyline": {
+            "n": 1019,
+            "roi_mean": 0.009556806651778667
+          },
+          "nrfi": {
+            "n": 872,
+            "roi_mean": -0.01650932916341879
+          },
+          "prop": {
+            "n": 197,
+            "roi_mean": -0.014243074718622128
+          },
+          "spread": {
+            "n": 4637,
+            "roi_mean": -0.01616227340286853
+          },
+          "total": {
+            "n": 6856,
+            "roi_mean": 0.028545056434782414
+          }
+        }
+      },
+      "baseline_all_wallets_equal": {
+        "selector": "baseline_all_wallets_equal",
+        "k": null,
+        "weighting": "equal",
+        "n_members": 16118,
+        "n_signals": 10706,
+        "n_total_markets": 23188,
+        "coverage": 0.461704329825772,
+        "n_priced": 10699,
+        "accuracy": 0.6614982252942275,
+        "accuracy_ci": [
+          0.6527181019988791,
+          0.6702783485895759
+        ],
+        "roi_mean": 0.02176432148519098,
+        "roi_ci": [
+          0.006711650653831553,
+          0.03567736201912299
+        ],
+        "by_market_type": {
+          "moneyline": {
+            "n": 957,
+            "roi_mean": 0.019148979147796334
+          },
+          "nrfi": {
+            "n": 919,
+            "roi_mean": -0.023677098621098867
+          },
+          "prop": {
+            "n": 34,
+            "roi_mean": 0.1924750935508287
+          },
+          "spread": {
+            "n": 3777,
+            "roi_mean": -0.008980707376846501
+          },
+          "total": {
+            "n": 5012,
+            "roi_mean": 0.05260697021947887
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,717 @@
+{
+  "zero_sum_check": [
+    {
+      "condition_id": "0x58fd9eca0564f981ff91aa67bb5f1f20ac54f5460a55bbd5c685b1ebb4c31243",
+      "question": "Spread: Baltimore Orioles (-4.5)",
+      "market_type": "spread",
+      "n_wallets": 8,
+      "total_invested": 69.264514,
+      "gamma_volume": 75.52401400000001,
+      "net_pnl_sum": 3.552713678800501e-15,
+      "net_pnl_pct_of_invested": 5.129197439832611e-17
+    },
+    {
+      "condition_id": "0x4d482951e492079bf02b8fcea35f5338e3bfe35ab481a736c4263859627fde0b",
+      "question": "Spread: Cleveland Guardians (-2.5)",
+      "market_type": "spread",
+      "n_wallets": 17,
+      "total_invested": 519.5566439999999,
+      "gamma_volume": 519.5613139999999,
+      "net_pnl_sum": 1.4210854715202004e-14,
+      "net_pnl_pct_of_invested": 2.735188718942069e-17
+    },
+    {
+      "condition_id": "0xcd4a8151e10d435c2f8e521f0a4872d50d231f4201558c64ad53feec2c370fe4",
+      "question": "Spread: Detroit Tigers (-1.5)",
+      "market_type": "spread",
+      "n_wallets": 117,
+      "total_invested": 13443.761838999999,
+      "gamma_volume": 14439.020088000007,
+      "net_pnl_sum": -3.694822225952521e-13,
+      "net_pnl_pct_of_invested": -2.748354419098633e-17
+    },
+    {
+      "condition_id": "0x5355cd9d15ee6a61c40037d8cfe28d21a04ce7da80f8256f5c39cd7bef4d058b",
+      "question": "Luis Arraez: Home Runs O/U 0.5",
+      "market_type": "total",
+      "n_wallets": 2,
+      "total_invested": 5.0,
+      "gamma_volume": 5.0,
+      "net_pnl_sum": -1.0668549377257364e-16,
+      "net_pnl_pct_of_invested": -2.133709875451473e-17
+    },
+    {
+      "condition_id": "0xc27643f855dc48ee92da19e760d6b919ec58d5a4a54ad1866cd271af645aec8a",
+      "question": "NRFI: Red Sox vs. Diamondbacks",
+      "market_type": "nrfi",
+      "n_wallets": 5,
+      "total_invested": 2464.0,
+      "gamma_volume": 2465.0,
+      "net_pnl_sum": -1.2789769243681803e-13,
+      "net_pnl_pct_of_invested": -5.190653102143589e-17
+    },
+    {
+      "condition_id": "0x329177e8dd6bf650ec66434ade6df3ccb249e0902dfad45c3eb857a51955a970",
+      "question": "Spread: Chicago White Sox (-1.5)",
+      "market_type": "spread",
+      "n_wallets": 13,
+      "total_invested": 425.70000000000005,
+      "gamma_volume": 425.7,
+      "net_pnl_sum": 1.4210854715202004e-14,
+      "net_pnl_pct_of_invested": 3.3382322563312196e-17
+    },
+    {
+      "condition_id": "0x0903927ea9aaf9917afcce4ff796f643d3e9fb273078fade0769e91d127c4235",
+      "question": "Philadelphia Phillies vs. Chicago Cubs",
+      "market_type": "moneyline",
+      "n_wallets": 768,
+      "total_invested": 233020.429522,
+      "gamma_volume": 245346.70870899985,
+      "net_pnl_sum": 19.99999800000296,
+      "net_pnl_pct_of_invested": 8.582937573769563e-05
+    },
+    {
+      "condition_id": "0x3c3a8f30ed7627a14478a57b1aa820b5775fb71e2a1774496ebbdbabb8f09784",
+      "question": "Milwaukee Brewers vs. Kansas City Royals",
+      "market_type": "moneyline",
+      "n_wallets": 921,
+      "total_invested": 902349.024994,
+      "gamma_volume": 1020575.215756002,
+      "net_pnl_sum": 124.1238269999667,
+      "net_pnl_pct_of_invested": 0.00013755633747240104
+    },
+    {
+      "condition_id": "0x21d883e3e29b0dc19b4fcd9526316918b5ddcdbdd657312ba7feff12c7b65006",
+      "question": "Colorado Rockies vs. New York Mets: O/U 8.5",
+      "market_type": "total",
+      "n_wallets": 10,
+      "total_invested": 418.0,
+      "gamma_volume": 418.0,
+      "net_pnl_sum": 1.7763568394002505e-14,
+      "net_pnl_pct_of_invested": 4.249657510526915e-17
+    },
+    {
+      "condition_id": "0x6b4eb8bca91015fe72f9d67165433a4c3431ec097cfab2d7fb200420b4212267",
+      "question": "Pittsburgh Pirates winning after 5 innings?",
+      "market_type": "prop",
+      "n_wallets": 9,
+      "total_invested": 25.162785,
+      "gamma_volume": 25.162785,
+      "net_pnl_sum": -5.828670879282072e-16,
+      "net_pnl_pct_of_invested": -2.316385439561667e-17
+    },
+    {
+      "condition_id": "0xcd131b2341cf9ac8b6cd6905a29eb0c9b97ff2e4938a3b29612277c439d41fe3",
+      "question": "1st 5 Innings Spread: Atlanta Braves (-2.5)",
+      "market_type": "spread",
+      "n_wallets": 6,
+      "total_invested": 120.32,
+      "gamma_volume": 120.32,
+      "net_pnl_sum": 1.5959455978986625e-15,
+      "net_pnl_pct_of_invested": 1.3264175514450321e-17
+    },
+    {
+      "condition_id": "0x1eb058eb586d12624138f7945e6ef641986418dcbe8069fb6584ca07c6843001",
+      "question": "Athletics vs. Angels",
+      "market_type": "moneyline",
+      "n_wallets": 203,
+      "total_invested": 272586.532964,
+      "gamma_volume": 285613.837324,
+      "net_pnl_sum": 0.0,
+      "net_pnl_pct_of_invested": 0.0
+    },
+    {
+      "condition_id": "0xa9497e29d847120dd0cdfe3ffc2da1e0c114f7d5f882777317b48d091d7c3af8",
+      "question": "Spread: Toronto Blue Jays (-2.5)",
+      "market_type": "spread",
+      "n_wallets": 53,
+      "total_invested": 11481.656152999998,
+      "gamma_volume": 11624.182553000002,
+      "net_pnl_sum": -4.654054919228656e-13,
+      "net_pnl_pct_of_invested": -4.053470037083993e-17
+    },
+    {
+      "condition_id": "0x76a3e8d1f747498e10beb6792c273c6f0095f3613b55f667f022e7b9149f0988",
+      "question": "Miami Marlins vs. St. Louis Cardinals: O/U 5.5",
+      "market_type": "total",
+      "n_wallets": 5,
+      "total_invested": 25.009999999999998,
+      "gamma_volume": 25.01,
+      "net_pnl_sum": 3.3029134982598407e-15,
+      "net_pnl_pct_of_invested": 1.3206371444461578e-16
+    },
+    {
+      "condition_id": "0xaa02a35b81f88982e806f020dda8ae637e48fe348f9375e4845e91da220f6748",
+      "question": "Spread: Kansas City Royals (-3.5)",
+      "market_type": "spread",
+      "n_wallets": 73,
+      "total_invested": 5661.907723,
+      "gamma_volume": 5669.844473000001,
+      "net_pnl_sum": -2.2737367544323206e-13,
+      "net_pnl_pct_of_invested": -4.015849190187024e-17
+    },
+    {
+      "condition_id": "0x38411b59a601d4a6c5229ac810a1fecc80a23ce4d76584acb6fdcc0aff642304",
+      "question": "Spread: Atlanta Braves (-4.5)",
+      "market_type": "spread",
+      "n_wallets": 25,
+      "total_invested": 338.416738,
+      "gamma_volume": 350.281021,
+      "net_pnl_sum": 7.993605777301127e-15,
+      "net_pnl_pct_of_invested": 2.3620598155228148e-17
+    },
+    {
+      "condition_id": "0xef6fc4c0394bc795d4504233df6ccec537d7a2ff90a730967a0135542b11f758",
+      "question": "Spread: San Francisco Giants (-1.5)",
+      "market_type": "spread",
+      "n_wallets": 14,
+      "total_invested": 99.558594,
+      "gamma_volume": 105.209504,
+      "net_pnl_sum": 3.219646771412954e-15,
+      "net_pnl_pct_of_invested": 3.233921494926851e-17
+    },
+    {
+      "condition_id": "0x24ec3441373a09b80f499acb19c97379b65ff2238746fcb3eb67927896189887",
+      "question": "Houston Astros vs. Minnesota Twins: O/U 9.5",
+      "market_type": "total",
+      "n_wallets": 34,
+      "total_invested": 1130.347193,
+      "gamma_volume": 1149.599493,
+      "net_pnl_sum": 0.0,
+      "net_pnl_pct_of_invested": 0.0
+    },
+    {
+      "condition_id": "0xa52687a925ff562692eadaa3dd6b3b3787d066bc854b5a5a30370c2a0410f85e",
+      "question": "Cincinnati Reds vs. Miami Marlins: O/U 5.5",
+      "market_type": "total",
+      "n_wallets": 39,
+      "total_invested": 6780.3817880000015,
+      "gamma_volume": 6785.101888,
+      "net_pnl_sum": 5.684341886080802e-14,
+      "net_pnl_pct_of_invested": 8.383512999431707e-18
+    },
+    {
+      "condition_id": "0x9748cb6ba3dfecdd752a959ccde338c747d845d1fce8193fc1ca01273a6c71ac",
+      "question": "Andr\u00e9s Gim\u00e9nez: Home Runs O/U 0.5",
+      "market_type": "total",
+      "n_wallets": 8,
+      "total_invested": 28.0,
+      "gamma_volume": 28.0,
+      "net_pnl_sum": -4.198030811863873e-16,
+      "net_pnl_pct_of_invested": -1.4992967185228118e-17
+    }
+  ],
+  "zero_sum_check_summary": {
+    "mean_pct_of_invested": 1.1169285660512063e-05,
+    "median_pct_of_invested": 1.0823844256941014e-17
+  },
+  "census": {
+    "census_size": 224559,
+    "total_dollar_volume": 1768562914.1559958,
+    "roi_pooled_deciles_all": {
+      "p0": -1.0,
+      "p10": -1.0,
+      "p20": -0.36494262841311154,
+      "p30": -0.06292304809134479,
+      "p40": -0.0020682523267838153,
+      "p50": -0.0010020040080159897,
+      "p60": 0.0,
+      "p70": 0.019420331473163924,
+      "p80": 0.20617418969021606,
+      "p90": 0.785713668367215,
+      "p100": 39037.80497512438
+    },
+    "roi_pooled_deciles_all_n": 224559,
+    "roi_pooled_deciles_ge5": {
+      "p0": -1.0,
+      "p10": -0.33722163080354184,
+      "p20": -0.18195205648198695,
+      "p30": -0.09362585223870713,
+      "p40": -0.03366433768125684,
+      "p50": -0.0014173365223405566,
+      "p60": 0.0010720097136674939,
+      "p70": 0.037691149761932004,
+      "p80": 0.11136985216656992,
+      "p90": 0.2568976087095955,
+      "p100": 2589.877620335547
+    },
+    "roi_pooled_deciles_ge5_n": 49585,
+    "roi_pooled_deciles_ge30": {
+      "p0": -1.0,
+      "p10": -0.171165541740675,
+      "p20": -0.10103884091620483,
+      "p30": -0.05614400103903298,
+      "p40": -0.02375871728093286,
+      "p50": 0.001001001001000935,
+      "p60": 0.001052551262641192,
+      "p70": 0.02336481999430266,
+      "p80": 0.06356148642931171,
+      "p90": 0.13414665868948827,
+      "p100": 76.28004268821155
+    },
+    "roi_pooled_deciles_ge30_n": 14951,
+    "n_markets_bucket_table": [
+      {
+        "nb": "1",
+        "n_wallets": 105982,
+        "mean_roi": 1.0058421383221836,
+        "median_roi": -0.0010010010010009843,
+        "mean_invested": 156.93720674139004,
+        "win_rate": 0.3751863523994641
+      },
+      {
+        "nb": "2-4",
+        "n_wallets": 68992,
+        "mean_roi": 0.2538152303679863,
+        "median_roi": -0.0010022625896457227,
+        "mean_invested": 419.53488162308673,
+        "win_rate": 0.3588532003710575
+      },
+      {
+        "nb": "5-9",
+        "n_wallets": 17649,
+        "mean_roi": 0.1359567649222955,
+        "median_roi": -0.0013583442809172945,
+        "mean_invested": 1941.6352519830018,
+        "win_rate": 0.4315581079732023
+      },
+      {
+        "nb": "10-19",
+        "n_wallets": 12424,
+        "mean_roi": 0.0239393408527372,
+        "median_roi": -0.007549393668278906,
+        "mean_invested": 2981.9751851295073,
+        "win_rate": 0.5394693448903105
+      },
+      {
+        "nb": "20-49",
+        "n_wallets": 9076,
+        "mean_roi": 0.00021610530286183237,
+        "median_roi": -0.01605808119999532,
+        "mean_invested": 10267.746562771374,
+        "win_rate": 0.5329408889385271
+      },
+      {
+        "nb": "50+",
+        "n_wallets": 10436,
+        "mean_roi": 0.013122821134838604,
+        "median_roi": 0.0010010010010010706,
+        "mean_invested": 127950.50054699424,
+        "win_rate": 0.5925330002326433
+      }
+    ],
+    "pregame_ge20_n": 10282,
+    "pregame_roi_deciles_ge20": {
+      "p0": -1.0,
+      "p10": -0.22406581273982742,
+      "p20": -0.13820200549666126,
+      "p30": -0.08380076101938609,
+      "p40": -0.04312995417454332,
+      "p50": -0.009312440657338817,
+      "p60": 0.022489931617669212,
+      "p70": 0.05970657795715984,
+      "p80": 0.1102344991688559,
+      "p90": 0.18890748705400945,
+      "p100": 18.407338938603104
+    },
+    "pregame_top10": [
+      {
+        "wallet": "0xde80ff45599c4f39db826e67b7c5eb3a47c62612",
+        "pregame_n_markets": 24.0,
+        "pregame_roi_pooled": 18.407338938603104,
+        "pregame_win_rate": 0.875,
+        "pregame_invested": 410.6136,
+        "roi_pooled": 18.43714798535655
+      },
+      {
+        "wallet": "0xb6bed94e75c333dae24eb9c80b3fef47ef3cfcfe",
+        "pregame_n_markets": 20.0,
+        "pregame_roi_pooled": 3.6759154214573737,
+        "pregame_win_rate": 0.6,
+        "pregame_invested": 31833.382799,
+        "roi_pooled": 1.7156093533148957
+      },
+      {
+        "wallet": "0xbde579ead903b9cf5c3fc4be5a0c515464769c38",
+        "pregame_n_markets": 128.0,
+        "pregame_roi_pooled": 3.1936164524993655,
+        "pregame_win_rate": 0.640625,
+        "pregame_invested": 74496.417447,
+        "roi_pooled": 5.174163344482966
+      },
+      {
+        "wallet": "0x99f5bafdc0d7a87c7c48e1e73a8b63d0960f68d1",
+        "pregame_n_markets": 42.0,
+        "pregame_roi_pooled": 2.27720498882644,
+        "pregame_win_rate": 0.9761904761904762,
+        "pregame_invested": 315.2084,
+        "roi_pooled": 2.276312146276972
+      },
+      {
+        "wallet": "0xfd326d28f55e429ebf7ecba4eddc487ff410c9c1",
+        "pregame_n_markets": 121.0,
+        "pregame_roi_pooled": 1.4399169312903175,
+        "pregame_win_rate": 0.45454545454545453,
+        "pregame_invested": 4796.4486449999995,
+        "roi_pooled": 0.7855833332535233
+      },
+      {
+        "wallet": "0x30a0c0554c1f86675123d2a09be36e999585a458",
+        "pregame_n_markets": 49.0,
+        "pregame_roi_pooled": 1.2991570073464758,
+        "pregame_win_rate": 0.6530612244897959,
+        "pregame_invested": 1915.25987,
+        "roi_pooled": 0.225231549326399
+      },
+      {
+        "wallet": "0x085b0045272572cad6ffe1f43d7c118a29c2ab9f",
+        "pregame_n_markets": 22.0,
+        "pregame_roi_pooled": 1.0501470437783496,
+        "pregame_win_rate": 0.5454545454545454,
+        "pregame_invested": 528.926493,
+        "roi_pooled": -0.04078043463784666
+      },
+      {
+        "wallet": "0x43857162c8a68c6b876bb8268a95b1d5eb6bf4b1",
+        "pregame_n_markets": 176.0,
+        "pregame_roi_pooled": 1.0447062528937459,
+        "pregame_win_rate": 0.022727272727272728,
+        "pregame_invested": 9.321828,
+        "roi_pooled": 0.8780192532499259
+      },
+      {
+        "wallet": "0x613bfbb81d9e5398bff208da4ae848e7a73e823a",
+        "pregame_n_markets": 28.0,
+        "pregame_roi_pooled": 1.0287295731919355,
+        "pregame_win_rate": 0.5714285714285714,
+        "pregame_invested": 4926.0878,
+        "roi_pooled": 0.3525142798642051
+      },
+      {
+        "wallet": "0x5d03aa8695276ed6f7d5ca10dc07d2a2d062369a",
+        "pregame_n_markets": 69.0,
+        "pregame_roi_pooled": 0.9638225604319788,
+        "pregame_win_rate": 0.5362318840579711,
+        "pregame_invested": 15004.786394,
+        "roi_pooled": 0.9638225604319788
+      }
+    ],
+    "market_type_table": [
+      {
+        "market_type": "futures",
+        "n_positions": 171435,
+        "invested": 33049566.402929,
+        "returned": 39109670.942675,
+        "n_wallets": 90744,
+        "pooled_roi": 0.18336411636580285
+      },
+      {
+        "market_type": "moneyline",
+        "n_positions": 1513087,
+        "invested": 1245923835.839063,
+        "returned": 1258419079.588903,
+        "n_wallets": 127491,
+        "pooled_roi": 0.010028898549344425
+      },
+      {
+        "market_type": "nrfi",
+        "n_positions": 47498,
+        "invested": 4214348.957597,
+        "returned": 4214573.424237,
+        "n_wallets": 6696,
+        "pooled_roi": 5.326247120462025e-05
+      },
+      {
+        "market_type": "other",
+        "n_positions": 23045,
+        "invested": 8420027.062916,
+        "returned": 8810350.823581,
+        "n_wallets": 14287,
+        "pooled_roi": 0.04635659217582438
+      },
+      {
+        "market_type": "prop",
+        "n_positions": 4340,
+        "invested": 1592938.054665,
+        "returned": 1615558.776419,
+        "n_wallets": 1091,
+        "pooled_roi": 0.014200628635717581
+      },
+      {
+        "market_type": "spread",
+        "n_positions": 430815,
+        "invested": 69753517.858915,
+        "returned": 69835762.395981,
+        "n_wallets": 22468,
+        "pooled_roi": 0.0011790736810198925
+      },
+      {
+        "market_type": "total",
+        "n_positions": 695259,
+        "invested": 182420307.196163,
+        "returned": 182616513.287165,
+        "n_wallets": 27699,
+        "pooled_roi": 0.0010755715414457673
+      }
+    ],
+    "season_table": [
+      {
+        "season": 2024,
+        "n_wallets": 8877,
+        "mean_roi": 0.015161083032725857,
+        "median_roi": -0.0012916789826092426,
+        "total_invested": 5819943.683212
+      },
+      {
+        "season": 2025,
+        "n_wallets": 111146,
+        "mean_roi": 1.131976430800678,
+        "median_roi": -0.00015804725282873768,
+        "total_invested": 598021134.581748
+      },
+      {
+        "season": 2026,
+        "n_wallets": 112294,
+        "mean_roi": 0.04099737257750311,
+        "median_roi": -0.0010060187900354542,
+        "total_invested": 941374657.510008
+      },
+      {
+        "season": 2027,
+        "n_wallets": 22,
+        "mean_roi": -0.4093626873104745,
+        "median_roi": -0.6068726927344765,
+        "total_invested": 158805.59728
+      }
+    ],
+    "bot_feature_distributions": {
+      "trades_per_day": {
+        "p10": 0.1760956898014863,
+        "p50": 8.584137077174693,
+        "p90": 48.0,
+        "p99": 180.10884073995368,
+        "n": 224559
+      },
+      "median_inter_trade_seconds": {
+        "p10": 10.5,
+        "p50": 7945.0,
+        "p90": 352480.2000000002,
+        "p99": 4676123.7399999285,
+        "n": 177243
+      },
+      "active_hours_entropy": {
+        "p10": -0.0,
+        "p50": 0.21810429198553155,
+        "p90": 0.6362812012918044,
+        "p99": 0.8551791050394573,
+        "n": 224559
+      },
+      "two_sided_share": {
+        "p10": 0.0,
+        "p50": 0.25,
+        "p90": 1.0,
+        "p99": 1.0,
+        "n": 224559
+      }
+    },
+    "bot_like_count": 1186,
+    "bot_like_pct": 0.5281462778156298
+  },
+  "list_overlap": {
+    "list_top_tier_n": 58,
+    "list_watchlist_n": 89,
+    "list_union_n": 147,
+    "matched_in_census_n": 143,
+    "matched_pct": 97.27891156462584,
+    "matched_median_roi": 0.0440738653278833,
+    "matched_median_pct_rank": 0.2748020555936551,
+    "census_median_roi": -0.0010020040080159897,
+    "n_matched_le_minus60pct": 6
+  },
+  "H1": {
+    "n_windows_total": 32,
+    "min_markets_per_window": 3,
+    "n_wallet_window_pairs": 50635,
+    "spearman_rho": 0.021988318993493357,
+    "ci95": [
+      0.011956816300343957,
+      0.03251503949337787
+    ]
+  },
+  "H2": {
+    "n_wallet_window_pairs": 50635,
+    "metrics": {
+      "past_settlement_roi": {
+        "spearman_rho": 0.021988318993493357,
+        "n": 50635,
+        "ci95": [
+          0.011956816300343957,
+          0.03251503949337787
+        ]
+      },
+      "clv": {
+        "spearman_rho": 0.030227779458733117,
+        "n": 31912,
+        "ci95": [
+          0.019212095525249297,
+          0.04180342310391805
+        ]
+      },
+      "win_rate": {
+        "spearman_rho": 0.061962042348375365,
+        "n": 50635,
+        "ci95": [
+          0.05298542893218891,
+          0.07096281398522258
+        ]
+      },
+      "volume": {
+        "spearman_rho": -0.009424875508980858,
+        "n": 50635,
+        "ci95": [
+          -0.018893417018440856,
+          0.0007436676472568269
+        ]
+      }
+    }
+  },
+  "H3": {
+    "population_n_wallets": 27699,
+    "population_pooled_roi": 0.0010755715414457673,
+    "population_mean_wallet_roi": -0.034572164442577207,
+    "n_ge30_wallets": 4224,
+    "n_ge30_both_halves": 4224,
+    "half_split_spearman_rho": 0.07130063771580533,
+    "half_split_n": 4224,
+    "half_split_ci95": [
+      0.034614797638148787,
+      0.10777354162959331
+    ],
+    "top_decile_cut_roi_a": 0.16340338275916488,
+    "n_specialists_top_decile": 423,
+    "specialists_mean_roi_b_oos": -0.016861068639165488,
+    "specialists_roi_b_ci95": [
+      -0.05101241709578582,
+      0.019118888214498052
+    ],
+    "n_specialists_positive_oos": 187
+  },
+  "H4": {
+    "table": [
+      {
+        "bucket": "0-1h",
+        "n_fills": 735367,
+        "invested": 451841512.120969,
+        "returned": 452808764.526791,
+        "mean_roi_fill": 0.014266837799613921,
+        "win_rate": 0.5020391178826354,
+        "pooled_roi": 0.0021406895556843435
+      },
+      {
+        "bucket": "1-3h",
+        "n_fills": 620943,
+        "invested": 200487705.119312,
+        "returned": 200366192.831602,
+        "mean_roi_fill": 0.002911567296983878,
+        "win_rate": 0.498063429332483,
+        "pooled_roi": -0.0006060834884496692
+      },
+      {
+        "bucket": "3-6h",
+        "n_fills": 536633,
+        "invested": 102933058.061683,
+        "returned": 102729711.914188,
+        "mean_roi_fill": 0.0015923432326839645,
+        "win_rate": 0.4969262046873748,
+        "pooled_roi": -0.0019755183740207704
+      },
+      {
+        "bucket": "6-24h",
+        "n_fills": 1353215,
+        "invested": 137848218.873053,
+        "returned": 137865666.945277,
+        "mean_roi_fill": 0.01330541434691571,
+        "win_rate": 0.49946756428209854,
+        "pooled_roi": 0.00012657452063315674
+      },
+      {
+        "bucket": "24-72h",
+        "n_fills": 104326,
+        "invested": 3777572.271908,
+        "returned": 3863838.689391,
+        "mean_roi_fill": 0.002120503539330339,
+        "win_rate": 0.49588788988363397,
+        "pooled_roi": 0.022836470429572507
+      },
+      {
+        "bucket": "72h+",
+        "n_fills": 2065,
+        "invested": 135964.459382,
+        "returned": 135922.32905,
+        "mean_roi_fill": 1.3576908842118784,
+        "win_rate": 0.49491525423728816,
+        "pooled_roi": -0.0003098628287972891
+      }
+    ],
+    "ci": [
+      {
+        "bucket": "0-1h",
+        "ci95": [
+          0.011440845817114704,
+          0.016920936437358685
+        ]
+      },
+      {
+        "bucket": "1-3h",
+        "ci95": [
+          2.5991818042559724e-07,
+          0.005656796422804115
+        ]
+      },
+      {
+        "bucket": "3-6h",
+        "ci95": [
+          -0.0011165462183948844,
+          0.004299065030090836
+        ]
+      },
+      {
+        "bucket": "6-24h",
+        "ci95": [
+          0.011354117917018897,
+          0.015413180976065277
+        ]
+      },
+      {
+        "bucket": "24-72h",
+        "ci95": [
+          -0.005587983792135027,
+          0.009315416098233676
+        ]
+      },
+      {
+        "bucket": "72h+",
+        "ci95": [
+          0.9263703578287326,
+          1.7933714913778507
+        ]
+      }
+    ],
+    "n_total_fills": 3352549
+  },
+  "H7": {
+    "n_active_2025_ge30": 3593,
+    "n_active_2026_ge30": 11484,
+    "n_active_both_ge30": 262,
+    "spearman_rho": 0.17358213471559292,
+    "n": 262,
+    "ci95": [
+      0.047159857854723757,
+      0.3055421393086847
+    ],
+    "top_decile_2025_n": 360,
+    "top_decile_2026_n": 1149,
+    "top_decile_overlap_n": 9,
+    "top_decile_turnover_rate": 0.975
+  }
+}

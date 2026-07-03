@@ -1,0 +1,8 @@
+{
+  "generated_at": "2026-07-02T01:50:25.520419+00:00",
+  "today": "2026-07-01",
+  "total_analyzed": 6,
+  "bets": [],
+  "fades": [],
+  "notice": "No validated betting edge exists right now. Backtested crowd-flow/orderbook signals did not survive execution-cost pricing (see reports/07_edge_rules.md) \u2014 zero rules cleared the train/validate bar. Recommendations will populate only if a future analysis/edge_rules.py run lands validated rules in data/edge_rules.json."
+}

@@ -1,0 +1,201 @@
+{
+  "generated_at": "2026-07-02T01:33:40.231712+00:00",
+  "games": [
+    {
+      "event_slug": "mlb-cws-bal-2026-07-01",
+      "game_date": "2026-07-01",
+      "snapshot_at": "2026-07-01T04:22:42.946798+00:00",
+      "markets": {
+        "moneyline": {
+          "slug": "mlb-cws-bal-2026-07-01",
+          "condition_id": "0xf6f693f2d5b402d1d35d78cdebd7268bc219976effb45ce4c10a9b658189258a",
+          "market_type": "moneyline",
+          "predicted_outcome": "Baltimore Orioles",
+          "conviction": 1.0,
+          "total_weighted_volume": 25.63,
+          "unique_traders": 1,
+          "depth_imbalance": 0.5,
+          "actual_outcome": null,
+          "correct": null
+        }
+      },
+      "resolved": false,
+      "resolved_at": null
+    },
+    {
+      "event_slug": "mlb-tb-kc-2026-07-01",
+      "game_date": "2026-07-01",
+      "snapshot_at": "2026-07-01T04:22:42.946798+00:00",
+      "markets": {
+        "moneyline": {
+          "slug": "mlb-tb-kc-2026-07-01",
+          "condition_id": "0x036b0c654502bb269410e8353735575a9203fc24acb8a321b6945c9d7ef7f25f",
+          "market_type": "moneyline",
+          "predicted_outcome": "Tampa Bay Rays",
+          "conviction": 1.0,
+          "total_weighted_volume": 35.88,
+          "unique_traders": 1,
+          "depth_imbalance": 0.5,
+          "actual_outcome": null,
+          "correct": null
+        }
+      },
+      "resolved": false,
+      "resolved_at": null
+    },
+    {
+      "event_slug": "mlb-pit-phi-2026-07-01",
+      "game_date": "2026-07-01",
+      "snapshot_at": "2026-07-02T01:17:31.434460+00:00",
+      "markets": {
+        "moneyline": {
+          "slug": "mlb-pit-phi-2026-07-01",
+          "condition_id": "0x04c736342b639e05fc4eb5512a7b46fec794e79c93a6c06b89e866fe70d15003",
+          "market_type": "moneyline",
+          "predicted_outcome": "Philadelphia Phillies",
+          "conviction": 0.7583,
+          "total_weighted_volume": 13156.03,
+          "unique_traders": 10,
+          "depth_imbalance": 0.9522,
+          "actual_outcome": null,
+          "correct": null
+        }
+      },
+      "resolved": false,
+      "resolved_at": null
+    },
+    {
+      "event_slug": "mlb-cin-mil-2026-07-01",
+      "game_date": "2026-07-01",
+      "snapshot_at": "2026-07-02T01:17:31.434460+00:00",
+      "markets": {
+        "moneyline": {
+          "slug": "mlb-cin-mil-2026-07-01",
+          "condition_id": "0xffcc16466bec36ad1a0d27106b53eaf338b4013c40fa6fdf446819e14318141d",
+          "market_type": "moneyline",
+          "predicted_outcome": "Milwaukee Brewers",
+          "conviction": 0.7381,
+          "total_weighted_volume": 86267.52,
+          "unique_traders": 14,
+          "depth_imbalance": 0.5788,
+          "actual_outcome": null,
+          "correct": null
+        }
+      },
+      "resolved": false,
+      "resolved_at": null
+    },
+    {
+      "event_slug": "mlb-mia-col-2026-07-01",
+      "game_date": "2026-07-01",
+      "snapshot_at": "2026-07-02T01:17:31.434460+00:00",
+      "markets": {
+        "moneyline": {
+          "slug": "mlb-mia-col-2026-07-01",
+          "condition_id": "0x503cc08c1fcff5bcca91d07c143e87b3bddd68566445851e93db965e6a1a122d",
+          "market_type": "moneyline",
+          "predicted_outcome": "Miami Marlins",
+          "conviction": 0.7338,
+          "total_weighted_volume": 157055.78,
+          "unique_traders": 17,
+          "depth_imbalance": 0.4611,
+          "actual_outcome": null,
+          "correct": null
+        }
+      },
+      "resolved": false,
+      "resolved_at": null
+    },
+    {
+      "event_slug": "mlb-sf-ari-2026-07-01",
+      "game_date": "2026-07-01",
+      "snapshot_at": "2026-07-02T01:17:31.434460+00:00",
+      "markets": {
+        "moneyline": {
+          "slug": "mlb-sf-ari-2026-07-01",
+          "condition_id": "0x293aa18bd50ec49cefc2a185332b7ab53765ac0eee8aed6b755d082a06bd5d49",
+          "market_type": "moneyline",
+          "predicted_outcome": "Arizona Diamondbacks",
+          "conviction": 0.8773,
+          "total_weighted_volume": 2628.12,
+          "unique_traders": 3,
+          "depth_imbalance": 0.5826,
+          "actual_outcome": null,
+          "correct": null
+        }
+      },
+      "resolved": false,
+      "resolved_at": null
+    },
+    {
+      "event_slug": "mlb-lad-oak-2026-07-01",
+      "game_date": "2026-07-01",
+      "snapshot_at": "2026-07-02T01:17:31.434460+00:00",
+      "markets": {
+        "moneyline": {
+          "slug": "mlb-lad-oak-2026-07-01",
+          "condition_id": "0xcc3f41af4b7ef6c7b399c1666801913d6b129594b261c84c1d1a838f4f76242a",
+          "market_type": "moneyline",
+          "predicted_outcome": "Los Angeles Dodgers",
+          "conviction": 0.8773,
+          "total_weighted_volume": 5946.35,
+          "unique_traders": 3,
+          "depth_imbalance": 0.558,
+          "actual_outcome": null,
+          "correct": null
+        }
+      },
+      "resolved": false,
+      "resolved_at": null
+    },
+    {
+      "event_slug": "mlb-stl-atl-2026-07-01",
+      "game_date": "2026-07-01",
+      "snapshot_at": "2026-07-02T01:33:40.231712+00:00",
+      "markets": {
+        "spread": {
+          "slug": "mlb-stl-atl-2026-07-01-spread-home-1pt5",
+          "condition_id": "0x92d1554c56357d9c2a8e6c64f85258c07e78b75bb1adb3147d037a9ab8a479d5",
+          "market_type": "spread",
+          "predicted_outcome": "Atlanta Braves",
+          "conviction": 0.6824,
+          "total_weighted_volume": 793.71,
+          "unique_traders": 5,
+          "depth_imbalance": 1.0,
+          "actual_outcome": null,
+          "correct": null
+        }
+      },
+      "resolved": false,
+      "resolved_at": null
+    },
+    {
+      "event_slug": "mlb-min-hou-2026-07-01",
+      "game_date": "2026-07-01",
+      "snapshot_at": "2026-07-02T01:33:40.231712+00:00",
+      "markets": {
+        "total": {
+          "slug": "mlb-min-hou-2026-07-01-total-8pt5",
+          "condition_id": "0xe7a13d32b74371625ee234d216c126b2cf4e1ee757db3dceba6c219e648c5d9c",
+          "market_type": "total",
+          "predicted_outcome": "Over",
+          "conviction": 0.9974,
+          "total_weighted_volume": 80.22,
+          "unique_traders": 1,
+          "depth_imbalance": 0.9997,
+          "actual_outcome": null,
+          "correct": null
+        }
+      },
+      "resolved": false,
+      "resolved_at": null
+    }
+  ],
+  "stats": {
+    "total_tracked": 9,
+    "resolved": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "accuracy": 0
+  }
+}

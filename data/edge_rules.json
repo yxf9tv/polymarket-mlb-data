@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-07-03T19:24:30.631645+00:00",
+  "meta": {
+    "rule_stake_usd": 200,
+    "min_n": 50,
+    "n_boot": 2000,
+    "train_cutoff_first_pitch": "2026-06-12T23:40:00+00:00",
+    "n_train_markets": 2670,
+    "n_validate_markets": 1147,
+    "note": "2025 orderbook data unavailable (retention limit -- see ingest_orderbooks.py); split is within-2026 time-based (train=earlier 70% by first_pitch, validate=latest 30%), not the originally planned 2025+early-2026 -> late-2026 split."
+  },
+  "n_rules_tested": 0,
+  "n_rules_survive_train_bar": 0,
+  "n_rules_survive_validate": 0,
+  "rules": []
+}

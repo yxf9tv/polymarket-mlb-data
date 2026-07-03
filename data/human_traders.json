@@ -1,0 +1,1318 @@
+[
+  {
+    "wallet": "0x4bff30af91642dc7d2b19a8664378fe55c45fc26",
+    "baseball_pnl_15d": 1251633.68,
+    "win_rate": 0.697,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 587,
+    "sports_pnl_15d": 1864150.77
+  },
+  {
+    "wallet": "0xfe787d2da716d60e8acff57fb87eb13cd4d10319",
+    "baseball_pnl_15d": 724819.28,
+    "win_rate": 0.4896,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 22709,
+    "sports_pnl_15d": -4239344.79
+  },
+  {
+    "wallet": "0xa71093cafc0c099b4ccab24c3cb8018d817923c4",
+    "baseball_pnl_15d": 330928.7,
+    "win_rate": 0.5714,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1966,
+    "sports_pnl_15d": 1122085.0
+  },
+  {
+    "wallet": "0xc8075693f48668a264b9fa313b47f52712fcc12b",
+    "baseball_pnl_15d": 307209.91,
+    "win_rate": 0.5789,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 2030,
+    "sports_pnl_15d": 1019983.61
+  },
+  {
+    "wallet": "0x3dfb153c197d4c19d3b31c1ecd2c7b6860eeabaf",
+    "baseball_pnl_15d": 267087.61,
+    "win_rate": 0.3808,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 2387,
+    "sports_pnl_15d": 444251.5
+  },
+  {
+    "wallet": "0x5966db1fe50763c9e3c014d756369bad07e1f804",
+    "baseball_pnl_15d": 244509.5,
+    "win_rate": 0.6944,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 49,
+    "sports_pnl_15d": 2861031.62
+  },
+  {
+    "wallet": "0x9703676286b93c2eca71ca96e8757104519a69c2",
+    "baseball_pnl_15d": 187769.24,
+    "win_rate": 0.4793,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 13316,
+    "sports_pnl_15d": 1214930.63
+  },
+  {
+    "wallet": "0xa8e089ade142c95538e06196e09c85681112ad50",
+    "baseball_pnl_15d": 185796.05,
+    "win_rate": 0.6464,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 668,
+    "sports_pnl_15d": 367596.75
+  },
+  {
+    "wallet": "0x4d4f13a12d943faabc0d154fb2d546f649a9e5f3",
+    "baseball_pnl_15d": 160283.44,
+    "win_rate": 0.4762,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 33,
+    "sports_pnl_15d": 1126489.0
+  },
+  {
+    "wallet": "0x2005d16a84ceefa912d4e380cd32e7ff827875ea",
+    "baseball_pnl_15d": 122174.85,
+    "win_rate": 0.512,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 36030,
+    "sports_pnl_15d": 1458765.1
+  },
+  {
+    "wallet": "0x50f0a0fc7364d3c10fc4578b9b1d955368335355",
+    "baseball_pnl_15d": 106000.0,
+    "win_rate": 0.4375,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 5,
+    "sports_pnl_15d": 1101974.14
+  },
+  {
+    "wallet": "0x09b540739cfa17ba6b61f4351000583cd6397e72",
+    "baseball_pnl_15d": 53843.33,
+    "win_rate": 0.7333,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 76,
+    "sports_pnl_15d": 177033.37
+  },
+  {
+    "wallet": "0xb56db5215443706244b0af76b3daaad3066ad621",
+    "baseball_pnl_15d": 48593.64,
+    "win_rate": 0.6739,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 32,
+    "sports_pnl_15d": 195172.84
+  },
+  {
+    "wallet": "0xc3656b313a7294600286ee3832ec2d6dc8e42e53",
+    "baseball_pnl_15d": 40432.94,
+    "win_rate": 0.5154,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 5769,
+    "sports_pnl_15d": 158207.68
+  },
+  {
+    "wallet": "0xd1ed12197b7dc22dede923727e9b714024dbd7cb",
+    "baseball_pnl_15d": 39894.29,
+    "win_rate": 0.5373,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 4520,
+    "sports_pnl_15d": 371125.45
+  },
+  {
+    "wallet": "0x67542c3219b37fd1610aad290676ff91cdbfe3bc",
+    "baseball_pnl_15d": 36056.8,
+    "win_rate": 0.4576,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": -4014894.03
+  },
+  {
+    "wallet": "0x32b484581fc5606de9c1e43af4636b6be9bc8b21",
+    "baseball_pnl_15d": 32917.59,
+    "win_rate": 0.4988,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 774,
+    "sports_pnl_15d": -243589.87
+  },
+  {
+    "wallet": "0xfe5428c1b7fae9f29cc5ce3b393d9a77251541d6",
+    "baseball_pnl_15d": 25489.95,
+    "win_rate": 0.8889,
+    "human_likeness_score": 80,
+    "behavioral_flags": [
+      "suspicious_win_rate"
+    ],
+    "baseball_trades_15d": 107,
+    "sports_pnl_15d": 76469.85
+  },
+  {
+    "wallet": "0x228b8d11eba89bf1c554f8879a9293b7106daf4c",
+    "baseball_pnl_15d": 24932.21,
+    "win_rate": 0.5125,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 10968,
+    "sports_pnl_15d": 695163.37
+  },
+  {
+    "wallet": "0x56acab44cfca2e88bb9b3406890aea7bfa0cd77e",
+    "baseball_pnl_15d": 24627.63,
+    "win_rate": 0.5354,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 56,
+    "sports_pnl_15d": -31130.49
+  },
+  {
+    "wallet": "0x26f8af9d49328e5fdae2c24e62e5c523bebd3452",
+    "baseball_pnl_15d": 20694.14,
+    "win_rate": 0.812,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 171,
+    "sports_pnl_15d": 125749.18
+  },
+  {
+    "wallet": "0xc660ae71765d0d9eaf5fa8328c1c959841d2bd28",
+    "baseball_pnl_15d": 20662.94,
+    "win_rate": 0.4962,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 37,
+    "sports_pnl_15d": -570218.68
+  },
+  {
+    "wallet": "0x84dbb7103982e3617704a2ed7d5b39691952aeeb",
+    "baseball_pnl_15d": 20500.0,
+    "win_rate": 0.6667,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 791253.13
+  },
+  {
+    "wallet": "0x5c20bf65929f64ee1e84e1a15ec332f5c6c266a9",
+    "baseball_pnl_15d": 19302.54,
+    "win_rate": 1,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 45,
+    "sports_pnl_15d": 59160.3
+  },
+  {
+    "wallet": "0xfc0847fe2ea938d6e2624650eb29ef8d8142a137",
+    "baseball_pnl_15d": 19270.18,
+    "win_rate": 0.5869,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 1470,
+    "sports_pnl_15d": 632515.8
+  },
+  {
+    "wallet": "0x6157d529ae129fe08f22a27ed42e741d2eaa9fb4",
+    "baseball_pnl_15d": 18185.85,
+    "win_rate": 0.6336,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 25,
+    "sports_pnl_15d": 288482.05
+  },
+  {
+    "wallet": "0x198a38b9704cf3a5ed321f28c8a7836559676762",
+    "baseball_pnl_15d": 12916.24,
+    "win_rate": 0.5,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 10,
+    "sports_pnl_15d": 806853.56
+  },
+  {
+    "wallet": "0xdd882a70680633a75516f6ed5fce443e2d96dadb",
+    "baseball_pnl_15d": 11661.46,
+    "win_rate": 0.7028,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 4,
+    "sports_pnl_15d": -10715.81
+  },
+  {
+    "wallet": "0xf0318c32136c2db7fec88b84869aee6a1106c80c",
+    "baseball_pnl_15d": 11071.09,
+    "win_rate": 0.8331,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 36,
+    "sports_pnl_15d": 7908105.21
+  },
+  {
+    "wallet": "0xbe8844173fa7f034c754b570d4628137263a67a8",
+    "baseball_pnl_15d": 10865.76,
+    "win_rate": 0.5717,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 658,
+    "sports_pnl_15d": 37586.88
+  },
+  {
+    "wallet": "0x63835d2726f2de0ebd571ed36465b025f8d66e28",
+    "baseball_pnl_15d": 10656.11,
+    "win_rate": 0.5794,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 614,
+    "sports_pnl_15d": 30319.76
+  },
+  {
+    "wallet": "0xdac7c8e3941162ca3f8b378eafaa2b3696596d53",
+    "baseball_pnl_15d": 9000.09,
+    "win_rate": 0.4455,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 295680.15
+  },
+  {
+    "wallet": "0xa804390f80019699ab34a282c0df7528fba82a75",
+    "baseball_pnl_15d": 8631.78,
+    "win_rate": 0.5213,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 340,
+    "sports_pnl_15d": 253179.67
+  },
+  {
+    "wallet": "0x8a269634753d90783f52c58e5ae9a8b9679e937e",
+    "baseball_pnl_15d": 7697.51,
+    "win_rate": 0.7108,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 972,
+    "sports_pnl_15d": -296038.79
+  },
+  {
+    "wallet": "0xd81e5bc01e4a98d0af93d82dc2c542a4c0f9e3d0",
+    "baseball_pnl_15d": 7116.05,
+    "win_rate": 0.5522,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 219,
+    "sports_pnl_15d": -2186205.27
+  },
+  {
+    "wallet": "0xcf6c5492124794394dd9eac46498a8babbe47e66",
+    "baseball_pnl_15d": 6237.37,
+    "win_rate": 0.6557,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 116,
+    "sports_pnl_15d": 611262.45
+  },
+  {
+    "wallet": "0xafac3978537771688598b0b65b9bb222e8318730",
+    "baseball_pnl_15d": 5834.6,
+    "win_rate": 0.4899,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 36,
+    "sports_pnl_15d": 56505.34
+  },
+  {
+    "wallet": "0x4658515faa6bddcba47129450ed4766831444131",
+    "baseball_pnl_15d": 5787.37,
+    "win_rate": 0.5637,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 183,
+    "sports_pnl_15d": 35052.66
+  },
+  {
+    "wallet": "0x1b47e9b128e6b671edebfb2cac23dd3efc40d814",
+    "baseball_pnl_15d": 4599.44,
+    "win_rate": 0.4732,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 43,
+    "sports_pnl_15d": 646374.2
+  },
+  {
+    "wallet": "0xd8ffb881f1a38e14b4ed334ccbe9761f4d97473d",
+    "baseball_pnl_15d": 4365.43,
+    "win_rate": 0.6429,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 7,
+    "sports_pnl_15d": 41958.73
+  },
+  {
+    "wallet": "0xfea31bc088000ff909be1dfd8d0e3f2c7ef2d227",
+    "baseball_pnl_15d": 4279.8,
+    "win_rate": 0.7424,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 80,
+    "sports_pnl_15d": 942740.88
+  },
+  {
+    "wallet": "0x6db568e61e5e3de7d87f831431b673f38ce2e279",
+    "baseball_pnl_15d": 3262.13,
+    "win_rate": 0.551,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 191,
+    "sports_pnl_15d": 1398859.34
+  },
+  {
+    "wallet": "0x1bc8b6519eb646dab62ac7be5b55920f5bb72f68",
+    "baseball_pnl_15d": 2531.72,
+    "win_rate": 0.4118,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 7,
+    "sports_pnl_15d": 64150.4
+  },
+  {
+    "wallet": "0xe2d0f0580716e47979206dcff5220695e7967bbf",
+    "baseball_pnl_15d": 2454.55,
+    "win_rate": 1,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 63109.84
+  },
+  {
+    "wallet": "0xb3cfe7615d64db8dfa743a1b1a2b976911460ebd",
+    "baseball_pnl_15d": 2379.84,
+    "win_rate": 0.6842,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 73,
+    "sports_pnl_15d": 445481.76
+  },
+  {
+    "wallet": "0x6082a48d24942336799a0452280586f8311b3323",
+    "baseball_pnl_15d": 1987.58,
+    "win_rate": 0.5842,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 13,
+    "sports_pnl_15d": 20903.5
+  },
+  {
+    "wallet": "0xccd81fbd3395dc43a0531f8484b21c2462daf4de",
+    "baseball_pnl_15d": 1879.41,
+    "win_rate": 0.4339,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 152,
+    "sports_pnl_15d": 920629.11
+  },
+  {
+    "wallet": "0x13b82311fc8d1769d57f973e325a67a0ca6cd1af",
+    "baseball_pnl_15d": 1410.0,
+    "win_rate": 0.3153,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 103307.32
+  },
+  {
+    "wallet": "0x0ee52436cfd4c726385fec293d48d99d3b44e798",
+    "baseball_pnl_15d": 965.91,
+    "win_rate": 0.411,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 12,
+    "sports_pnl_15d": 48716.39
+  },
+  {
+    "wallet": "0xd218e474776403a330142299f7796e8ba32eb5c9",
+    "baseball_pnl_15d": 877.43,
+    "win_rate": 0.5098,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 734,
+    "sports_pnl_15d": -306270.54
+  },
+  {
+    "wallet": "0x48ecc049f171a8c7758e5d351e5f6c3c6df58f36",
+    "baseball_pnl_15d": 749.31,
+    "win_rate": 0.5546,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 8,
+    "sports_pnl_15d": 39657.69
+  },
+  {
+    "wallet": "0x3eece5e0a9e804abe2612f634f600967a1a96b3d",
+    "baseball_pnl_15d": 651.09,
+    "win_rate": 0.5759,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 17,
+    "sports_pnl_15d": 19570.52
+  },
+  {
+    "wallet": "0xf3c73f43afd680a35b4c65af727ebf7a495dc83b",
+    "baseball_pnl_15d": 629.91,
+    "win_rate": 0.5458,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 102,
+    "sports_pnl_15d": -678710.93
+  },
+  {
+    "wallet": "0xf5290af255adf92b79f0e2042078b4be108e755f",
+    "baseball_pnl_15d": 582.5,
+    "win_rate": 0.3708,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 4,
+    "sports_pnl_15d": 6321.42
+  },
+  {
+    "wallet": "0xdc8f4237ded78506b43cb895f887897ef606d0e4",
+    "baseball_pnl_15d": 387.97,
+    "win_rate": 0.727,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 13,
+    "sports_pnl_15d": 42968.5
+  },
+  {
+    "wallet": "0xe7a2052a8b7c6b865e3eb3d16300a4db7432ae70",
+    "baseball_pnl_15d": 341.76,
+    "win_rate": 0.4557,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 53,
+    "sports_pnl_15d": 110227.28
+  },
+  {
+    "wallet": "0x46f0bc37a748a74983f0c2d40c4e343e29b7fe05",
+    "baseball_pnl_15d": 254.7,
+    "win_rate": 0.74,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 10,
+    "sports_pnl_15d": 13101.65
+  },
+  {
+    "wallet": "0x7efe92e2c13d1d6ddc402484f85d5014957e2e32",
+    "baseball_pnl_15d": 249.9,
+    "win_rate": 0.6902,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 3,
+    "sports_pnl_15d": 39993.52
+  },
+  {
+    "wallet": "0x6ffb4354cbe6e0f9989e3b55564ec5fb8646a834",
+    "baseball_pnl_15d": 194.45,
+    "win_rate": 0.57,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 945.94
+  },
+  {
+    "wallet": "0x73aaa2d28a2c6bfc8eaa890ce736c8016b6f409b",
+    "baseball_pnl_15d": 187.71,
+    "win_rate": 1,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 5,
+    "sports_pnl_15d": 1023.87
+  },
+  {
+    "wallet": "0x661daf6af6d884012dd6db73c09d72e8be224dc6",
+    "baseball_pnl_15d": 180.88,
+    "win_rate": 0.524,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 22,
+    "sports_pnl_15d": 170166.99
+  },
+  {
+    "wallet": "0x842c9e2ba1ed0c9f0182fd3db42b7605e4fa6674",
+    "baseball_pnl_15d": 144.83,
+    "win_rate": 0.5748,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "perfect_timing"
+    ],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 28921.39
+  },
+  {
+    "wallet": "0xb7d8c4457c6f6bda6e654f1847bdf83099efa577",
+    "baseball_pnl_15d": 130.47,
+    "win_rate": 0.5833,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 10,
+    "sports_pnl_15d": 5837.22
+  },
+  {
+    "wallet": "0xf0ea0711aa08556fc9a4d0f8ca379254de2f2f71",
+    "baseball_pnl_15d": 69.95,
+    "win_rate": 0.8068,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 123,
+    "sports_pnl_15d": 37664.48
+  },
+  {
+    "wallet": "0x007b44a74a8d915a4cd7cff5c07ce881e4d9adc6",
+    "baseball_pnl_15d": 66.74,
+    "win_rate": 0.8438,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 12,
+    "sports_pnl_15d": 83234.82
+  },
+  {
+    "wallet": "0xd4ace370a22f2283727032ff60b0a27b5d0f5e19",
+    "baseball_pnl_15d": 62.33,
+    "win_rate": 0.7258,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 8527.67
+  },
+  {
+    "wallet": "0xc0f89d4e30b3ab40ab1f1979ebdcf8a02c39ae2e",
+    "baseball_pnl_15d": 36.2,
+    "win_rate": 0.6265,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 3,
+    "sports_pnl_15d": 139802.15
+  },
+  {
+    "wallet": "0x1ec4295fcbcd51699c396b8e1930daa674fedefa",
+    "baseball_pnl_15d": 27.04,
+    "win_rate": 0.4261,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 126,
+    "sports_pnl_15d": 173511.93
+  },
+  {
+    "wallet": "0x40f502f276165f19dfba36c225d6c5736c2a55b9",
+    "baseball_pnl_15d": 21.67,
+    "win_rate": 0.3846,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 5745.01
+  },
+  {
+    "wallet": "0x47ec6508d6f1c749ec2c5f3f97898218110510a0",
+    "baseball_pnl_15d": 0.18,
+    "win_rate": 0.6889,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 9252.5
+  },
+  {
+    "wallet": "0x970998da056e60c707d9b1fc55cfdf3d68c252ab",
+    "baseball_pnl_15d": 0.05,
+    "win_rate": 0.6149,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 8,
+    "sports_pnl_15d": 45861.92
+  },
+  {
+    "wallet": "0x4064f0122a3703e9159ca5dbd4bfeb7b980df741",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.6667,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": -155865.9
+  },
+  {
+    "wallet": "0x7bfad86ad5faf2d7d6a5e0ffd3ac479ae1469c71",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.75,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 108.0
+  },
+  {
+    "wallet": "0x4a9027a16dec5e8b05e194aec7825cb2f6af03b5",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.6667,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 36092.57
+  },
+  {
+    "wallet": "0x2f77a16e12a2a42119334895ebb0346963160b4a",
+    "baseball_pnl_15d": 0.0,
+    "win_rate": 1,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 2,
+    "sports_pnl_15d": 856.72
+  },
+  {
+    "wallet": "0xde8527e2c3d1e0dd16aab3237526065dcb447ff8",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.75,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 85.69
+  },
+  {
+    "wallet": "0x59c35c58b51714971f1f044f69d017e0c9ee882f",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.7059,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 43.4
+  },
+  {
+    "wallet": "0xe4aee4bd0d3e4e684739e28ddee02224d20093ec",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.5556,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 29245.87
+  },
+  {
+    "wallet": "0x819129ecbbebd2bfb718340364c700b2b7978a35",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.6875,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 142.26
+  },
+  {
+    "wallet": "0x57676cb09d8cdb8e0850e2fb1bd9e7fd9b588cc1",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.5714,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 1038.44
+  },
+  {
+    "wallet": "0x9ccc0ca985cd638f106d5f355cc2e4d11d4ce7e8",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.4319,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 40418.07
+  },
+  {
+    "wallet": "0x2b4dad71932d9aaef27578ae274d1b59a300ae93",
+    "baseball_pnl_15d": 0,
+    "win_rate": 1,
+    "human_likeness_score": 90,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 23499.99
+  },
+  {
+    "wallet": "0x706958c87efe9202a8e2a8ad74d727824d01325b",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.5304,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 27991.94
+  },
+  {
+    "wallet": "0x6d8c4e9adf5748af82dabe2c6225207770d6b4fa",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.2857,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": -2.0
+  },
+  {
+    "wallet": "0xd2dd9f96adb442d7390748b1eaa2ec9754678a4b",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.6,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 625.38
+  },
+  {
+    "wallet": "0x032578850831935d337af0a54b31fe88ee5201bc",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.5,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": -38.7
+  },
+  {
+    "wallet": "0xe5e59ff5136098bce48590e5ef70940bef9a485a",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.1667,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 1278.36
+  },
+  {
+    "wallet": "0x14c24206e995eedece09cc5466a736f3826326fa",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.375,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 1501.52
+  },
+  {
+    "wallet": "0xcb8fc46290f62dbbaae250a6f0743e5d82c355a7",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.5978,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 337.43
+  },
+  {
+    "wallet": "0x226bf1220731af372b1e7d572959414f31b4cad6",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.5,
+    "human_likeness_score": 90,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 26670.24
+  },
+  {
+    "wallet": "0x850cea5e92e6ace98cb9cefb23ac385d1cd35f62",
+    "baseball_pnl_15d": 0,
+    "win_rate": 1,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 1166.06
+  },
+  {
+    "wallet": "0xbbb74d110b9a097c4127e9db34ea632ff16bbd55",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.6,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 1112.67
+  },
+  {
+    "wallet": "0x222d51b1f98cef2dd128168358a29484daad90d1",
+    "baseball_pnl_15d": 0,
+    "win_rate": 1,
+    "human_likeness_score": 90,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 22314.4
+  },
+  {
+    "wallet": "0x65f8ed209f63f317c5767362fb654d1e9fba91ef",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.7143,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 269.64
+  },
+  {
+    "wallet": "0xde7cdcab3e0c5b0e8315da358e80c7d80a12c933",
+    "baseball_pnl_15d": 0.0,
+    "win_rate": 0.5493,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 2,
+    "sports_pnl_15d": 240763.44
+  },
+  {
+    "wallet": "0x81fa86d4bc777ee0b2d0b7dd644ca3e8bcc6c4d6",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.8571,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 335.54
+  },
+  {
+    "wallet": "0x399d9aa06edcc8da49e364f638c81da3261babcc",
+    "baseball_pnl_15d": 0,
+    "win_rate": 0.5,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 0,
+    "sports_pnl_15d": 14505.28
+  },
+  {
+    "wallet": "0x9732f622c04d7d91dc0637fe0b6c7ae02d62cd57",
+    "baseball_pnl_15d": -9.7,
+    "win_rate": 0.1765,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 23,
+    "sports_pnl_15d": -129.22
+  },
+  {
+    "wallet": "0x05e17fb524aa6896de92dec88db2f0e4dd5285a2",
+    "baseball_pnl_15d": -36.72,
+    "win_rate": 0.2947,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 19,
+    "sports_pnl_15d": 83378.13
+  },
+  {
+    "wallet": "0x2c28cc0884a793b1fbfde9c6881f6bf549db7ba5",
+    "baseball_pnl_15d": -55.18,
+    "win_rate": 0.6667,
+    "human_likeness_score": 90,
+    "behavioral_flags": [
+      "single_market_dependence"
+    ],
+    "baseball_trades_15d": 10,
+    "sports_pnl_15d": 9810.16
+  },
+  {
+    "wallet": "0x132f78734e5fecba945c24d5c49cd84d8c0f453b",
+    "baseball_pnl_15d": -186.05,
+    "win_rate": 0.73,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 4,
+    "sports_pnl_15d": 517971.29
+  },
+  {
+    "wallet": "0x4cc3522b689a6bf1fb4a2444c523e7776db47552",
+    "baseball_pnl_15d": -186.35,
+    "win_rate": 0.5758,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 15,
+    "sports_pnl_15d": 207936.51
+  },
+  {
+    "wallet": "0x152fdae6b14b9131a61ec77ed61dda50f68da549",
+    "baseball_pnl_15d": -210.97,
+    "win_rate": 0.2097,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": -34506.21
+  },
+  {
+    "wallet": "0x83bfe645e1e21396704882fae0cbd251a77b0ef2",
+    "baseball_pnl_15d": -225.0,
+    "win_rate": 0.6667,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 10431.81
+  },
+  {
+    "wallet": "0x19ae9efef67c685a8581d631d99267b1ff10395c",
+    "baseball_pnl_15d": -271.39,
+    "win_rate": 0.5157,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 2,
+    "sports_pnl_15d": 8106.69
+  },
+  {
+    "wallet": "0x9a3fa403a6666eef75f92f181fcf13f9c051914a",
+    "baseball_pnl_15d": -350.31,
+    "win_rate": 0.6343,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 99,
+    "sports_pnl_15d": 10702.84
+  },
+  {
+    "wallet": "0xb4d250f58c26840e09723a83ce9c8149aa32ce99",
+    "baseball_pnl_15d": -604.18,
+    "win_rate": 0.5707,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 506,
+    "sports_pnl_15d": -827380.51
+  },
+  {
+    "wallet": "0x1a2f67124f12eaa88be0f6683a95abede555647a",
+    "baseball_pnl_15d": -801.03,
+    "win_rate": 0.5432,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 248,
+    "sports_pnl_15d": 269235.12
+  },
+  {
+    "wallet": "0x2e69bb3db7ffcedc4f83b56fe3e6f93371d1858d",
+    "baseball_pnl_15d": -924.97,
+    "win_rate": 0.55,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 2,
+    "sports_pnl_15d": 1360354.84
+  },
+  {
+    "wallet": "0x0cc0bd67a7731602d8e658388dbf4ffe21ef5765",
+    "baseball_pnl_15d": -1033.92,
+    "win_rate": 0.6406,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 307716.2
+  },
+  {
+    "wallet": "0xec8d7bf83a1db5f06b9535985e58ffd17708dd71",
+    "baseball_pnl_15d": -1249.08,
+    "win_rate": 0.3607,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 174,
+    "sports_pnl_15d": 145741.15
+  },
+  {
+    "wallet": "0xc7e53ac4a7c76d6df8b794de2e7d0794265d2d3a",
+    "baseball_pnl_15d": -1837.27,
+    "win_rate": 0.3743,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 105,
+    "sports_pnl_15d": 15713.84
+  },
+  {
+    "wallet": "0xc29198ad764bd6adaf7bb971a3757a689ece5d74",
+    "baseball_pnl_15d": -1931.4,
+    "win_rate": 0.5195,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 382,
+    "sports_pnl_15d": 509022.24
+  },
+  {
+    "wallet": "0x39d3c773be30fcc73161fc6768f46d563a779ef0",
+    "baseball_pnl_15d": -1946.34,
+    "win_rate": 0.6226,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 66,
+    "sports_pnl_15d": 407274.32
+  },
+  {
+    "wallet": "0xa974826f82380f9bb3d5b9c722c50f82fb1aef79",
+    "baseball_pnl_15d": -2128.99,
+    "win_rate": 0.3992,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 49,
+    "sports_pnl_15d": 174654.39
+  },
+  {
+    "wallet": "0x664a25f165a0150ce687410470f3352f5783fc5f",
+    "baseball_pnl_15d": -2677.24,
+    "win_rate": 0.5534,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 604,
+    "sports_pnl_15d": -23412.31
+  },
+  {
+    "wallet": "0x8ce7eb8a3ad1d6907b24368865c8487a68fb3150",
+    "baseball_pnl_15d": -3283.83,
+    "win_rate": 0.4184,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 16,
+    "sports_pnl_15d": 5058.76
+  },
+  {
+    "wallet": "0x98d04f9eb52d08ef9697f6eb8d7cfe8d46e5f14a",
+    "baseball_pnl_15d": -8098.15,
+    "win_rate": 0.6949,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 51,
+    "sports_pnl_15d": -23136.01
+  },
+  {
+    "wallet": "0x97cb27132b9dd66a2ef49390893cbeb26c3fe4d0",
+    "baseball_pnl_15d": -11972.93,
+    "win_rate": 0.6316,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 11,
+    "sports_pnl_15d": 3666142.85
+  },
+  {
+    "wallet": "0x99a75dee1487879c95b3d61c92e4493e2c63fc82",
+    "baseball_pnl_15d": -14235.41,
+    "win_rate": 0.5789,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 1,
+    "sports_pnl_15d": 74382.9
+  },
+  {
+    "wallet": "0x9770ca178764cdca1271934ad613ad7ab4a10ff5",
+    "baseball_pnl_15d": -16837.84,
+    "win_rate": 0.5914,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 122,
+    "sports_pnl_15d": 114562.5
+  },
+  {
+    "wallet": "0x56e2c952f9b953521f08ef0eb0c15473a1fa4b88",
+    "baseball_pnl_15d": -18658.49,
+    "win_rate": 0.5926,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 73,
+    "sports_pnl_15d": 224128.81
+  },
+  {
+    "wallet": "0xdb859a551fcf56e49416160911476bea7307152f",
+    "baseball_pnl_15d": -24380.66,
+    "win_rate": 0.4142,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 53,
+    "sports_pnl_15d": 186535.13
+  },
+  {
+    "wallet": "0x1d1ade627d0bb0205758580b20d808573e720df6",
+    "baseball_pnl_15d": -25034.6,
+    "win_rate": 0.4773,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 42,
+    "sports_pnl_15d": 45274.4
+  },
+  {
+    "wallet": "0x5b4ec9c06b284ee52c41a761974d836992880232",
+    "baseball_pnl_15d": -33036.47,
+    "win_rate": 0.6923,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 6,
+    "sports_pnl_15d": -293087.82
+  },
+  {
+    "wallet": "0xa0f21e6d351baa9185716b5c00c2925ed9621848",
+    "baseball_pnl_15d": -34026.55,
+    "win_rate": 0.4976,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 742,
+    "sports_pnl_15d": -176360.13
+  },
+  {
+    "wallet": "0x204f72f35326db932158cba6adff0b9a1da95e14",
+    "baseball_pnl_15d": -41490.86,
+    "win_rate": 0.5304,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 45961,
+    "sports_pnl_15d": 12581263.72
+  },
+  {
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563",
+    "baseball_pnl_15d": -42751.3,
+    "win_rate": 0.5765,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 695,
+    "sports_pnl_15d": 2828732.73
+  },
+  {
+    "wallet": "0xb91aeb5accc33a5f9a8615b8ed6b2d352e913987",
+    "baseball_pnl_15d": -51701.31,
+    "win_rate": 0.6667,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 334,
+    "sports_pnl_15d": -155103.93
+  },
+  {
+    "wallet": "0x21f333307ac6d2e65ac82f014b3dd2b64cbc35e3",
+    "baseball_pnl_15d": -93321.61,
+    "win_rate": 0.4399,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 744,
+    "sports_pnl_15d": -528876.99
+  },
+  {
+    "wallet": "0x5e9458202b5817a72cf81105ec8a30e6f3705ba1",
+    "baseball_pnl_15d": -136691.65,
+    "win_rate": 0.4881,
+    "human_likeness_score": 100,
+    "behavioral_flags": [],
+    "baseball_trades_15d": 6095,
+    "sports_pnl_15d": -410074.95
+  },
+  {
+    "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d",
+    "baseball_pnl_15d": -417577.68,
+    "win_rate": 0.5058,
+    "human_likeness_score": 95,
+    "behavioral_flags": [
+      "position_size_volatility"
+    ],
+    "baseball_trades_15d": 40836,
+    "sports_pnl_15d": -684657.23
+  }
+]
