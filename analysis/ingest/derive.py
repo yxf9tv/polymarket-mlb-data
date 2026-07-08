@@ -135,3 +135,99 @@ def classify_market_type(slug: str, question: str) -> str:
     if re.match(r"^mlb-[a-z]+-[a-z]+-\d{4}-\d{2}-\d{2}$", slug or ""):
         return "moneyline"
     return "other"
+
+
+# ---------------------------------------------------------------------------
+# NFL/NBA ("sport") market-type + season derivation. Gamma markets for these
+# sports carry a `sportsMarketType` field MLB markets don't - far more
+# reliable than slug/question regex, which is only a fallback here for the
+# null case (futures/season-long markets, or pre-2024 rows missing the
+# field).
+# ---------------------------------------------------------------------------
+_FUTURES_KW_SPORT = (
+    "champion", "mvp", "make-the-playoffs", "win-the-division",
+    "conference-champion", "draft", "coach-of-the-year",
+    "offensive-player", "defensive-player", "rookie-of-the-year",
+    "super-bowl", "nba-finals", "win-the-nba-finals", "nba-cup",
+)
+_PER_GAME_SLUG_RE = re.compile(r"^(nfl|nba)-[a-z]+-[a-z]+-\d{4}-\d{2}-\d{2}$")
+
+
+def classify_market_type_sport(sports_market_type: str | None, slug: str, question: str) -> str:
+    """Bucket into moneyline/spread/total/prop/futures/other using Gamma's
+    sportsMarketType field primarily (much more reliable than MLB's slug/question
+    regex, which is only a fallback here for markets where the field is null)."""
+    t = (sports_market_type or "").lower()
+    if "moneyline" in t:
+        return "moneyline"
+    if "spread" in t:
+        return "spread"
+    if "total" in t:
+        return "total"
+    if t:  # non-empty, non-matched -> some other prop type (e.g. anytime_touchdowns)
+        return "prop"
+    # sports_market_type is null/empty -> likely a futures/season-long market, or
+    # an older pre-2024 market missing the field. Fallback heuristics:
+    text = f"{slug or ''} {question or ''}".lower()
+    if any(k in text for k in _FUTURES_KW_SPORT):
+        return "futures"
+    if _PER_GAME_SLUG_RE.match(slug or ""):
+        return "moneyline"
+    return "other"
+
+
+_SEASON_SLUG_RE = re.compile(r"^(nfl|nba)-(\d{4})$")
+
+
+def derive_season_sport(event: dict, market: dict, sport: str) -> tuple["str | int | None", str]:
+    """Returns (season_label, source). NFL season_label is an int year (e.g. 2025
+    for the 2025 season, which runs Sep 2025 - Feb 2026). NBA season_label is a
+    string like "2025-26" (season starting Oct 2025, ending Jun 2026).
+
+    Preferred source: the event's `series` list - look for a slug matching
+    `nfl-(\\d{4})` or `nba-(\\d{4})`; for NBA the series slug year is the season's
+    ENDING year (nba-2026 series == the "2025-26" season), confirmed live.
+
+    Fallback (no matching series, e.g. legacy series_id=1/2 events, or events with
+    no series at all): derive from market.endDate (else event.endDate), using the
+    standard sports-season convention - for NFL, month>=8 (Aug-Dec) => season=year;
+    month<=7 (Jan-Jul, covers playoffs/Super Bowl + offseason draft) => season=year-1.
+    For NBA, month>=8 (Aug-Dec) => season_start=year; month<=7 (Jan-Jul, covers
+    playoffs/Finals + offseason) => season_start=year-1; label=f"{season_start}-{str(season_start+1)[2:]}".
+    """
+    for s in (event.get("series") or []):
+        slug = (s or {}).get("slug") or ""
+        m = _SEASON_SLUG_RE.match(slug)
+        if not m or m.group(1) != sport:
+            continue
+        series_year = int(m.group(2))
+        if sport == "nfl":
+            return series_year, "event.series"
+        else:  # nba: series slug year is the season's ENDING year
+            season_start = series_year - 1
+            return f"{season_start}-{str(season_start + 1)[2:]}", "event.series"
+
+    date_val = market.get("endDate") or event.get("endDate")
+    year, month = _year_month_of(date_val)
+    if year is None:
+        return None, "none"
+
+    if sport == "nfl":
+        season = year if month >= 8 else year - 1
+        return season, "date_fallback"
+    else:  # nba
+        season_start = year if month >= 8 else year - 1
+        return f"{season_start}-{str(season_start + 1)[2:]}", "date_fallback"
+
+
+def _year_month_of(date_str: str | None) -> tuple[int | None, int | None]:
+    """Extends _year_of to also return the month, for season-boundary logic
+    that needs to know which side of the season-year cutover a date falls on."""
+    if not date_str or not isinstance(date_str, str) or len(date_str) < 7:
+        return None, None
+    try:
+        year = int(date_str[:4])
+        month = int(date_str[5:7])
+        return year, month
+    except ValueError:
+        return None, None

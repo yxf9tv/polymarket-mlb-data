@@ -1,0 +1,2238 @@
+{
+  "generated_at": "2026-07-07T03:06:54.588663+00:00",
+  "methodology": {
+    "eligibility_n_floor": 50,
+    "relaxed_floor_used": false,
+    "bot_thresholds": {
+      "two_sided_share_max": 0.2,
+      "active_hours_entropy_max": 0.95,
+      "median_inter_trade_seconds_min": 60.0
+    },
+    "min_median_fill_notional": 20.0,
+    "heavy_favorite_entry_threshold": 0.75,
+    "combined_score_definition": "min(bootstrap-2.5%ile pregame ROI lower bound, 2025) across the two periods -- i.e. min(pregame_2025_roi_ci_lower, pregame_2026_roi_ci_lower)",
+    "n_boot": 2000
+  },
+  "funnel": {
+    "1_active_both_periods_n>=50": 83,
+    "2_positive_full_roi_both": 28,
+    "3_positive_pregame_roi_both": 23,
+    "4_not_bot_shaped": 9,
+    "5_median_notional>=20": 7,
+    "6_external_reality_screen": 6
+  },
+  "survivors": [
+    {
+      "wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
+      "combined_score": -0.07333005533129087,
+      "periods": {
+        "2025": {
+          "n_markets_full": 423,
+          "roi_full": 0.0474,
+          "n_markets_pregame": 396,
+          "roi_pregame": 0.0477,
+          "roi_pregame_ci95": [
+            -0.0733,
+            0.1724
+          ],
+          "roi_full_ci95": [
+            -0.073,
+            0.1749
+          ],
+          "win_rate_pregame": 0.5278,
+          "avg_entry_price_pregame": 0.4909,
+          "heavy_favorite_profile": false,
+          "profit_full": 21319.99
+        },
+        "2026": {
+          "n_markets_full": 995,
+          "roi_full": 0.0062,
+          "n_markets_pregame": 887,
+          "roi_pregame": 0.009,
+          "roi_pregame_ci95": [
+            -0.0608,
+            0.0823
+          ],
+          "roi_full_ci95": [
+            -0.0584,
+            0.0723
+          ],
+          "win_rate_pregame": 0.5299,
+          "avg_entry_price_pregame": 0.529,
+          "heavy_favorite_profile": false,
+          "profit_full": 6189.64,
+          "recent_form_last30": {
+            "n": 30,
+            "roi_pooled": -0.0099,
+            "win_rate": 0.5
+          }
+        }
+      },
+      "total_profit_full": 27509.63,
+      "market_type_mix": {
+        "futures": {
+          "n_markets": 1,
+          "pct_n": 0.001,
+          "invested": 19.0
+        },
+        "moneyline": {
+          "n_markets": 634,
+          "pct_n": 0.447,
+          "invested": 740246.14
+        },
+        "nrfi": {
+          "n_markets": 1,
+          "pct_n": 0.001,
+          "invested": 233.1
+        },
+        "prop": {
+          "n_markets": 2,
+          "pct_n": 0.001,
+          "invested": 1801.6
+        },
+        "spread": {
+          "n_markets": 296,
+          "pct_n": 0.209,
+          "invested": 286545.53
+        },
+        "total": {
+          "n_markets": 484,
+          "pct_n": 0.341,
+          "invested": 426326.61
+        }
+      },
+      "bot_features": {
+        "two_sided_share": 0.0536,
+        "active_hours_entropy": 0.7174,
+        "median_inter_trade_seconds": 84.0,
+        "trades_per_day": 15.45
+      },
+      "sizing": {
+        "median_fill_notional_alltime": 52.16
+      },
+      "copyability": {
+        "median_minutes_to_first_pitch": 24.3,
+        "price_drift_1h_after_entry": 0.0131,
+        "n_fills_matched_for_drift": 4499
+      },
+      "in_old_147_list": false,
+      "in_clv_cohort": false,
+      "external_screen": {
+        "pseudonym": "Trotz.85",
+        "lifetime_pnl": 49304.07636375003,
+        "current_value": 23374.7966,
+        "last_mlb_trade": "2026-07-02T01:42:05+00:00",
+        "days_since_last_mlb_trade": 5,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      }
+    },
+    {
+      "wallet": "0x985c0516200c5a2c76dde58917ce2c852afde5d2",
+      "combined_score": -0.07972171571566056,
+      "periods": {
+        "2025": {
+          "n_markets_full": 212,
+          "roi_full": 0.0549,
+          "n_markets_pregame": 206,
+          "roi_pregame": 0.0565,
+          "roi_pregame_ci95": [
+            -0.0797,
+            0.1972
+          ],
+          "roi_full_ci95": [
+            -0.0818,
+            0.1896
+          ],
+          "win_rate_pregame": 0.568,
+          "avg_entry_price_pregame": 0.5425,
+          "heavy_favorite_profile": false,
+          "profit_full": 868.39
+        },
+        "2026": {
+          "n_markets_full": 219,
+          "roi_full": 0.1226,
+          "n_markets_pregame": 213,
+          "roi_pregame": 0.1385,
+          "roi_pregame_ci95": [
+            -0.0066,
+            0.2804
+          ],
+          "roi_full_ci95": [
+            -0.0109,
+            0.2517
+          ],
+          "win_rate_pregame": 0.5915,
+          "avg_entry_price_pregame": 0.5208,
+          "heavy_favorite_profile": false,
+          "profit_full": 1751.77,
+          "recent_form_last30": {
+            "n": 30,
+            "roi_pooled": 0.2146,
+            "win_rate": 0.6333
+          }
+        }
+      },
+      "total_profit_full": 2620.16,
+      "market_type_mix": {
+        "moneyline": {
+          "n_markets": 357,
+          "pct_n": 0.828,
+          "invested": 26495.09
+        },
+        "spread": {
+          "n_markets": 47,
+          "pct_n": 0.109,
+          "invested": 2206.09
+        },
+        "total": {
+          "n_markets": 27,
+          "pct_n": 0.063,
+          "invested": 1410.0
+        }
+      },
+      "bot_features": {
+        "two_sided_share": 0.0673,
+        "active_hours_entropy": 0.7922,
+        "median_inter_trade_seconds": 1527.0,
+        "trades_per_day": 1.76
+      },
+      "sizing": {
+        "median_fill_notional_alltime": 45.0
+      },
+      "copyability": {
+        "median_minutes_to_first_pitch": 112.3,
+        "price_drift_1h_after_entry": 0.0024,
+        "n_fills_matched_for_drift": 503
+      },
+      "in_old_147_list": false,
+      "in_clv_cohort": false,
+      "external_screen": {
+        "pseudonym": "AnEventHorizon",
+        "lifetime_pnl": 2321.1071761214243,
+        "current_value": 115.2945,
+        "last_mlb_trade": "2026-07-02T01:20:05+00:00",
+        "days_since_last_mlb_trade": 5,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      }
+    },
+    {
+      "wallet": "0x681d7946e0280c6ec6562c7ce662e90812354cbf",
+      "combined_score": -0.11108611021882461,
+      "periods": {
+        "2025": {
+          "n_markets_full": 236,
+          "roi_full": 0.0316,
+          "n_markets_pregame": 178,
+          "roi_pregame": 0.0406,
+          "roi_pregame_ci95": [
+            -0.1111,
+            0.2078
+          ],
+          "roi_full_ci95": [
+            -0.068,
+            0.1583
+          ],
+          "win_rate_pregame": 0.5225,
+          "avg_entry_price_pregame": 0.5104,
+          "heavy_favorite_profile": false,
+          "profit_full": 786.3
+        },
+        "2026": {
+          "n_markets_full": 154,
+          "roi_full": 0.0331,
+          "n_markets_pregame": 101,
+          "roi_pregame": 0.0719,
+          "roi_pregame_ci95": [
+            -0.1084,
+            0.2511
+          ],
+          "roi_full_ci95": [
+            -0.1253,
+            0.1946
+          ],
+          "win_rate_pregame": 0.5644,
+          "avg_entry_price_pregame": 0.5136,
+          "heavy_favorite_profile": false,
+          "profit_full": 251.08,
+          "recent_form_last30": {
+            "n": 30,
+            "roi_pooled": 0.1193,
+            "win_rate": 0.5667
+          }
+        }
+      },
+      "total_profit_full": 1037.38,
+      "market_type_mix": {
+        "futures": {
+          "n_markets": 2,
+          "pct_n": 0.005,
+          "invested": 358.61
+        },
+        "moneyline": {
+          "n_markets": 311,
+          "pct_n": 0.797,
+          "invested": 28223.63
+        },
+        "nrfi": {
+          "n_markets": 11,
+          "pct_n": 0.028,
+          "invested": 611.55
+        },
+        "other": {
+          "n_markets": 2,
+          "pct_n": 0.005,
+          "invested": 238.67
+        },
+        "spread": {
+          "n_markets": 6,
+          "pct_n": 0.015,
+          "invested": 252.65
+        },
+        "total": {
+          "n_markets": 58,
+          "pct_n": 0.149,
+          "invested": 2821.76
+        }
+      },
+      "bot_features": {
+        "two_sided_share": 0.1,
+        "active_hours_entropy": 0.8044,
+        "median_inter_trade_seconds": 7462.0,
+        "trades_per_day": 1.43
+      },
+      "sizing": {
+        "median_fill_notional_alltime": 50.0
+      },
+      "copyability": {
+        "median_minutes_to_first_pitch": 74.7,
+        "price_drift_1h_after_entry": -0.0067,
+        "n_fills_matched_for_drift": 309
+      },
+      "in_old_147_list": false,
+      "in_clv_cohort": false,
+      "external_screen": {
+        "pseudonym": "GreatAgain28",
+        "lifetime_pnl": 6032.453142562544,
+        "current_value": 1,
+        "last_mlb_trade": "2026-06-23T01:07:04+00:00",
+        "days_since_last_mlb_trade": 14,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      }
+    },
+    {
+      "wallet": "0x2934efa3cc0794953270262e9da00c04e21d0b51",
+      "combined_score": -0.11573207980165519,
+      "periods": {
+        "2025": {
+          "n_markets_full": 406,
+          "roi_full": 0.055,
+          "n_markets_pregame": 405,
+          "roi_pregame": 0.0536,
+          "roi_pregame_ci95": [
+            -0.0495,
+            0.154
+          ],
+          "roi_full_ci95": [
+            -0.0449,
+            0.1546
+          ],
+          "win_rate_pregame": 0.5358,
+          "avg_entry_price_pregame": 0.4881,
+          "heavy_favorite_profile": false,
+          "profit_full": 8923.34
+        },
+        "2026": {
+          "n_markets_full": 192,
+          "roi_full": 0.0201,
+          "n_markets_pregame": 189,
+          "roi_pregame": 0.0343,
+          "roi_pregame_ci95": [
+            -0.1157,
+            0.1879
+          ],
+          "roi_full_ci95": [
+            -0.126,
+            0.1736
+          ],
+          "win_rate_pregame": 0.4762,
+          "avg_entry_price_pregame": 0.4581,
+          "heavy_favorite_profile": false,
+          "profit_full": 967.1,
+          "recent_form_last30": {
+            "n": 30,
+            "roi_pooled": -0.0286,
+            "win_rate": 0.4667
+          }
+        }
+      },
+      "total_profit_full": 9890.44,
+      "market_type_mix": {
+        "moneyline": {
+          "n_markets": 598,
+          "pct_n": 1.0,
+          "invested": 210320.06
+        }
+      },
+      "bot_features": {
+        "two_sided_share": 0.0017,
+        "active_hours_entropy": 0.7675,
+        "median_inter_trade_seconds": 197.5,
+        "trades_per_day": 5.7
+      },
+      "sizing": {
+        "median_fill_notional_alltime": 24.52
+      },
+      "copyability": {
+        "median_minutes_to_first_pitch": 343.9,
+        "price_drift_1h_after_entry": -0.0031,
+        "n_fills_matched_for_drift": 2010
+      },
+      "in_old_147_list": false,
+      "in_clv_cohort": false,
+      "external_screen": {
+        "pseudonym": "cleoclaudiu",
+        "lifetime_pnl": 13761.566165346792,
+        "current_value": 269.775,
+        "last_mlb_trade": "2026-07-01T16:10:46+00:00",
+        "days_since_last_mlb_trade": 5,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      }
+    },
+    {
+      "wallet": "0xfc234be3c4c3568284a566613ba90033b9d98283",
+      "combined_score": -0.1395532600158474,
+      "periods": {
+        "2025": {
+          "n_markets_full": 201,
+          "roi_full": 0.3442,
+          "n_markets_pregame": 128,
+          "roi_pregame": 0.0949,
+          "roi_pregame_ci95": [
+            -0.1396,
+            0.3202
+          ],
+          "roi_full_ci95": [
+            -0.0224,
+            0.6274
+          ],
+          "win_rate_pregame": 0.5078,
+          "avg_entry_price_pregame": 0.5055,
+          "heavy_favorite_profile": false,
+          "profit_full": 12189.92
+        },
+        "2026": {
+          "n_markets_full": 177,
+          "roi_full": 0.0656,
+          "n_markets_pregame": 161,
+          "roi_pregame": 0.0455,
+          "roi_pregame_ci95": [
+            -0.1172,
+            0.197
+          ],
+          "roi_full_ci95": [
+            -0.0858,
+            0.2126
+          ],
+          "win_rate_pregame": 0.5528,
+          "avg_entry_price_pregame": 0.5523,
+          "heavy_favorite_profile": false,
+          "profit_full": 2943.1,
+          "recent_form_last30": {
+            "n": 30,
+            "roi_pooled": 0.2218,
+            "win_rate": 0.6667
+          }
+        }
+      },
+      "total_profit_full": 15133.02,
+      "market_type_mix": {
+        "futures": {
+          "n_markets": 15,
+          "pct_n": 0.04,
+          "invested": 3659.89
+        },
+        "moneyline": {
+          "n_markets": 277,
+          "pct_n": 0.733,
+          "invested": 63539.09
+        },
+        "nrfi": {
+          "n_markets": 3,
+          "pct_n": 0.008,
+          "invested": 300.0
+        },
+        "spread": {
+          "n_markets": 41,
+          "pct_n": 0.108,
+          "invested": 5115.17
+        },
+        "total": {
+          "n_markets": 42,
+          "pct_n": 0.111,
+          "invested": 7631.33
+        }
+      },
+      "bot_features": {
+        "two_sided_share": 0.1561,
+        "active_hours_entropy": 0.7343,
+        "median_inter_trade_seconds": 194.0,
+        "trades_per_day": 1.51
+      },
+      "sizing": {
+        "median_fill_notional_alltime": 100.0
+      },
+      "copyability": {
+        "median_minutes_to_first_pitch": 215.1,
+        "price_drift_1h_after_entry": -0.0023,
+        "n_fills_matched_for_drift": 292
+      },
+      "in_old_147_list": false,
+      "in_clv_cohort": false,
+      "external_screen": {
+        "pseudonym": "FishCrypto",
+        "lifetime_pnl": 7873.749374993091,
+        "current_value": 7036.618,
+        "last_mlb_trade": "2026-07-01T18:58:16+00:00",
+        "days_since_last_mlb_trade": 5,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      }
+    },
+    {
+      "wallet": "0xa5dcb282cab760e31df1f3f5c18350731c95ec43",
+      "combined_score": -0.25258406681066325,
+      "periods": {
+        "2025": {
+          "n_markets_full": 119,
+          "roi_full": 0.1319,
+          "n_markets_pregame": 94,
+          "roi_pregame": 0.1198,
+          "roi_pregame_ci95": [
+            -0.2526,
+            0.4539
+          ],
+          "roi_full_ci95": [
+            -0.1519,
+            0.4281
+          ],
+          "win_rate_pregame": 0.5213,
+          "avg_entry_price_pregame": 0.538,
+          "heavy_favorite_profile": false,
+          "profit_full": 1139.18
+        },
+        "2026": {
+          "n_markets_full": 292,
+          "roi_full": 0.243,
+          "n_markets_pregame": 219,
+          "roi_pregame": 0.236,
+          "roi_pregame_ci95": [
+            -0.1958,
+            0.4833
+          ],
+          "roi_full_ci95": [
+            -0.1134,
+            0.4689
+          ],
+          "win_rate_pregame": 0.5799,
+          "avg_entry_price_pregame": 0.5935,
+          "heavy_favorite_profile": false,
+          "profit_full": 27140.55,
+          "recent_form_last30": {
+            "n": 30,
+            "roi_pooled": 0.4639,
+            "win_rate": 0.5
+          }
+        }
+      },
+      "total_profit_full": 28279.73,
+      "market_type_mix": {
+        "moneyline": {
+          "n_markets": 314,
+          "pct_n": 0.764,
+          "invested": 94110.42
+        },
+        "nrfi": {
+          "n_markets": 50,
+          "pct_n": 0.122,
+          "invested": 9121.57
+        },
+        "spread": {
+          "n_markets": 22,
+          "pct_n": 0.054,
+          "invested": 2844.46
+        },
+        "total": {
+          "n_markets": 25,
+          "pct_n": 0.061,
+          "invested": 14266.32
+        }
+      },
+      "bot_features": {
+        "two_sided_share": 0.1411,
+        "active_hours_entropy": 0.9036,
+        "median_inter_trade_seconds": 835.0,
+        "trades_per_day": 2.0
+      },
+      "sizing": {
+        "median_fill_notional_alltime": 50.0
+      },
+      "copyability": {
+        "median_minutes_to_first_pitch": 180.9,
+        "price_drift_1h_after_entry": 0.055,
+        "n_fills_matched_for_drift": 397
+      },
+      "in_old_147_list": false,
+      "in_clv_cohort": false,
+      "external_screen": {
+        "pseudonym": "Yikes110",
+        "lifetime_pnl": -262176.32559296355,
+        "current_value": 53.4,
+        "last_mlb_trade": "2026-06-21T02:12:41+00:00",
+        "days_since_last_mlb_trade": 16,
+        "stale": false,
+        "screen_verdict": "FAIL",
+        "notes": [
+          "lifetime PnL $-262,176 < fail threshold $-10,000 -- net loser across full trading history; category profit is noise inside a losing account, not evidence of skill"
+        ]
+      }
+    },
+    {
+      "wallet": "0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d",
+      "combined_score": -0.58222247258985,
+      "periods": {
+        "2025": {
+          "n_markets_full": 303,
+          "roi_full": 0.1215,
+          "n_markets_pregame": 295,
+          "roi_pregame": 0.1121,
+          "roi_pregame_ci95": [
+            -0.5822,
+            0.9074
+          ],
+          "roi_full_ci95": [
+            -0.4901,
+            0.8489
+          ],
+          "win_rate_pregame": 0.4949,
+          "avg_entry_price_pregame": 0.4357,
+          "heavy_favorite_profile": false,
+          "profit_full": 73451.07
+        },
+        "2026": {
+          "n_markets_full": 75,
+          "roi_full": 0.0871,
+          "n_markets_pregame": 75,
+          "roi_pregame": 0.0747,
+          "roi_pregame_ci95": [
+            -0.2195,
+            0.3936
+          ],
+          "roi_full_ci95": [
+            -0.2107,
+            0.3968
+          ],
+          "win_rate_pregame": 0.48,
+          "avg_entry_price_pregame": 0.4597,
+          "heavy_favorite_profile": false,
+          "profit_full": 239.05,
+          "recent_form_last30": {
+            "n": 30,
+            "roi_pooled": -0.2604,
+            "win_rate": 0.3667
+          }
+        }
+      },
+      "total_profit_full": 73690.12,
+      "market_type_mix": {
+        "moneyline": {
+          "n_markets": 378,
+          "pct_n": 1.0,
+          "invested": 607402.46
+        }
+      },
+      "bot_features": {
+        "two_sided_share": 0.0897,
+        "active_hours_entropy": 0.8141,
+        "median_inter_trade_seconds": 114.0,
+        "trades_per_day": 4.47
+      },
+      "sizing": {
+        "median_fill_notional_alltime": 25.75
+      },
+      "copyability": {
+        "median_minutes_to_first_pitch": 397.4,
+        "price_drift_1h_after_entry": 0.0185,
+        "n_fills_matched_for_drift": 1378
+      },
+      "in_old_147_list": false,
+      "in_clv_cohort": false,
+      "external_screen": {
+        "pseudonym": "Radahn-131",
+        "lifetime_pnl": 18659.029230123968,
+        "current_value": 0,
+        "last_mlb_trade": "2026-06-28T17:21:23+00:00",
+        "days_since_last_mlb_trade": 8,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": [
+          "lifetime PnL $18,659 is 25.3% of category profit $73,690 -- close to the 25% WARN threshold, worth watching"
+        ]
+      }
+    }
+  ],
+  "screened_out_wallets": [
+    "0xa5dcb282cab760e31df1f3f5c18350731c95ec43"
+  ],
+  "overlap_old_147_list": [],
+  "overlap_clv_cohort": [],
+  "walk_forward_2025_selected_2026_oos": {
+    "n_selected_2025": 770,
+    "full_2026_oos": {
+      "n_wallets": 738,
+      "n_markets": 8426,
+      "invested": 22548089.8,
+      "returned": 22878364.86,
+      "roi_pooled": 0.0146,
+      "roi_ci95": [
+        -0.0221,
+        0.0505
+      ]
+    },
+    "pregame_2026_oos": {
+      "n_wallets": 735,
+      "n_markets": 5660,
+      "invested": 9826733.08,
+      "returned": 10538591.29,
+      "roi_pooled": 0.0724,
+      "roi_ci95": [
+        -0.0027,
+        0.1385
+      ]
+    },
+    "selected_wallets": [
+      "0x008b3d1191ba16a2f76d8a9fe47d7e4e2b774f82",
+      "0x00bd06f208da4eee1ab2a28425fefdbd22a23fc6",
+      "0x00efd6280b481fa9d79f0494c1a43af3366ed995",
+      "0x011c5ab97c4c94816694fff1f0e6c3c334a72e30",
+      "0x018163cddc0a27eedd0ed4b60d852412906e6c14",
+      "0x0230b4529adde70b7cb8a69e268ce95c90d90a2f",
+      "0x027364bf74983ef899250e5d689492e791dd0f78",
+      "0x02a63d15f4f7cb20a4a5b4460a367a8523bc050c",
+      "0x02e9fba5b51e5aab966fa20e70b9e6ab1e6c65d5",
+      "0x03392653d042360b521eed23ee23c58b05b3b3b0",
+      "0x03968505bf9e57f4ea37dadfea053f95690f0af6",
+      "0x03a92efa7bffe7faaf85b149ffbf969d2ed33374",
+      "0x0453ab13a7b10f8ec6ada193421aadf0ba9729dd",
+      "0x045f15b9a1ba1021d288340b5a4303137439bfe7",
+      "0x047653414171ff52116fef2e98c3ac219a647eb8",
+      "0x054142d1ac3023835aa0a10afaa21053bf4f6caa",
+      "0x0570be99ce594b95049ba3678c23adace6e3752c",
+      "0x0646bc432b8fe0947350faff48dce623b786a3b2",
+      "0x06773e38ab26036bf28688f3f5fd1b17eac33f44",
+      "0x07d52ae1ddc762583d7fd73991f06d7fefe4b5d9",
+      "0x081cd40e9d1a90896612c189bf470b4fbae4f010",
+      "0x0834b8df4804a48782f812ed2979192140ebe7c3",
+      "0x085f8fe5b92d844b070d2e9a9ec10072ba0e1eb5",
+      "0x08e4591ecaa676355539fb186ec88e50ab1855b9",
+      "0x08f8eeb3913b88c482480e20fddffeea865752a2",
+      "0x090005c105d050c600139daed6c13a23c5fdced0",
+      "0x095732f1874f67444f2c7b8f17950281c016502e",
+      "0x097032ac3b7ce88768447cbf0ca87212367eec88",
+      "0x0a33cf3a7f3d4e6e37802554977aacf44eab9605",
+      "0x0a5efd2edda461ce09d38acacfa6ef66063c138d",
+      "0x0a77bc0638f13892c8b1d1d2c13ba178540f9d74",
+      "0x0a80d4af0a7c084ac705d23716ad7105ff336b64",
+      "0x0a8d02b57b9e49423dbc4bcd1a5419b79f1570ef",
+      "0x0aaa916194d6ab2ac31d325733c00ef9db7c8212",
+      "0x0addc9e7d2a2bc11cd4455e5416ab017c9fb142b",
+      "0x0b44152064123e0935bf1c522e44cda0136b54bf",
+      "0x0c2aff0cc9bcd573ca828527b9c56875e0db1c31",
+      "0x0c326f0f567aabd8fc7059dc3b5922cae0f47ff0",
+      "0x0c50dec3aed12fc29b4f29761f107e7b3ed92915",
+      "0x0c5aed8e1106c941aa1a70e7bb6cb2eea1e5408d",
+      "0x0ddea003cf36aba6eb38eee26143d62c1ca6b422",
+      "0x0ea6a906b1ad2734da4eb02288ba34a76165f4ca",
+      "0x0ed0ced5bc67af7b8d2150a017b4581116aa82a9",
+      "0x0f55639eb4cf3be67dbfce71488909ec0fd7811a",
+      "0x0f5eb18dc412fcf1115380dfa70faba0767f8890",
+      "0x0f6943e84619cdd2c62e5898f0c1773f5756f676",
+      "0x100046de360a69ee49b75c69fb30cdda7c5b7028",
+      "0x10323ef199ccc7ac1a361a573b7fc18be8e12f63",
+      "0x1085e8de1ba52ab787565e48b4f7ff922bb5a6c5",
+      "0x11388e66092d65c8ac16ccedbd84a8185a46be8f",
+      "0x12438fd537ab4dcb60a3922799824d6b32ee18cf",
+      "0x127434725abc88b79de148f928703c79c1e1402a",
+      "0x12b0d3298dd1dbb6592e20146b0b0a9a6dd53080",
+      "0x130c559ce72e4b74daaa04f9bbe4a6f09ae6f67d",
+      "0x132d3f658b942653d8f71d20931f6a7d1b977418",
+      "0x13419654553543ac9b16408310987a17c5b5c53d",
+      "0x136f47cdd3838120b3a09dbee03ab47e735df80f",
+      "0x13d3352ccd9f9f82ae92cec70b02ca8437983c9b",
+      "0x13fecea26000df5c91e51b26a6f5fdc158a3594f",
+      "0x1405fc46777b1d6c2d0d20f075a28381f60eb584",
+      "0x147c50a21f780ea34eaa7a2aa41b1389492ece7b",
+      "0x161c9e0f8ffe350036c49cffa1808b6ceb67ab49",
+      "0x16621fc9eb16ecd71d558a1ee26ff90b3eba1168",
+      "0x1678c024950266655064003f2fd3153f979d515f",
+      "0x16dfc0e4b7284495862453c4bbe5606be2739fc5",
+      "0x17083b1a682875014fde867bbd2750aebce8e34e",
+      "0x17381a931e8fa8be6c1db0b39218fd053974813b",
+      "0x177b69f2a9f782f48d5a98710cac85a7caec6c2c",
+      "0x17dfb6c9b447602a9624a211256f94268d9ff592",
+      "0x181b0b9e08748b7a38d4418d8301bda5c72879f7",
+      "0x1826dd032766bceb4918f5597e286d0dc1b04140",
+      "0x18670d5a83b7b38d509398067c095d4c321992ca",
+      "0x18ff7a130bb133be0a101e675d15f410d6942536",
+      "0x1926a647c9c8d847974856619625db2270e3add2",
+      "0x19d03dd0374707d54d4a8e581896a93c37c8c5b5",
+      "0x1a0ef988098cb346ea001c7aeda783111d299b1e",
+      "0x1b6edb8cf5f1a2488bc9f34cca08f4c30af7ec2b",
+      "0x1cbea0d402f7e9179252c66599c26a37e1d712bc",
+      "0x1ceb593a7886726d902f72ed92bd185337fd17cf",
+      "0x1d2d5ef40d446e84dfbab14c7be85195a5985f48",
+      "0x1d3a805284bc8029cd6acd06d5a2b8b2b1807b63",
+      "0x1d66e5385add87bec33cff8bd0ca23e5aed3ff1e",
+      "0x1d7f391d3f616b26cf14114537c5f10a4d75bea1",
+      "0x1dbd838b24211251e96318af1b62dcf6e8fc3db6",
+      "0x1dbfa1ac3639dc2b62928cd24de9fb8a8e40876a",
+      "0x1dc8aaad437a3e23d90dd72afa90383934244c1d",
+      "0x1e65108a8935d6dd191188bcea4161adc0908508",
+      "0x1eb7929a574d9e45163d777d510e89e524c4ec7f",
+      "0x1eca7d078a4548f4180c731192df05bd0d9a45bf",
+      "0x1eea0c2e3baa8226e89b45dac8cb2d50afaa3cf2",
+      "0x1f3c9e481c05428725d5d4cddc81a972ebf6b7e1",
+      "0x1f3e541f82fb57a101986a23e0a4571d3620ccac",
+      "0x1fc33c8a9a41f5f8891c7399ed1c1be20cfb1270",
+      "0x1fc4faacb4048e01e939ec054f82b140f6f98225",
+      "0x2019460a12723571526f8aff69214272791ca6a9",
+      "0x2086e5d6885dab2ffe26ba2ba0ab59943af26412",
+      "0x20cebe9d654ff165c39a414dc125ff407734215f",
+      "0x20d0885c9662108dc5d5104c6291b19ca31fe24f",
+      "0x216012126baafa8ad9037d21f4f7d6220525bcb3",
+      "0x2217d6f725f53932e1ca28d5625baaf0fab22522",
+      "0x223e08e71fc120aa1a81e9055878fea60c9f602b",
+      "0x22639b23a619046659da39f43777f3565748d9d6",
+      "0x228f41667b3b8ebbb54fe629644c3b2d3c311676",
+      "0x2391e433e712c536aea8190e233d235276365e1c",
+      "0x24077e409eb38457e8348a731068b986917055b2",
+      "0x24f7792d5cb54d85c0a584769a70c2ad5418b320",
+      "0x251bd8fdcfd199d65aa68b7c8c9ff7bd55e1143c",
+      "0x25c6b5a1ffdd064c4a5797228bafef8986b38325",
+      "0x25f273c913cbfcf8580129debb22f40d3db9edf8",
+      "0x268b21fcd80d54927cb8a871d3e27a61c3d8920b",
+      "0x26b76c8fbf0d95b596aa69fa3991a73f86925b40",
+      "0x26c000282483f4c845da74e63cd0ccdcbf9fc630",
+      "0x270bee5f4a630cd1784363818af08c8104726375",
+      "0x273a3fd663e917c531f17299a2e11c14c47ca597",
+      "0x2741b027d8027f5aca1a05ac11a45d258ff5940a",
+      "0x27471428d952bb40e087e346d7c1f4552aa53263",
+      "0x274a8536b968defef21a2c7a06495ada6fc34fb3",
+      "0x274d5a340ca4b422d144713907cbc1911d14a55e",
+      "0x27533494470337c718017764a3b0c61005d4568d",
+      "0x276392eb897c66178f05aa3da73af0cb0e4ad9ab",
+      "0x27b74c9d5800d813f49214036fe720f5113720b2",
+      "0x27e932c379ff97c9e6e5ce6eae7914cb2d4c4c2d",
+      "0x283ea29c0d6178be15083dd3ae711a568d907303",
+      "0x28a30c9bbcd02798ce96fec94585c1804d399aed",
+      "0x28d3e918eb1015fa73f5371270c20b4ed80c6705",
+      "0x28fe2fb437b62f6d4bc07bf1975489881374620b",
+      "0x292e0341a4cafc04f0ca1c945ae064b5fc06afad",
+      "0x2934efa3cc0794953270262e9da00c04e21d0b51",
+      "0x296de57433eb5f0037d2fd4df3657b21431a537b",
+      "0x2a04770e38cf9afab98bd54716769559e128dbe9",
+      "0x2a4008a966c62f5c1cf2fc938ce9891fc586f650",
+      "0x2ac5696feb8c9d9bf14e555e4ec7a6a2e3b03536",
+      "0x2ada299aaaf27c806424ec6dcb0c169d1a9c2f28",
+      "0x2b3db27a330c79a0015be4d049eb6e0b791be63e",
+      "0x2b5290f7ec653c196630cdd20591d173035c32a1",
+      "0x2b5ac4b624dface9ff5c8a384cc34694c1d2d1bb",
+      "0x2c0099b7f152c88f57dad4cf39db414d6738cf04",
+      "0x2c55bbf04f80daefc29a3ef5ec44631b1ac7c16d",
+      "0x2c93f82c71e016da7f84ccfed6b67995d6f5d3ec",
+      "0x2cb989e2abbe0445716da514c4029f26a0d982f6",
+      "0x2ce7420d1f0b9a36ef92c2c61fa48b58fbb1d59b",
+      "0x2ce8505aa641791eb8460f6ac6bf5c0511e34527",
+      "0x2db420869ca452149863784d469e4a3162497f72",
+      "0x2dd131b5fdcf2bf14e70743d99f40201e935edb9",
+      "0x2e57ba94b8ac2a133bb0440759b4084692813258",
+      "0x2e97cf11ea38b5191d08cffffa1abb325bcff811",
+      "0x2ea7f5d36c26321ad48fc6592eb05c14a580b555",
+      "0x2f0434aee59ea65815224dc42a5c45640808a460",
+      "0x2f09642639aedd6ced432519c1a86e7d52034632",
+      "0x2f43631ff5b122f022afc2114bb9191e675b4932",
+      "0x2fea0362c4cfe5411068ed170b75c1979d6a3ddd",
+      "0x30350dd125248a71dfde68758bc06ae2ea1289a6",
+      "0x30432263554556f32809752a218fa9404be6f1d8",
+      "0x310c882d2ef0e14c2a11f396a8d7cf03a2c2f4a2",
+      "0x3161ad8cc3182055d3a2bc991c320c7dc677661f",
+      "0x31b009860d843eba7378475cf749ea5269178c4c",
+      "0x31f751424409275d05f98f800c9ee360f493bc4a",
+      "0x32192cdb884d0897d2a4a79d7283431d98352087",
+      "0x3236f4fe6d771bd91cd513973c472bcef13c8f9e",
+      "0x32a7774c11cd850e70378758357150612ab11bef",
+      "0x32ae45f91c3f48fb478827d084b9672aee5e83ef",
+      "0x332fd0674e50ce600c35543b521b3fd202c22194",
+      "0x33820c6e08a2e8f9c8811824945a94fca46d9bcc",
+      "0x33d681d566362f691e866b66dce319b0edb1e499",
+      "0x341293d97e48d31dc944d361c10ea427ee6fd57c",
+      "0x3442fe7e8c70e3418d3a15c879c35047f695694b",
+      "0x345f4a3fd54552152bc0527651398e09fa417238",
+      "0x34c4e1b51da32173bef056d205f494369a82592a",
+      "0x354a30c45a19a4a5fd6d65184f8f5d8ee0116ddb",
+      "0x355e32c7bc88d4d9bc9edbec64809fe11f134025",
+      "0x3617b2491170448603c195fbb1456543d1bd6237",
+      "0x36aa44451b4b09f91a9e3d956f906ff5a90fa0cb",
+      "0x36d5ef09fcb0b441740742488713faa22f0f01e4",
+      "0x3745ea2359adc5992b91402fc86e3f0d8419cf3b",
+      "0x377cfb0e187499348c56b005199c16a0903d91ae",
+      "0x380742807296fbab8de7cdeb0f3d32e685ae83c9",
+      "0x381355a8fd182b51ef4729c1cff8695310534231",
+      "0x3896abf728f7e3776e46d4d55aa30efa002e5e61",
+      "0x38dda978bf27fd020afb4e2471bdbfdc02a4c20a",
+      "0x38f2a592985616a8db02ff2ec0eefbc3890915d1",
+      "0x38f30cc347e2705cef806ad9e3b74dd9f4c6a723",
+      "0x38f7c939af6038c2d18b0b6c7ddec441108a7f8d",
+      "0x398388c67ba3b6bd0820978efba60ad7524b057c",
+      "0x3aa18b59d8853554a916dda79d7904fb1f5b59a1",
+      "0x3abceea03599f61538851bb680ccb079f91bc09f",
+      "0x3b2c7fe2b1ba1f7bd7d57b89249d73174734284c",
+      "0x3b3a21cc429d91948a1744620d46beadae1ab30e",
+      "0x3b8859006d99d55d28215a5e3a84318f54c02e18",
+      "0x3bc265cd6cdb3a5db6baf4fd5974261cee3a9a9c",
+      "0x3c2b25414c308343d370372c3276e4a585a5e2db",
+      "0x3c4b1986a3dc82822b4be06539ba2f4cba628ba5",
+      "0x3c84c25773981056c03c95856516631a752e1c97",
+      "0x3c8d6d6f816b30ef7627f389a742d10a0fc85eb2",
+      "0x3c94402ebe22f377731e403319089e974225f718",
+      "0x3cb8f764db6197ad64c53a9710cddee49aa18916",
+      "0x3d1f29a32eb171219335b9ccda3768648d96eeb6",
+      "0x3d7d563a2704709214811d5064663f5b476a40f0",
+      "0x3dd26a559e4e23f057dd92325cde116b77a981e0",
+      "0x3e04fbc51adb75418129f6ce2091ae633070564d",
+      "0x3e3b7c9d69c435308f0cf98ef43e96cefe4de6e4",
+      "0x3e7ded8d5854d83d6d27cae6199c28ee6e58227f",
+      "0x400e797861a5b2926c867e62f7cd294651e46a5f",
+      "0x403fe555eb0733998dfd1ac9e8c48d7158952206",
+      "0x40a06b3dca5a5d597e09e1c492a6b3c1d2f7a1c0",
+      "0x40d85b3ed27e57583b12f68999b965b174122127",
+      "0x41dd27a5e6b82d00b70230d2a24c6dacf64005fa",
+      "0x41ff33c0ca19de08f4f836a0f8bb26cd0d8da79d",
+      "0x42028137afa5cb7599f5bb64d7400800d27dbc51",
+      "0x427ac4bc38a1b4405ff9d738cd249b6f26087865",
+      "0x429bf3e6c056e8e0510d295f4b10409a5def4072",
+      "0x438f7a01d1dd8d24da0a6788170475bfc77628fa",
+      "0x43d5dc4cc6cb89664825a29f4c368834ca44bc26",
+      "0x441934b77eb8e15877ee8fafe2b3719e9df7228c",
+      "0x44a1159b925c145e70f746bb3f0f58380553bd21",
+      "0x44b950d1a4fae46f832959be5f9372409c9b2214",
+      "0x450e196d0242af54ceadfbd2f6c0a1a5a093cb13",
+      "0x4561722c74ee2915d6ba772c867373d6cec9eba2",
+      "0x458234b3b0fb52fd16869286f2461babde9770c6",
+      "0x4597de1edba0471ed86340ae740d4afb1a02e075",
+      "0x45d1c222a0dc1e3714e4795876cfbd49d1887017",
+      "0x45df03979ed85aa9ef90855fe32c62423bcbabc4",
+      "0x460a20d648c4601abfcd0c71ec37eb6dfd26d738",
+      "0x4621a1aa8adf2ebb0552f4658c7d37b23361f03f",
+      "0x46d8509bc4272cee21e5b4a0d65a1b73559dc629",
+      "0x46f5a54d3ea26f381901cb833c8f078f861d31d4",
+      "0x46fe42410d6b5347e3cef168808f53bd09d378da",
+      "0x473c960a7a691248543051afb14c713f52d777ca",
+      "0x47552ea66e571c9d03e04ee980ed5530c23bd46f",
+      "0x4756ab0a2cdff7c67a314fce3e4e4651faa1c87b",
+      "0x4779016ebae141e1fa14da68cc763dacd366211f",
+      "0x479bc4c4dbb18db522f7633667ad9cafcd3f64e9",
+      "0x47cbc5d16a2e81c1c2a14c9d20fc53c1fc2da359",
+      "0x483e2c8a682f21fba4e9110ce9ed14f9960f5247",
+      "0x48508504f4d0ef59f393c57acf1d98da1b53d8a7",
+      "0x488f8b1c47d2d3aa544a95afaac3dfe8f80727c7",
+      "0x489b5670f4abd2761bf3799bc1a878a8ec3a4173",
+      "0x4907ac5155a352fbaafdbd4c01fdb2f19de671f4",
+      "0x490dfc1dbded26702737413395ab0a084e57e062",
+      "0x49be5ae4a65466b6e7e95ae8bb2b194dea6006ab",
+      "0x49ce1c438c3602bd7a09c2c320aa87e894367f0e",
+      "0x49e01911bc55488c5c0bfb56c09ebfd8d596e9af",
+      "0x49eb34b58cded5da3d7c664404c9f72eea135f24",
+      "0x4abf8da0ccac975bd47aaca7cbac16368d2b9c82",
+      "0x4b18f9bfe465c9e8eb8e2476462977fadfbd0ef6",
+      "0x4c972e301092538101a182eddd0343b04c95f3c9",
+      "0x4cc15219c5accbb4ee8e881661209fc3f31a95a4",
+      "0x4cc9a5f66a4f3d208f402c43290372e0c54aac33",
+      "0x4cd8d03a398b6f20340a03e7fda8bbb54b29c8a2",
+      "0x4d07bc07f60251423fc3d80a87c734bda1913068",
+      "0x4d234eb9c54d7376c19b0e6789e3d5c0e9dcd901",
+      "0x4d518c62fbad70a11f8a5a5c404035e34af3bb15",
+      "0x4db8fc87bc513a379e904a4415d826e9920bccc3",
+      "0x4e00faec11e124f63d5e2da94c656a1675a8c26c",
+      "0x4e5e1b7396ab7a94622eb7b7a4970bf87cfe2ac2",
+      "0x4ee55f3798eeab18d89b9947a0ca3df8a62c6854",
+      "0x4f1fd7a543618bf26c09f1989b0a061f061129ff",
+      "0x4f600f85f9450ebabb7bda49b307257cddc51f64",
+      "0x4f83e34e73f797778e5fdea15da1c96d631447ff",
+      "0x503e820faf490b79bb12e6fd63aa91d33621ec14",
+      "0x50fc916c9af955fb99f63bbc8b6a7a248105de93",
+      "0x51393c00184b39182f09a8a62b8549642e69a8db",
+      "0x51ce77afdd475df9f7e101c4d5b9415f698b0a46",
+      "0x5284d46712d426a4b281971bca6af2e49f4827f5",
+      "0x52a1a5003a4d8ec83e8d614e3dd214821c358886",
+      "0x52d0ee44e57ca7e2dc53d285fe90991845d5ea16",
+      "0x533747780568e1416ae29324ab2ddf34808675d0",
+      "0x53e55bc7cb3d67ad177c023ce891ad076a9d6177",
+      "0x542bf394731b3cb66402244d9718bb3de70638e4",
+      "0x54d86e557ec0cc6ce3eee75a458cf1b58ea8d31b",
+      "0x5532c7ea18169f71f25e49a672ee42b8ebd5c6db",
+      "0x556633967927a45ccc8a301c1d19856c0347fb01",
+      "0x569872a1575ea8298c4ba9f85a37b912afdacada",
+      "0x56d07125064f77906e572c4a504e9e4150087525",
+      "0x56de6a745cc862819ec5717575e231946e35cd01",
+      "0x56e6eea95be98dde64c3def3bd89da874ce245e9",
+      "0x56f59201605863a2b7ae31820bbd769423760071",
+      "0x5701f4510411b6af3a4b41f8142d0c62a85b0414",
+      "0x5720979070bba3d89bb3e2922fecc8ba0ee09ae2",
+      "0x577595d0c5a19f8a0115b8005fabd2b1c924cde6",
+      "0x57a87672e1ef963bd9dd9fa4ad6e7699878573ff",
+      "0x584840d0362e6fec5110a157cc63a40da81629d7",
+      "0x587f7cfe381c8863ca1402942dc6cad02287bdfc",
+      "0x589bf3eb998b7b4927e77409312641c767d80885",
+      "0x5941921f82bac62c401e4c2e5c39a19daee6463f",
+      "0x5954cf932088a5a98ecd3e9813af2d563980ab6b",
+      "0x597e9131443895bf145cf1fbce7f9318c6bad24c",
+      "0x5ad101ab92cf4eb4accc5901d94bd5ce6f9a1f12",
+      "0x5b7065359a6b6fe34d061b2e5a9bd06f2b5c5e72",
+      "0x5bd795ddf62ed0eb35d50711000184211acdee5c",
+      "0x5d0abc555260e3c786106e623538747f7a1026f4",
+      "0x5d38521f856f371c38f306e75ba0e2e99229439a",
+      "0x5db5f2cb26219237fea0c5a1d84d976d2f54f2a9",
+      "0x5e0a89c9ac4931e5fd971a352561c0bb8dabbb8e",
+      "0x5e3aaa95adf3dcffa55df14baf410f3b71cead1a",
+      "0x5e8110c3bc0a5c3d722ac6bdfa7c999e8d1cdc21",
+      "0x5ed17f57a542c33914eee5a9df257957050cd738",
+      "0x5f5924ea4ff7e2d2cbd3b6038304c4d1aba413a2",
+      "0x5f6c0d897d3c9dd11fa155316e91d804fc1e3e0c",
+      "0x5fd36f6eb64cfdd9a55a49e4ef28e26ce952be9d",
+      "0x5fd620b48428c5749034fca33ba9bfb8616c5758",
+      "0x600cdcb73c3593acc12c74d2ecf13deab37aa310",
+      "0x6020780b5921ee65ecc7f83d6101f50224709e3c",
+      "0x608bd3eb47837d7a1adc51aa7ebe6412a77e3c6b",
+      "0x60e66c65018d745a5551ff9e2d3610eaa1ed9e8a",
+      "0x60e928bdae22ce028c26ba04171e8359af65d7f9",
+      "0x610116cc46fd5a462893561dfe83a0ad8c009f56",
+      "0x611ffd6ed9c716f0ca76c73d2354ed37aec423b3",
+      "0x61a36738c0f836550a5aa564cfeb32ee2abf2bb9",
+      "0x61a66bff022e2cf9005032543acced1c206a835a",
+      "0x62047028002338fe456d92bbf7d25ff66772cc30",
+      "0x62173bf575826f695a7d8dc2afc94f0aedb539b5",
+      "0x621a1971e957d090ba0ae237567de70c1064f60d",
+      "0x6248beae63e9965718d30a8b6b39d59e767b32d7",
+      "0x62e80b643b59e3af4b77ee2fee9ef206e3ce6a57",
+      "0x6354a7b6a53d6140f759f5b8415d0f013b5569bb",
+      "0x63f2b0cafb51e338f20e968061857fd4a969d548",
+      "0x642730a6aa30c2db60d6e631aea0725e696b7621",
+      "0x649f5d754cb99245901014ea83de18d2b4d65b02",
+      "0x64e2459c7e212cb0e65455b38aaf41d0afb50439",
+      "0x6559c3fe7b9b91296b9426df28db078e04a87654",
+      "0x6596b5511310a979a9e72d496087d0d4c483e88e",
+      "0x659d457c3a5ae1738827c8d9fb021ac66b7409bb",
+      "0x661e99e62e4ead62f690fd4a164f7a0ff817b45e",
+      "0x66a52431a23f0b14e7eeb4a677e45c92a4d2a9ba",
+      "0x66f888c22c39a3b3c7ce53ee7fc70f3cdb4e53d6",
+      "0x670665752d297936dc1cc11c144dc6240d0aa382",
+      "0x6718e114e395a010700c2c5df37b0e6210af41ba",
+      "0x67b8c8cc218bffe85ac88ab908049dac7254729c",
+      "0x681d7946e0280c6ec6562c7ce662e90812354cbf",
+      "0x685c765887a0b402ecd0d4515d3196d184aa9e18",
+      "0x686f394b62facdd0e02648e5d077779d16ff1c9a",
+      "0x687972601f0142fda46e5654030d9e01683a8631",
+      "0x68b13639ffd5a0af572127abd0e5622331a05fae",
+      "0x68f8713b662d61da7d0d3e7d0e000733afd3422c",
+      "0x6931c435ae7da1dd3c2c6ac46e7c65710be732bd",
+      "0x6aab3a17e615af80a0880872f52b0297c0b1dcc6",
+      "0x6b0d3f98edeef986eac19f25f3c2c6365f7edbd9",
+      "0x6b3f26b1d0de8ae24bf6a1b9a132ea7e914ba9cf",
+      "0x6b545ada013d0b9cd5725efc4b7b37537ca0eadd",
+      "0x6b809c6cf9160da95581d86b5aa5ddd70c9fb4c0",
+      "0x6beeb866ab5ce3b49f8267c203687e21f5c6e466",
+      "0x6c6dbeea6549ad42c68175c8c67b4b87ccd8fb55",
+      "0x6c930be4219ebdb553172a04a3dfcc82f617e69c",
+      "0x6cfb9801b3e0e1f628d39aff306537ad5d907e20",
+      "0x6d0186ee2a018bbb3cbb3ef49cbff8c783ab0ab1",
+      "0x6de98a686f1ab6604649e6de9126d32bb581d1c1",
+      "0x6e3371921faea811e3fdcdc2d48ba93432819d57",
+      "0x6e9aae003e8daa08b3791c1ecbb500f4bd37d9d7",
+      "0x6ec0b132a0a2a50305caed90977bed982e028ee3",
+      "0x6ed8c1cacf562ba0afc742d4b0557a9853e53693",
+      "0x6edc46108419c8e2ecde273d6aa31a39a33f5371",
+      "0x6f108efafd26dac13d06ad7fc327e123cc18de4a",
+      "0x6f77480bb054c59daf29d2a6eae69bcc2e943a4a",
+      "0x6fd9cdaf9c562e0042b0487e2d776f15c601f0d5",
+      "0x700c81fe418682abf4fc5041dac71d4625199ea2",
+      "0x70c3c7bf885fd1e0113da9025c309df6929b3898",
+      "0x70dbe3f8ab734aace8d7cd159814afe9e589ba79",
+      "0x71352f35cf1d7cd7adbfa949da5479cff0d3f10d",
+      "0x71649b43b93f276a32900f373e5342c90d41f463",
+      "0x7205a7509529c8d6c43fcd57a9ebc6234e40c850",
+      "0x72809a9d5a598e00173448c7f2d9b28dea2b68fa",
+      "0x728cb7a9a641a8ed672d230f2015671e44eee459",
+      "0x73c6dfb61ff6706a3e2ff8e9349da0958d0b6ce7",
+      "0x7430deb8b88d25fc4dd6dad4d8619dbef4c43af2",
+      "0x74663097d40aef37823cd8c68dce4b6babaf51d3",
+      "0x7502ac7b92ea3cb440b41f247e252e8d1a879a2d",
+      "0x761c3d2c65d4bf54734e8231c9f1c2eee97caa03",
+      "0x765228f163bf1e199ac1677b3d485016b032957c",
+      "0x76b0dcf690b2cbf67344285d8e749d96878f8c77",
+      "0x772a5cfb7595d2943f4778972deefd5e72688ba4",
+      "0x7899b28eecb47adad75d8a6f5bd0e605783ef0b4",
+      "0x79c041b5e782e1f83d907c38336e3c4bfc3bddc5",
+      "0x7a1bf929cbf37ca18ec48ba2e03a8e8a48e5ae68",
+      "0x7ae6c6c97f253560b1718a1881eb4216d2ea665b",
+      "0x7b282934af228ce5995d60205923f45c84d366f0",
+      "0x7b691dc132ee93856f74f41b76634e38aa0515a4",
+      "0x7b6c4dd77d7ec748d4c014f279d3254659eb62c6",
+      "0x7b7ab8e84e44e1d864679d18145b4a926b9ea902",
+      "0x7b7db77a5b5496cfd11f1246956890c35db76172",
+      "0x7bb03fc61691c007ff9ed0fb2bae4f21b5c9c4dd",
+      "0x7bb86e34379ac7320aaebeab6ccc6c142ede6fee",
+      "0x7bbc404c6f828767e8e7bc924bbcab5d87cd9367",
+      "0x7bc1c6ac57c180d23f06a9873ac833039ac0cc31",
+      "0x7bdcd262d2bc6ee9dacb47a0b361d332c99c7e37",
+      "0x7be93101958c3c1b6a8475ce2f87c371ed849ce4",
+      "0x7bf5cb6c38f5969bd2da7889aedbb3882cbd65f8",
+      "0x7c321381e35e7b7b9642dd4586d9baef4e703b86",
+      "0x7c8113e60c3d5467c018108f3838d7cecd9c558f",
+      "0x7cee3a6c2e1675682f6deb620c3c7def68977318",
+      "0x7d742ce6ff0819e5736e05979fb77a3d4c83d6bc",
+      "0x7d8fae10c6a13176259e825d63018c7478f4d6cb",
+      "0x7df81d67a3d7f6ae6eeef2af9f82235f68b2e6e7",
+      "0x7e409b423d76e7cd169a1a0cdf8b56c9b0664efa",
+      "0x7ebca91d7caebe8c8259976550b816e6df9b28c8",
+      "0x7ed99bd0462ce3ec946fb6e1a7fdea7c98102992",
+      "0x7f7ec99a5ebcfeda8d07b1490f220fa49f571f66",
+      "0x7ff6256f203b8968b857e366b0d4c0047a7cf6ae",
+      "0x801a5d3e4c77a71eec26d2af1ce0725d7dfc260b",
+      "0x80a861df202ed2c894f48bc02ba960f65c70a36b",
+      "0x8107fd03bbfbe60d97015f717523d010ea3a69b9",
+      "0x8187bf2a91366f616db5b3a7c1b046a0a6edfbe2",
+      "0x81b3db31a9a181e03168067b82359690e10fd93f",
+      "0x81fffc14f61482a9d8eadffebcf1830083a82437",
+      "0x82afbb374d88c88498beaca2f2d9eaab47a7f06e",
+      "0x82b66f0e11a651b747b011586a741bab29a439e3",
+      "0x8325b2493be264df4d9e2559fbd367b23fde0d98",
+      "0x833019a9ae889b97d5545f19eb6be8233cb95146",
+      "0x83a63888853ab0906ad9d7b40e8dea9d6e9ad9d5",
+      "0x83bb091315758031a799ac408e667011a48f7d7a",
+      "0x84a03f5359dde6c85f085cf82d63279faf883bf8",
+      "0x84bc0e09689eded570bd2c03a698b2f0687d9470",
+      "0x84dbb7103982e3617704a2ed7d5b39691952aeeb",
+      "0x84dcc1e88da7865d298d5dc7263f4683c0579c02",
+      "0x84f5aaf0b83d6b8a51234aad793a6d6267954baf",
+      "0x85008db00323da5f22ef3efa7a34a0965c205c5e",
+      "0x851129f5ec6c956ff128473bbb294c52e7424a6b",
+      "0x8583d89d921e2bfc3b159dcf4384960a63fa623d",
+      "0x85c4e95b5bc3597bb234701c378f9e46c0d125e7",
+      "0x863de1137314ff283c2665b42022ec9e5e19d143",
+      "0x86d9efa58510a0473b92d80eddc10a20a5aaa4b7",
+      "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
+      "0x87dc8c716e42753558856dcc39f105a60ebab9f8",
+      "0x895f02f17f92695300788b91522b6a749b71f292",
+      "0x89aa57c8986dbcb790a302673208e20f175b5b4e",
+      "0x89af75dd5a6b63c3460aee1b60cafe83cb43e481",
+      "0x89f381ec5a5ccbb28e390f16be7640bcf179a4ed",
+      "0x8a97bb91438f5319a30fec36fcd91333df8c15d2",
+      "0x8b2a07db7d1f808ac0b0beecc97a371f223a73f9",
+      "0x8b3b5e4f9178da505ea60563fa758e665e32b5bd",
+      "0x8b58dee4a0de140dfc1e10af96f1a2c866b75a64",
+      "0x8b74b7fcbdb143ca622be660ce08244f160a4a05",
+      "0x8ba9dbc3a851f9563319dd8e12b128d48257bfae",
+      "0x8be84c4dc5714f97327aca1ebd8ec7a056777066",
+      "0x8d0bcccec6df495671f419546beff575830aa6f9",
+      "0x8d3a712972ace02ae0d7729200f5d83082d14098",
+      "0x8d836ee243bdcd73bba8533a3493f2d1bcacd8fd",
+      "0x8dbde24a672c2426c8ef8bbb135749490dad35d3",
+      "0x8dd57afdeda69da03c8c6f96e5ab29d10b04291e",
+      "0x8e0e51b52f42fc146d2a72b0e0702ac40e583422",
+      "0x8e1a7b34d19b66664bc9c378ee6e6dcfdf85feab",
+      "0x8e3995414fe46f3be4a10924144eb6e48a3d0e47",
+      "0x8eb7197ad1119b7b4919a9a4bd36f8c3a06f202b",
+      "0x8ebbbed897bd3b6046299523e9a53b5b2117670d",
+      "0x8eed10083c06e739e8e8b0dfd5b1b1b888bc011e",
+      "0x8fba2c29715c41dd87e781c23373aa1e0549d08a",
+      "0x8fbc114a7f2cf6c673ff0b1afab557c7e6b08795",
+      "0x8fcca3fb89eb483f281d7427918bd5ed6fec1502",
+      "0x8fd382d531ab21013dc67429696cc735defaeecf",
+      "0x902a50d98cb63ad76c4a7c28dfa1aaa5b7a1302a",
+      "0x903c56b56134ef695d59f91d9f102f98c5a7e732",
+      "0x90f6937e92e80dbad3fa69abc4c424bbc48d7f6a",
+      "0x911ac5b9f944e02b697d1dd988c66c1097a31cc5",
+      "0x914d546992703330cb8078e6bbeac8942dba031b",
+      "0x9185451eb1c58c06f098186aa80b37bea87b9abd",
+      "0x919485afee4c2471fe4d054acbd1e9060462cc43",
+      "0x91b0b01f781013329bf03893ad1d00b76b91a559",
+      "0x91d1de800b2883720a3350e7dac171d21b90087a",
+      "0x922e7071f9e3df2f725866bd660e8826189dc018",
+      "0x92672c80d36dcd08172aa1e51dface0f20b70f9a",
+      "0x93b8426ba1a1f4749d6246b2f1c77d34e107d365",
+      "0x9459ab1401965fda9414538aae708038cafde52b",
+      "0x9476be5e8fe5481b6a3064c86c6a022f4d16f379",
+      "0x94d96eb0b0727758eafcbd3d05fd8df779857b13",
+      "0x9533dcd3a11f8effdbb041836dbf1876a825efba",
+      "0x95a859ad1d43673e5d669388dce93114493b9b79",
+      "0x95c78b3cc17877a41686b8dcb15457b61adc4436",
+      "0x95fe977531c52f718be7a4db92aff64cd8e6693d",
+      "0x96f9ad07704733301dc74a755bfd1d46c93d4ec7",
+      "0x97cdd55f93022cff5a9ea329cde3fa5a13e31d85",
+      "0x9803482f4753fd78f8f2032eb3a3f15d3ebef634",
+      "0x985c0516200c5a2c76dde58917ce2c852afde5d2",
+      "0x986dfd22e52ebc73254ecd0f29d1f4e5771ef636",
+      "0x9887b8fe82793b25741358dae963ff6c23c7dfa7",
+      "0x9901f014fdc685f9c13e8b0b1fade7c9da3d3b4f",
+      "0x9953c8c75850f8e0057e03bdd177cd1c1422cc33",
+      "0x9a49fef272eac626aee567292bcc23b66589e04b",
+      "0x9a5286417900e3856accf48d8489fe76f8538e39",
+      "0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d",
+      "0x9af27dac2fb639d6e8faca2f0b1b194aa14c9d81",
+      "0x9b6b4fa465fc1417a865baa34a1d740c7767ed6e",
+      "0x9bb59d9335eefce843bb8881c572f213a99012c4",
+      "0x9bf14a0f78fb80ce46b024fe07b3251056ee9f68",
+      "0x9c2881b577d551bf05aa0c9fd279bba5c0596944",
+      "0x9c3762d6e02928998a94cf17d562db61f37ba9ef",
+      "0x9c4457956c57ef0b506a766aaaba50445008b660",
+      "0x9c4c93c4f56aee2e55b27f537de69d016538b457",
+      "0x9c55770b98d9ec366cdd6ccdfd4e605d3efe3f1b",
+      "0x9c69abe1d291f363db0b5914580b21216d69ddaa",
+      "0x9c95df82fe2f55f522cee739cefb08f528dded41",
+      "0x9caa46294957f8a6e7e4db01575a2a2f25a22ccd",
+      "0x9cb990f1862568a63d8601efeebe0304225c32f2",
+      "0x9d0bc90dd5375604a576f70013bff9abdbbe85bd",
+      "0x9d0fceb2a5ec8b8baa804608f7a91cd3daf65b69",
+      "0x9d91dcd1770266029191a9b0e88c2d5f285406fb",
+      "0x9dbf36c7531302d414e4290f3d76c101217ce157",
+      "0x9df55a3152e6ef58cff698997336324fe3cc2390",
+      "0x9e45205e317569962e976d605a70a9d212f517ac",
+      "0x9e8df901b9f042dc38770da7a681992b4d0085d2",
+      "0x9f3ebaa979b1bf70c7a2f7ffe7684d69def1c35a",
+      "0x9f95914562a8f0f3e6cb948185e5ef615d6c87a0",
+      "0x9fbc6f2987423dba45ca4b8710c393ee4308bddf",
+      "0x9fe8f73aee4ebe8564c853322997f850e735c3fe",
+      "0xa00348417e1156394fb6bedb8b742f9881196377",
+      "0xa077c80706104ef76c85f776c96b4abe2f5a20e0",
+      "0xa079df1d147f72ecc9b7689fa26290810c1ced58",
+      "0xa0aa204eeced23c33ac08987affcd5edee040f46",
+      "0xa0bfb99c00a4d9148470e1b397f61c1cf7c396c0",
+      "0xa16f15834283f7327ae93a5bea33b0be602afdca",
+      "0xa17954269bfdd31bf2a5122418aa7af8b060846c",
+      "0xa180ec3df7bfd1f6ee61f06e2e7ac11d4e8df3b2",
+      "0xa1a0d65a7ab5185e328b0c50407f80997aff8eb1",
+      "0xa2378f5b935e4c79f3bacd3ebcd20721d38b80af",
+      "0xa360034dbc4430a68007f10cae034aadb4fb5967",
+      "0xa38a9c5a190ab445b14788eef696804987e2604f",
+      "0xa39a38fbb98ad026c5a6b126d74d891e1be51246",
+      "0xa3b18dc3b18c67f0446c59a5a17bffded513e22f",
+      "0xa4be9efe18099ccd6ba4b2d6379a249b132150ad",
+      "0xa53bf74ccb502c32bb436f7575c125b5777fc3fe",
+      "0xa54fdf7e41e89c43218a9ac7abdec530e53bed41",
+      "0xa55b88c4bae04e9325dc4922090e1829799c9460",
+      "0xa57a3c9716cc07c734d4ef30c0cd161883fb8dff",
+      "0xa6c99a0222f6c33c6d5cc172f709647ede30ebba",
+      "0xa75cb55885d667de343b241d26268ef45981895e",
+      "0xa7b54199bcebf0b74a0c756043ebc0df09a3eafe",
+      "0xa8cd0af4502c3b323cfb2dc1e9b5b46017525c0b",
+      "0xa98d9850a586d5986b9cd260033d6928011c303f",
+      "0xa9993d6952df7f35103b713b4926b838302e0c61",
+      "0xa9d3a341b158fa30f9aa089057f3f06613dd4202",
+      "0xaa52d75399af890271cecab19e2afd58e62dba2d",
+      "0xaabbe0a62b8a1d0018416ed92ba07c102ed94d8e",
+      "0xab4719792ef76e797f80ab0d0b6314e606d904a0",
+      "0xab77e969d37e473e5c813f21f0e69d3776d1cd04",
+      "0xab8cf304236372116a2aa456f5e561bcf504fc94",
+      "0xace193c32b0898774da835e512918e36f4a093e8",
+      "0xad92973043c676c7a1093464aa2bd8b2936fa30f",
+      "0xae4a466133a41360e1e009b0f5f177aeb2b12a70",
+      "0xaed9566bc34cbaad8f64956a94fd0b38109cf023",
+      "0xaee1b9529a3d2fef64905bcb330d9e20486fa478",
+      "0xaf45edfa3f5259b540828b2c632cf35c684d413a",
+      "0xaf7a780fdcd69f7b31de2cec395c4d999d6ae08e",
+      "0xaf83d2c073cad10759c6829479e99b2c5265af79",
+      "0xb00042109290d8dd4693ed7bd6a8da08d9028338",
+      "0xb006ec5ecd30959d6d71bd6852756b6afd95289f",
+      "0xb0335ce3c772a76972902b74ebb00b5a84d788e6",
+      "0xb033e9e174e8db293eb50cacd9afb4a3d479fb4f",
+      "0xb042fcdafc7ae3543cdabad1c6d88ce0acab37de",
+      "0xb09fd623a3454582b18a0e5aad9eb62b778e722c",
+      "0xb25963576fe000069d50e159de82bc9cd0da00d8",
+      "0xb3831b51a40df4c591197261fa48cc7f8f58f7b9",
+      "0xb3a47f5fae1ba652ce3e0e9f25b3cb9ad69fa700",
+      "0xb3b8f70fed65566603def3afe73da0c95fa4a815",
+      "0xb3f71b4ad2330c2749c2ad83d0740383a2bf09ce",
+      "0xb412326d42c1fa00846c44eaae8fd2f6f0a53026",
+      "0xb44c44c424fb858a1721e3c9462af3c9a7fa73ca",
+      "0xb479410086a5d696bfb8d3307869b1f14f2a568a",
+      "0xb5234578043997915de3cac951166b6c9f600d72",
+      "0xb5b161a6c73f42a52ac3e5e1eb1d59cd51b17b5c",
+      "0xb5b56067a143b1504cbff053eb04780324e6fdba",
+      "0xb60ecf6d543bf3e911a147b97135c16cbbe7e276",
+      "0xb6331dcb5304d075b0918cc3b591ca706b89ceff",
+      "0xb65a06132f47e3ccc74c797936f28c53c6283aa3",
+      "0xb6aedbdd7e0ef64970fccad80c5af0bec863dfff",
+      "0xb6fd7b6d0c2be285dfa8bcd6836ccc90dc831753",
+      "0xb79f8aaf083079c69db10713ca132e5779258197",
+      "0xb8834f044070ead7ff1dce6b5d1218dc375ddee3",
+      "0xb90d7d5ae9937113baefe2f6fff03dcc4b1e0082",
+      "0xb9133c17ec0bc7f55e0924e65dc8697acca0f8f3",
+      "0xb9eab70c0014c0d5aeef913b353845a0e7c9e15c",
+      "0xba15f81ef250897efc9fa749ccf1f3845915dd89",
+      "0xba1c5fcca264cbdeba42e7e005e15a778a8e6d3b",
+      "0xba391abf47672387dd438fee5734d926e46db068",
+      "0xba48bcd93e1f59194595fb49f65f1e4afa7d90dc",
+      "0xba74e7851fe1f8469b11256b30ed92d1e4707e43",
+      "0xbac1e3c7bb14e0551ee744fcb943f9fd7007879f",
+      "0xbadd4b3ff640792d30726c47d7571e89b61ceae6",
+      "0xbb388854299c4357823f56867a622c2087fdfb69",
+      "0xbbacfd6760a2a9e51577ce3790b44fbb9a398e02",
+      "0xbbd0163ca34568cd6d76a448ba64487e329c8487",
+      "0xbc1745b44ebd866c88b9756362822f46e2150250",
+      "0xbc1775a8bc4dda029c04bc4976c5612430f6289a",
+      "0xbc261add8607fdd7bd3c268b49ad25263b0b1430",
+      "0xbc30814eb5dcbb2f5b23e9b880153ba747aaee94",
+      "0xbc7c235b50568f61a319515e10df61060ab8aa1b",
+      "0xbc94e6788bfbba44f292668d63e97677384572de",
+      "0xbca775c3da239fdfa1fd7323bac6709525837ee5",
+      "0xbcd3a267429303f121dec8af7bc19bb33dfdcc14",
+      "0xbceac69ee683514b2cf5ba61b021644c263608ce",
+      "0xbe3949f2ec6b28c3bf6b2c89625024e651231d2b",
+      "0xbefb3e1ac3ec32a2ef2038a12385cea61d6c826f",
+      "0xbf0199bdaab5efb5c76d240e9864399ef4710439",
+      "0xbf3306d021db7fb7f166af68f1078b7ba3a63900",
+      "0xbfc4e43fc469dfdf35675a33bcaf08a96d55be0a",
+      "0xbfe5815ec8f20ce79e7cb23c8a27cc12acf93c80",
+      "0xc04b232f3a523e6645515f1f458046fe4d4ecc1c",
+      "0xc0644a5733fe4be4ddf048ddab02c341ebafff89",
+      "0xc087fc708bb08cad6eda54d46914f74814cc124d",
+      "0xc11e866a8d7f8b09b7a5b0ad81150108fecb40d6",
+      "0xc1b119c81e481b2bc87106627a0927ea2265e717",
+      "0xc1e53d87743a6c76fc1ffd6ae2edaee124b90bcc",
+      "0xc20d204d0be881b283f08b80b4a779fe735138a1",
+      "0xc20efe3d4f6e38639901091868db9204f3a2224b",
+      "0xc21377501d009e9c38883e84b0265856ab0bf12b",
+      "0xc2e3a4aece5f8e66d60915749ed93c0d4d70fbbe",
+      "0xc3e2b9f310e28fd86ecea63f7d6339780bacd23c",
+      "0xc40cfd1e505b7c1324d5a3334b18925acdfc1191",
+      "0xc417751d89fc02b6375d3cd5d91c4f81f15c3ca6",
+      "0xc4bd94a959a0716bc78ffaeac453338e485bbcec",
+      "0xc51c932602b6fa393ca3372212524c2b22893308",
+      "0xc561839399a218283a3e8d07f446241f0cf5efc9",
+      "0xc5acceaebb6c1b474909239a7a9254b254fa2f3d",
+      "0xc60aa3b8fc93d61a1d39fae4ded87961c9b865b0",
+      "0xc6555ecddf82b8a08521fb56af6f6a9fc3388467",
+      "0xc6fa30904d8e28c834abb913ab9915c5d97e10f8",
+      "0xc711c520ceada1554bc0bdbd2126bc4cf51c092e",
+      "0xc7f6815342bac823b1b0e15b6ba60062034aef99",
+      "0xc815c1bc8b3728d416a5259af750bb8e6728d9d0",
+      "0xc818414209a20b328bf88f17da669aae3cf09fff",
+      "0xc82e278d6adb4e4e12c7782fd63ffdeadc9791f8",
+      "0xc8649c1893aded2f12472b44a9aaa911b6dc97df",
+      "0xc88187b2a30fd89413957f72b5505145009a82b5",
+      "0xc9bcb35a56b4583cb858dbd69681dfe44f69158c",
+      "0xca5e57e1f7d3ec196de6d2bb06ebec760ddbcb39",
+      "0xca6678a5fd2e6a25a5c0a022368ccde773acc18b",
+      "0xcaef82bab6f2ddf7dd54bc1a1fbe231e8ee1f3eb",
+      "0xcafefcaa41aa2e6a3fcd3937f61c2555fbc5ab1f",
+      "0xcb1cfb0162dd67cc35f03c6887713ad1ed92cad2",
+      "0xcb6b9ee55cb3e71db3e18a837907d1391eb4a565",
+      "0xcb8dfb328bef1ba8c296939e12f4edaba0499d03",
+      "0xcbb58a83fa4aedde642212d873f7878f52b61b71",
+      "0xcbbd47641474ddda965cb576d79d9851c0dc6440",
+      "0xcd399f6a82597984c77f20b66f15f2a3d6fbbb38",
+      "0xce4fd9d17556a6debfe10eaef042c72916710170",
+      "0xcea10f02497fdba9f9f3c867b653d7174d53dc6f",
+      "0xd056e50848e1691e5e66a23294624f3202d5fc80",
+      "0xd0669f734129b165492bae3c9b2a154a7d92f8ad",
+      "0xd0b77700f112e7340d85f9ecea2a866cf70896d3",
+      "0xd0d71787cfcbf4d9670982263653e9c3ae004aa4",
+      "0xd12ee757df60413db45c0d8741114010ebf00231",
+      "0xd22b3b50cba594206392a4ec57e51d948e926880",
+      "0xd2678dc3b152a54900f28b0e849afe2049df9dc6",
+      "0xd2c6ecebd6c281f754a5e7767cfe158ee842bdf2",
+      "0xd3e828966d06e42b67f1357becf35ab6187f9b3b",
+      "0xd413c12c44c7945dad4819d1bd0c946286511416",
+      "0xd4e35e278f93e963f0c054e407e2a6879dde42ed",
+      "0xd4f0cf19c00730cf3276a8291a133a1388dce73c",
+      "0xd523b634e73ae5e129bc5f37abda3b51f24c0aa4",
+      "0xd5d8bac5138e71f4fb7421d313e1206d05ecb096",
+      "0xd5dbc57fc2d22d4436be35ad80fc4e096c935aa9",
+      "0xd60bb815c0bdd3e020e317e63fafe33732312ed4",
+      "0xd60bc2e28ccd342a31bec86dcbc59f186e3ad63b",
+      "0xd61068efe9bdd4c44825b888cadc016eb17f4c9a",
+      "0xd67ff57d117d31a9447b4ed1e9bf0a4997423ac0",
+      "0xd6b2232805e4af7c5a7125e1a41b37d7b9cd69ed",
+      "0xd6edcee11dec9dc9fff41fe178d1f124d1b983ae",
+      "0xd7699ea71c591992b994fb140259a94f8fe29969",
+      "0xd7eee517f63e71d87333d6fec881756d8e44f52f",
+      "0xd8190d876a9e4461e9a758bee59709e4c28e4234",
+      "0xd8e219ba8da3eced6f35675fe0437ad165eb5dae",
+      "0xd9011fe14727da8f4ceee1644d0b3b300c1981dd",
+      "0xd902b66b21d4341e090cb27e9df176e41a026992",
+      "0xd972186fc22d11ed29d065f2dd977e28b8b328ad",
+      "0xd9fcf99e5a0a0c95adf527fea7b23fb9ac6efd81",
+      "0xda00d7e244079c5041781717400ee86c7f3a68b5",
+      "0xda9ee6857d3af7a3c17a5984ce801efb0177cd4e",
+      "0xdbb9b3616f733e19278d1ca6f3207a8344b5ed8d",
+      "0xdbca42895275c7f9d03a15dd9408cf9709af17ca",
+      "0xdd595b1dd789b3fd9d1a6d6d88448917a0e3b170",
+      "0xdefe23b9f2631280df4b18e43beef527150e5432",
+      "0xdf3ac12774a7d934eb01c41504035e06271f944c",
+      "0xdfbd41ea2c4f1b0e5b65af86ffd7859259e15efa",
+      "0xdfd15fd52646fa4a25d64e1280412297644a1809",
+      "0xdfea5e73e5dfdbfc2ae8ec9365ca46d6e68b35d3",
+      "0xe015711b7e2c0594185f10bda7caff00fc524525",
+      "0xe03307316acd5a32557d887ab91eccb82d7bcc0e",
+      "0xe0e20652223e6013f89cadaffe9df7eaebe2ba3a",
+      "0xe136cb34b9da9a59f5b635de881831cf9bcec10d",
+      "0xe1434a06e6bfc5e6bc03e8d7a93c6225a6eccd10",
+      "0xe1ccb4f275429d14a66ee47b86840b0a70eb5df5",
+      "0xe214c32ee0981bd8e949fab910243695bf1a776e",
+      "0xe2198b0b4c9bbe4ec97fb9a905508d390633a7bd",
+      "0xe2591717346301ad3a93d22bc065878fc1055891",
+      "0xe2db7f5af0bca6711a6171f3e1651720a7d3c044",
+      "0xe30715dc2cafd0ece64dbd4bfc86d0e467c9da7e",
+      "0xe4ed742753ab70cbd586fb5a6180508dd3977c73",
+      "0xe5d8a5f60002c914d2cb46e189a04e6ed081da20",
+      "0xe657426ddbd36068c5c758e8b9c441a205f5175f",
+      "0xe692d6b70f5c261166817019a535756712458837",
+      "0xe6f826ccce4f5a1d5de2eb22e4eb04fe40c8d26c",
+      "0xe7058033673ae78dbc2635240da35322ca0be17a",
+      "0xe83cc0c82d009a1c349c1a89feaadfcee9655e8f",
+      "0xe91aad86164d65260dbf4db42e590232a1255145",
+      "0xe95025824439195044a49d98c86375939136eeee",
+      "0xe9616fdf9507c8dbe96b2170adf50f2ca57dda91",
+      "0xe96be687fdf9fc7482f865a2ab88a43a26cd3394",
+      "0xe97b985d5761f963d1d5a7af8068a936d9784da5",
+      "0xe9a514e951414daca037d59e7ba3bdd3a9d36751",
+      "0xe9e9af12b4b924fd047b3639f1d0f8f7ae944ef4",
+      "0xea2500f16d2c3fe3daeff19fec0d6cfdd9280edc",
+      "0xea4602cd633dbc7a7e2b3211b20967599a55065a",
+      "0xea60f52135f14ae14c881a80e5b60ba5d584f4f6",
+      "0xeae75f2853512b109913507e9aa4e629d9ad7c03",
+      "0xeb3b8cdcaba20cb72d896f1b9d7abacd1cf14924",
+      "0xebad2d5bfc14e043033f0354c346aee4eda01775",
+      "0xebe77d31b78d1cda5d4a8f7262835adeb9844e5b",
+      "0xec14fd88595cffbcc89ec987947a69549adcafbb",
+      "0xec235f0d4eb8534d8375ba28eb66f44d4c98257c",
+      "0xec4566176dd66767e73f8b129a173ba4e135a36a",
+      "0xec48bea08820e1bbf968e36a67b650103c03786b",
+      "0xed458c68530c979eb677fa1f32b6cae463444df8",
+      "0xee00ba338c59557141789b127927a55f5cc5cea1",
+      "0xee613b3fc183ee44f9da9c05f53e2da107e3debf",
+      "0xeec159f6c83e806ac8fd855701e82c8ac32bf3ef",
+      "0xeeee33683608e3765bc94efb4c93c2fdcb839989",
+      "0xef1c882d8c20f111e05a6c1341f4b0d168de56ae",
+      "0xef47fd2a14a9167d117ef2718d6f25983639482d",
+      "0xef6081051911684bcffeb1110d57f00d6f0ac2a7",
+      "0xf0141f4beeb88cdc424f2dc436785548071121bc",
+      "0xf02f1afab02432f1be4df881b7253c0c27e7ff23",
+      "0xf075a693f9c65b637e18454fa4762c491a504f84",
+      "0xf0beb10f5c8540816ca84206704a6ba3c50bed7d",
+      "0xf0e881aa5f929c83e37819658888e6f569ff0190",
+      "0xf1494c310a4207bfbe5cafd36763232976dab05e",
+      "0xf2050b1fbe114792da1ece89d8978e3ca30c3583",
+      "0xf2edeb57f00f4c87627623f370476ba11548bd7d",
+      "0xf3452a5cfa341c9bfad4e6145c51bb63c482bd3c",
+      "0xf35267a28b6ea522783e5a2d6adff905e1aeec05",
+      "0xf38ad6551a40ca2906eeaf4c7e93bc99f511ef3f",
+      "0xf397d778a1e36d4513bca5268156133997cb3adf",
+      "0xf429756c9280996afee888df4f4bab0c48fc7294",
+      "0xf44ec3108e8d3339f50f92c74670b202e450e7f7",
+      "0xf53164b330abf96759c44876085dc96ac7254e8b",
+      "0xf55068698683e69ed7c1d684d8630da597d30321",
+      "0xf5f232033c51448e17ced9f2ff7c91b78b620234",
+      "0xf615f699d1f77b45bb23e6aa351b879f34413e30",
+      "0xf61e89f209708fe62f276b8452d625e7c2912adc",
+      "0xf65008de3569630f9d370525cdfcd118ea81dcbf",
+      "0xf66837b123be0b9af30fc596c6427036e52a32f4",
+      "0xf6734071f884c505806aa9df5fd5f9c1bba438ff",
+      "0xf6a9216c2ffd3c645cc9dd218763643f4b4a87e7",
+      "0xf6ff7c55508b5fad7bafea1a03b04e81e31242f7",
+      "0xf78587460379a4ef214bcd18d00bc5dd33d5be35",
+      "0xf792176896d72675bcaaa7f5409e57f833d8e826",
+      "0xf7cef9a8cfb3674b609f168158c5acd5546ef90c",
+      "0xf8081aa8a3931dc01947fc5cdb234aa7626d8de3",
+      "0xf828bd7dbaf7b95a575dfa63c3d4a9171f3699fc",
+      "0xf8638e78e43226b7e39ce9f1a6a9c88be1accc15",
+      "0xf86762d6975fc3fd22712c7e8580286d70347a5d",
+      "0xf88a8c82228425930e48fa8385954ceab0477ff4",
+      "0xf9373399908319ab5c622e82b5ac08cc36788c92",
+      "0xf95f87d86b8de7e5638f1006b8246cca6b36e9f2",
+      "0xf9d1fbd5b9c52569b2ea3d4a8da444cecacef933",
+      "0xf9e747eec81f8adc0ac956909a42385664232ea5",
+      "0xf9f2ac17d3a6dd087dcec276c04836fa4878751e",
+      "0xfa1baa8a8e18f8fd8941a661082bf68ec2bd8e57",
+      "0xfab900c28b2d90726df8d5bf47fe9d1c6d0d64a7",
+      "0xfaeaf4e070460283f624ae2ff9539b53ff18c101",
+      "0xfc3032a2e58b61264c89ad6efb9a7f0148ba2973",
+      "0xfcea4a0066c808f86bb7b51d254b53bc1e1e1c4b",
+      "0xfcfe7b9756da0d7ca1837e3281910d9e67ead420",
+      "0xfd08d2b759fc7f017b455ae961c675b18b881e7a",
+      "0xfd33661dc9b2320aced82e992abb9fe39fb5689e",
+      "0xfd3f5bee57b7ee729ebb63c99e25486f7232a8bd",
+      "0xfd6c55670bd18398e43918467fc53131813101a2",
+      "0xfdb0483f39a87a7adf1111fe87f4bda4750cca08",
+      "0xfe03dda29766a5b6141d87586ecfe091c18b1437",
+      "0xfe9866450d9657e78512e989876e6c3e3cd521e0",
+      "0xfea7a61d83143d290bb38aa206a7dc7841d328aa",
+      "0xff0072f85321ae8e3333c3c7c7421e4b2056a047",
+      "0xff2e05978bf56fe6deb04aa3fc0ba978a4bb315e",
+      "0xfffa7da7e0957f332aa11f6c044e90ed96bef24d"
+    ]
+  },
+  "near_miss_rescan_meta": {
+    "generated_at": "2026-07-07T09:31:28.584867+00:00",
+    "pipeline": "analysis/rescan_near_miss.py",
+    "definition": "stage-3 pool (positive full & pregame ROI both periods, BEFORE bot/stake filters) at relaxed n>=30 floor, minus the 7 main-list wallets",
+    "n_candidates_screened": 22,
+    "relaxed_funnel": {
+      "1_active_both_periods_n>=30": 125,
+      "2_positive_full_roi_both": 37,
+      "3_positive_pregame_roi_both": 29,
+      "4_not_bot_shaped": 12,
+      "5_median_notional>=20": 8
+    },
+    "convincing_pass_definition": "verdict OK AND lifetime PnL >= $1,000 AND (current value > $1,000 OR traded on/after 2026-06-01)",
+    "tier": "SECOND-TIER: nothing here is promoted into the main list; user decides"
+  },
+  "near_miss_candidates": [
+    {
+      "wallet": "0x2005d16a84ceefa912d4e380cd32e7ff827875ea",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 115,
+          "roi_pregame": 0.1764,
+          "roi_full": 0.0313
+        },
+        "2026": {
+          "n_markets_pregame": 140,
+          "roi_pregame": 0.1005,
+          "roi_full": 0.0107
+        }
+      },
+      "total_profit_full": 253552.8,
+      "failed_strict_criteria": [
+        "criterion 4 (median_inter_trade_seconds>=60s): 2s (short 58s)",
+        "criterion 5 (median notional>=$20): $5.77 (short $14.23)"
+      ],
+      "external_screen": {
+        "pseudonym": "RN1",
+        "lifetime_pnl": 10828497.7369929,
+        "current_value": 143461.4899,
+        "last_trade": "2026-07-02T04:32:26+00:00",
+        "days_since_last_trade": 5,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0x84dbb7103982e3617704a2ed7d5b39691952aeeb",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 129,
+          "roi_pregame": 0.2883,
+          "roi_full": 0.2981
+        },
+        "2026": {
+          "n_markets_pregame": 50,
+          "roi_pregame": 0.3405,
+          "roi_full": 0.3405
+        }
+      },
+      "total_profit_full": 166992.86,
+      "failed_strict_criteria": [
+        "criterion 5 (median notional>=$20): $15.06 (short $4.94)"
+      ],
+      "external_screen": {
+        "pseudonym": "Soarin22",
+        "lifetime_pnl": 2044129.47663416,
+        "current_value": 0,
+        "last_trade": "2026-06-15T23:25:19+00:00",
+        "days_since_last_trade": 21,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0xde0463ea7f611b065e8ab06bbfbddad75e6dfa37",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 84,
+          "roi_pregame": 0.18,
+          "roi_full": 0.0035
+        },
+        "2026": {
+          "n_markets_pregame": 296,
+          "roi_pregame": 0.0161,
+          "roi_full": 0.0126
+        }
+      },
+      "total_profit_full": 14245.24,
+      "failed_strict_criteria": [
+        "criterion 4 (median_inter_trade_seconds>=60s): 28s (short 32s)"
+      ],
+      "external_screen": {
+        "pseudonym": "mwenya",
+        "lifetime_pnl": 172650.78256438737,
+        "current_value": 124588.6068,
+        "last_trade": "2026-06-13T13:42:13+00:00",
+        "days_since_last_trade": 23,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0x6a32a31f2b28c31c016c6a222f2942240d8d0086",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 33,
+          "roi_pregame": 0.213,
+          "roi_full": 0.2057
+        },
+        "2026": {
+          "n_markets_pregame": 205,
+          "roi_pregame": 0.0598,
+          "roi_full": 0.0706
+        }
+      },
+      "total_profit_full": 42346.55,
+      "failed_strict_criteria": [
+        "criterion 1 (n>=50 pregame both periods): 2025: n=33 (short 17)"
+      ],
+      "external_screen": {
+        "pseudonym": "0x6A32A31F2B28c31c016C6A222f2942240d8D0086-1756820952447",
+        "lifetime_pnl": 73279.35611056018,
+        "current_value": 1676.4344,
+        "last_trade": "2026-07-01T19:06:07+00:00",
+        "days_since_last_trade": 5,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0x2ada299aaaf27c806424ec6dcb0c169d1a9c2f28",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 106,
+          "roi_pregame": 0.9266,
+          "roi_full": 0.0017
+        },
+        "2026": {
+          "n_markets_pregame": 31,
+          "roi_pregame": 0.0513,
+          "roi_full": 0.0039
+        }
+      },
+      "total_profit_full": 28456.38,
+      "failed_strict_criteria": [
+        "criterion 1 (n>=50 pregame both periods): 2026: n=31 (short 19)",
+        "criterion 4 (median_inter_trade_seconds>=60s): 26s (short 34s)"
+      ],
+      "external_screen": {
+        "pseudonym": "wowfarm",
+        "lifetime_pnl": 43981.65388846422,
+        "current_value": 65.935,
+        "last_trade": "2026-07-02T04:34:37+00:00",
+        "days_since_last_trade": 5,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0xa39a38fbb98ad026c5a6b126d74d891e1be51246",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 81,
+          "roi_pregame": 0.1012,
+          "roi_full": 0.1473
+        },
+        "2026": {
+          "n_markets_pregame": 87,
+          "roi_pregame": 0.1738,
+          "roi_full": 0.1381
+        }
+      },
+      "total_profit_full": 35415.78,
+      "failed_strict_criteria": [
+        "criterion 4 (median_inter_trade_seconds>=60s): 32s (short 28s)",
+        "criterion 5 (median notional>=$20): $19.60 (short $0.40)"
+      ],
+      "external_screen": {
+        "pseudonym": "MrBently",
+        "lifetime_pnl": 25840.543609077482,
+        "current_value": 263.2236,
+        "last_trade": "2026-06-14T19:11:27+00:00",
+        "days_since_last_trade": 22,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0xf10299cf1fff507cff45e1a906800e5b44bf1348",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 708,
+          "roi_pregame": 0.0268,
+          "roi_full": 0.0296
+        },
+        "2026": {
+          "n_markets_pregame": 345,
+          "roi_pregame": 0.1186,
+          "roi_full": 0.0981
+        }
+      },
+      "total_profit_full": 4055.17,
+      "failed_strict_criteria": [
+        "criterion 4 (active_hours_entropy<0.95): 0.975 (over by 0.025)",
+        "criterion 5 (median notional>=$20): $9.41 (short $10.59)"
+      ],
+      "external_screen": {
+        "pseudonym": "pjotrekkk",
+        "lifetime_pnl": 21360.226881234223,
+        "current_value": 1406.3591,
+        "last_trade": "2026-07-01T22:44:46+00:00",
+        "days_since_last_trade": 5,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0xe05f5943a8adf19d59d0d63d77b7eb681297b3e8",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 140,
+          "roi_pregame": 0.0423,
+          "roi_full": 1.141
+        },
+        "2026": {
+          "n_markets_pregame": 91,
+          "roi_pregame": 0.4873,
+          "roi_full": 0.0969
+        }
+      },
+      "total_profit_full": 18086.6,
+      "failed_strict_criteria": [
+        "criterion 4 (active_hours_entropy<0.95): 0.974 (over by 0.024)",
+        "criterion 5 (median notional>=$20): $1.23 (short $18.77)"
+      ],
+      "external_screen": {
+        "pseudonym": "TangledUpInBlue",
+        "lifetime_pnl": 15727.074842654305,
+        "current_value": 8516.4128,
+        "last_trade": "2026-05-02T02:19:50+00:00",
+        "days_since_last_trade": 66,
+        "stale": true,
+        "screen_verdict": "OK",
+        "notes": [
+          "no trade in 66d (> 30d staleness threshold)"
+        ]
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0x5adf695a088172a920b6d0b2e5b7d88aa8ffa5e7",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 805,
+          "roi_pregame": 0.0213,
+          "roi_full": 0.0175
+        },
+        "2026": {
+          "n_markets_pregame": 638,
+          "roi_pregame": 0.0048,
+          "roi_full": 0.0095
+        }
+      },
+      "total_profit_full": 9069.0,
+      "failed_strict_criteria": [
+        "criterion 4 (two_sided_share<0.2): 0.901 (over by 0.701)",
+        "criterion 5 (median notional>=$20): $8.87 (short $11.13)"
+      ],
+      "external_screen": {
+        "pseudonym": "XxConorxX",
+        "lifetime_pnl": 12848.194355867769,
+        "current_value": 0,
+        "last_trade": "2026-06-30T12:46:47+00:00",
+        "days_since_last_trade": 6,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0xd61068efe9bdd4c44825b888cadc016eb17f4c9a",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 614,
+          "roi_pregame": 0.0787,
+          "roi_full": 0.0523
+        },
+        "2026": {
+          "n_markets_pregame": 917,
+          "roi_pregame": 0.0468,
+          "roi_full": 0.0228
+        }
+      },
+      "total_profit_full": 4581.55,
+      "failed_strict_criteria": [
+        "criterion 4 (active_hours_entropy<0.95): 0.959 (over by 0.009)",
+        "criterion 5 (median notional>=$20): $16.16 (short $3.84)"
+      ],
+      "external_screen": {
+        "pseudonym": "LFGKKO",
+        "lifetime_pnl": 11482.383201050918,
+        "current_value": 224.2903,
+        "last_trade": "2026-06-05T03:53:51+00:00",
+        "days_since_last_trade": 32,
+        "stale": true,
+        "screen_verdict": "OK",
+        "notes": [
+          "no trade in 32d (> 30d staleness threshold)"
+        ]
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0x3b4bc12a86691200bf2b96e7b9aaaeaa7cdc94d4",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 170,
+          "roi_pregame": 0.1451,
+          "roi_full": 0.1405
+        },
+        "2026": {
+          "n_markets_pregame": 99,
+          "roi_pregame": 0.0193,
+          "roi_full": 0.0368
+        }
+      },
+      "total_profit_full": 956.05,
+      "failed_strict_criteria": [
+        "criterion 4 (two_sided_share<0.2): 0.266 (over by 0.066)"
+      ],
+      "external_screen": {
+        "pseudonym": "pcd",
+        "lifetime_pnl": 1020.4689300394484,
+        "current_value": 0,
+        "last_trade": "2026-06-28T11:33:04+00:00",
+        "days_since_last_trade": 8,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      },
+      "convincing_external_pass": true
+    },
+    {
+      "wallet": "0xee613b3fc183ee44f9da9c05f53e2da107e3debf",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 144,
+          "roi_pregame": 0.0575,
+          "roi_full": 0.02
+        },
+        "2026": {
+          "n_markets_pregame": 626,
+          "roi_pregame": 0.0832,
+          "roi_full": 0.0496
+        }
+      },
+      "total_profit_full": 366711.36,
+      "failed_strict_criteria": [
+        "criterion 4 (median_inter_trade_seconds>=60s): 2s (short 58s)",
+        "criterion 5 (median notional>=$20): $4.74 (short $15.26)"
+      ],
+      "external_screen": {
+        "pseudonym": "sovereign2013",
+        "lifetime_pnl": 3588720.218017625,
+        "current_value": 0,
+        "last_trade": "2026-04-24T02:07:32+00:00",
+        "days_since_last_trade": 74,
+        "stale": true,
+        "screen_verdict": "OK",
+        "notes": [
+          "no trade in 74d (> 30d staleness threshold)"
+        ]
+      },
+      "convincing_external_pass": false
+    },
+    {
+      "wallet": "0x00f7cd432b127dab1bffd6d54701f4eb88b64476",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 34,
+          "roi_pregame": 0.165,
+          "roi_full": 0.1359
+        },
+        "2026": {
+          "n_markets_pregame": 32,
+          "roi_pregame": 0.1522,
+          "roi_full": 0.1612
+        }
+      },
+      "total_profit_full": 311.53,
+      "failed_strict_criteria": [
+        "criterion 1 (n>=50 pregame both periods): 2025: n=34 (short 16); 2026: n=32 (short 18)",
+        "criterion 5 (median notional>=$20): $12.75 (short $7.25)"
+      ],
+      "external_screen": {
+        "pseudonym": "CrvenaZvezda",
+        "lifetime_pnl": 267.79489170463944,
+        "current_value": 598.3539,
+        "last_trade": "2026-05-31T16:13:49+00:00",
+        "days_since_last_trade": 36,
+        "stale": true,
+        "screen_verdict": "OK",
+        "notes": [
+          "no trade in 36d (> 30d staleness threshold)"
+        ]
+      },
+      "convincing_external_pass": false
+    },
+    {
+      "wallet": "0xb64f2747856045517b16a910c52886e835043237",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 91,
+          "roi_pregame": 0.1032,
+          "roi_full": 0.0855
+        },
+        "2026": {
+          "n_markets_pregame": 48,
+          "roi_pregame": 0.0662,
+          "roi_full": 0.0662
+        }
+      },
+      "total_profit_full": 228.22,
+      "failed_strict_criteria": [
+        "criterion 1 (n>=50 pregame both periods): 2026: n=48 (short 2)",
+        "criterion 5 (median notional>=$20): $15.12 (short $4.88)"
+      ],
+      "external_screen": {
+        "pseudonym": "ExplainWatermelon",
+        "lifetime_pnl": 98.6597620260471,
+        "current_value": 132.88,
+        "last_trade": "2026-06-09T07:58:21+00:00",
+        "days_since_last_trade": 28,
+        "stale": false,
+        "screen_verdict": "OK",
+        "notes": []
+      },
+      "convincing_external_pass": false
+    },
+    {
+      "wallet": "0xbef7795f3b451833d982ad41a22d68c44573c774",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 213,
+          "roi_pregame": 0.0032,
+          "roi_full": 0.0213
+        },
+        "2026": {
+          "n_markets_pregame": 37,
+          "roi_pregame": 0.1411,
+          "roi_full": 0.2369
+        }
+      },
+      "total_profit_full": 16.16,
+      "failed_strict_criteria": [
+        "criterion 1 (n>=50 pregame both periods): 2026: n=37 (short 13)",
+        "criterion 4 (median_inter_trade_seconds>=60s): 16s (short 44s)",
+        "criterion 5 (median notional>=$20): $1.00 (short $19.00)"
+      ],
+      "external_screen": {
+        "pseudonym": "Regg2024",
+        "lifetime_pnl": -27.511917136956054,
+        "current_value": 8.8079,
+        "last_trade": "2026-06-10T14:52:12+00:00",
+        "days_since_last_trade": 26,
+        "stale": false,
+        "screen_verdict": "WARN",
+        "notes": [
+          "lifetime PnL $-28 is -170.2% of category profit $16 (< 25% threshold) -- category-hot-streak-inside-loser pattern"
+        ]
+      },
+      "convincing_external_pass": false
+    },
+    {
+      "wallet": "0x2275c805b31785dd424cf1fc2d9a848b54db7a5d",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 232,
+          "roi_pregame": 0.0076,
+          "roi_full": 0.0065
+        },
+        "2026": {
+          "n_markets_pregame": 89,
+          "roi_pregame": 0.0428,
+          "roi_full": 0.0416
+        }
+      },
+      "total_profit_full": 7.21,
+      "failed_strict_criteria": [
+        "criterion 5 (median notional>=$20): $1.50 (short $18.50)"
+      ],
+      "external_screen": {
+        "pseudonym": "aasb1",
+        "lifetime_pnl": -36.12082385051399,
+        "current_value": 4.6159,
+        "last_trade": "2026-06-08T19:05:31+00:00",
+        "days_since_last_trade": 28,
+        "stale": false,
+        "screen_verdict": "WARN",
+        "notes": [
+          "lifetime PnL $-36 is -500.8% of category profit $7 (< 25% threshold) -- category-hot-streak-inside-loser pattern"
+        ]
+      },
+      "convincing_external_pass": false
+    },
+    {
+      "wallet": "0x71a475af7a7cc6a87661c9e087de2425f377083d",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 147,
+          "roi_pregame": 0.0012,
+          "roi_full": 0.0083
+        },
+        "2026": {
+          "n_markets_pregame": 282,
+          "roi_pregame": 0.025,
+          "roi_full": 0.0349
+        }
+      },
+      "total_profit_full": 27.66,
+      "failed_strict_criteria": [
+        "criterion 4 (median_inter_trade_seconds>=60s): 23s (short 37s)",
+        "criterion 5 (median notional>=$20): $2.00 (short $18.00)"
+      ],
+      "external_screen": {
+        "pseudonym": "rhetgen",
+        "lifetime_pnl": -252.67770427503496,
+        "current_value": 0.7679,
+        "last_trade": "2026-06-30T15:39:56+00:00",
+        "days_since_last_trade": 6,
+        "stale": false,
+        "screen_verdict": "WARN",
+        "notes": [
+          "lifetime PnL $-253 is -913.4% of category profit $28 (< 25% threshold) -- category-hot-streak-inside-loser pattern"
+        ]
+      },
+      "convincing_external_pass": false
+    },
+    {
+      "wallet": "0x805968ede90e5c228c26069a63bcbffa6dd8c043",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 353,
+          "roi_pregame": 0.0428,
+          "roi_full": 0.044
+        },
+        "2026": {
+          "n_markets_pregame": 277,
+          "roi_pregame": 0.0262,
+          "roi_full": 0.0117
+        }
+      },
+      "total_profit_full": 1563.29,
+      "failed_strict_criteria": [
+        "criterion 4 (median_inter_trade_seconds>=60s): 40s (short 20s)"
+      ],
+      "external_screen": {
+        "pseudonym": "BET",
+        "lifetime_pnl": -1558.1271638371825,
+        "current_value": 250.1245,
+        "last_trade": "2026-06-01T14:33:00+00:00",
+        "days_since_last_trade": 35,
+        "stale": true,
+        "screen_verdict": "WARN",
+        "notes": [
+          "lifetime PnL $-1,558 is -99.7% of category profit $1,563 (< 25% threshold) -- category-hot-streak-inside-loser pattern",
+          "no trade in 35d (> 30d staleness threshold)"
+        ]
+      },
+      "convincing_external_pass": false
+    },
+    {
+      "wallet": "0x8fba2c29715c41dd87e781c23373aa1e0549d08a",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 204,
+          "roi_pregame": 0.2546,
+          "roi_full": 0.189
+        },
+        "2026": {
+          "n_markets_pregame": 159,
+          "roi_pregame": 0.1962,
+          "roi_full": 0.1046
+        }
+      },
+      "total_profit_full": 482827.44,
+      "failed_strict_criteria": [
+        "criterion 4 (median_inter_trade_seconds>=60s): 49s (short 11s)",
+        "criterion 5 (median notional>=$20): $12.73 (short $7.27)"
+      ],
+      "external_screen": {
+        "pseudonym": "abura2025",
+        "lifetime_pnl": -7158.661199564884,
+        "current_value": 75775.7118,
+        "last_trade": "2026-06-26T22:02:26+00:00",
+        "days_since_last_trade": 10,
+        "stale": false,
+        "screen_verdict": "WARN",
+        "notes": [
+          "lifetime PnL $-7,159 is -1.5% of category profit $482,827 (< 25% threshold) -- category-hot-streak-inside-loser pattern"
+        ]
+      },
+      "convincing_external_pass": false
+    },
+    {
+      "wallet": "0x7b3c17043318369b371c00d31ec6b2b8111dffc7",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 310,
+          "roi_pregame": 0.0459,
+          "roi_full": 0.1273
+        },
+        "2026": {
+          "n_markets_pregame": 62,
+          "roi_pregame": 0.32,
+          "roi_full": 0.126
+        }
+      },
+      "total_profit_full": 17504.52,
+      "failed_strict_criteria": [
+        "criterion 4 (two_sided_share<0.2): 0.237 (over by 0.037)",
+        "criterion 4 (active_hours_entropy<0.95): 0.972 (over by 0.022)"
+      ],
+      "external_screen": {
+        "pseudonym": "Netscape",
+        "lifetime_pnl": -9515.161303759058,
+        "current_value": 0,
+        "last_trade": "2026-05-23T01:35:50+00:00",
+        "days_since_last_trade": 45,
+        "stale": true,
+        "screen_verdict": "WARN",
+        "notes": [
+          "lifetime PnL $-9,515 is -54.4% of category profit $17,505 (< 25% threshold) -- category-hot-streak-inside-loser pattern",
+          "no trade in 45d (> 30d staleness threshold)"
+        ]
+      },
+      "convincing_external_pass": false
+    },
+    {
+      "wallet": "0xacbe72e8da366d4f89a06e59da2ef517e3b285d4",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 39,
+          "roi_pregame": 0.3001,
+          "roi_full": 0.216
+        },
+        "2026": {
+          "n_markets_pregame": 133,
+          "roi_pregame": 0.107,
+          "roi_full": 0.0186
+        }
+      },
+      "total_profit_full": 909.23,
+      "failed_strict_criteria": [
+        "criterion 1 (n>=50 pregame both periods): 2025: n=39 (short 11)",
+        "criterion 4 (active_hours_entropy<0.95): 0.958 (over by 0.008)",
+        "criterion 5 (median notional>=$20): $16.00 (short $4.00)"
+      ],
+      "external_screen": {
+        "pseudonym": "LDM8",
+        "lifetime_pnl": -13955.941608599609,
+        "current_value": 514.7652,
+        "last_trade": "2026-06-17T16:58:47+00:00",
+        "days_since_last_trade": 19,
+        "stale": false,
+        "screen_verdict": "FAIL",
+        "notes": [
+          "lifetime PnL $-13,956 < fail threshold $-10,000 -- net loser across full trading history; category profit is noise inside a losing account, not evidence of skill"
+        ]
+      },
+      "convincing_external_pass": false
+    },
+    {
+      "wallet": "0xd81fbc5c53593e4e2923a641ff2bc7e2d9866b75",
+      "tier": "second-tier near-miss (NOT promoted; user decides)",
+      "periods": {
+        "2025": {
+          "n_markets_pregame": 347,
+          "roi_pregame": 0.005,
+          "roi_full": 0.0067
+        },
+        "2026": {
+          "n_markets_pregame": 740,
+          "roi_pregame": 0.0132,
+          "roi_full": 0.0227
+        }
+      },
+      "total_profit_full": 19963.38,
+      "failed_strict_criteria": [
+        "criterion 4 (median_inter_trade_seconds>=60s): 42s (short 18s)",
+        "criterion 5 (median notional>=$20): $10.79 (short $9.21)"
+      ],
+      "external_screen": {
+        "pseudonym": "LBZone",
+        "lifetime_pnl": -53782.47418891367,
+        "current_value": 25911.5905,
+        "last_trade": "2026-05-23T02:16:26+00:00",
+        "days_since_last_trade": 45,
+        "stale": true,
+        "screen_verdict": "FAIL",
+        "notes": [
+          "lifetime PnL $-53,782 < fail threshold $-10,000 -- net loser across full trading history; category profit is noise inside a losing account, not evidence of skill",
+          "no trade in 45d (> 30d staleness threshold)"
+        ]
+      },
+      "convincing_external_pass": false
+    }
+  ]
+}

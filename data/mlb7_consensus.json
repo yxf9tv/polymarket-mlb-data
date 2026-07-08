@@ -1,0 +1,553 @@
+{
+  "pooled": {
+    "label": "pooled 2025+2026",
+    "overlap": {
+      "per_wallet": [
+        {
+          "wallet": "0x2934efa3cc0794953270262e9da00c04e21d0b51",
+          "n_markets": 594,
+          "n_with_overlap": 379,
+          "frac_overlap": 0.638
+        },
+        {
+          "wallet": "0x681d7946e0280c6ec6562c7ce662e90812354cbf",
+          "n_markets": 279,
+          "n_with_overlap": 161,
+          "frac_overlap": 0.5771
+        },
+        {
+          "wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
+          "n_markets": 1283,
+          "n_with_overlap": 389,
+          "frac_overlap": 0.3032
+        },
+        {
+          "wallet": "0x985c0516200c5a2c76dde58917ce2c852afde5d2",
+          "n_markets": 419,
+          "n_with_overlap": 260,
+          "frac_overlap": 0.6205
+        },
+        {
+          "wallet": "0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d",
+          "n_markets": 371,
+          "n_with_overlap": 254,
+          "frac_overlap": 0.6846
+        },
+        {
+          "wallet": "0xa5dcb282cab760e31df1f3f5c18350731c95ec43",
+          "n_markets": 313,
+          "n_with_overlap": 164,
+          "frac_overlap": 0.524
+        },
+        {
+          "wallet": "0xfc234be3c4c3568284a566613ba90033b9d98283",
+          "n_markets": 289,
+          "n_with_overlap": 155,
+          "frac_overlap": 0.5363
+        }
+      ],
+      "market_dist": {
+        "1": 1786,
+        "2": 558,
+        "3+": 203
+      },
+      "per_wallet_game": [
+        {
+          "wallet": "0x2934efa3cc0794953270262e9da00c04e21d0b51",
+          "n_markets": 594,
+          "n_with_game_overlap": 440,
+          "frac_game_overlap": 0.7407
+        },
+        {
+          "wallet": "0x681d7946e0280c6ec6562c7ce662e90812354cbf",
+          "n_markets": 279,
+          "n_with_game_overlap": 218,
+          "frac_game_overlap": 0.7814
+        },
+        {
+          "wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
+          "n_markets": 1283,
+          "n_with_game_overlap": 784,
+          "frac_game_overlap": 0.6111
+        },
+        {
+          "wallet": "0x985c0516200c5a2c76dde58917ce2c852afde5d2",
+          "n_markets": 419,
+          "n_with_game_overlap": 334,
+          "frac_game_overlap": 0.7971
+        },
+        {
+          "wallet": "0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d",
+          "n_markets": 371,
+          "n_with_game_overlap": 269,
+          "frac_game_overlap": 0.7251
+        },
+        {
+          "wallet": "0xa5dcb282cab760e31df1f3f5c18350731c95ec43",
+          "n_markets": 313,
+          "n_with_game_overlap": 257,
+          "frac_game_overlap": 0.8211
+        },
+        {
+          "wallet": "0xfc234be3c4c3568284a566613ba90033b9d98283",
+          "n_markets": 289,
+          "n_with_game_overlap": 227,
+          "frac_game_overlap": 0.7855
+        }
+      ],
+      "n_markets_total": 2547
+    },
+    "agreement": {
+      "n_markets_multi": 761,
+      "n_agree": 267,
+      "n_disagree": 494,
+      "agree_rate": 0.3509
+    },
+    "money": {
+      "buckets": {
+        "2_agree": {
+          "n_markets": 236,
+          "n_wallet_market_rows": 472,
+          "invested": 190883.35,
+          "returned": 203183.48,
+          "roi": 0.0644,
+          "roi_ci95": [
+            -0.1099,
+            0.2297
+          ]
+        },
+        "3+_agree": {
+          "n_markets": 30,
+          "n_wallet_market_rows": 92,
+          "invested": 114068.21,
+          "returned": 45249.97,
+          "roi": -0.6033,
+          "roi_ci95": [
+            -0.899,
+            0.5423
+          ]
+        },
+        "disagree": {
+          "n_markets": 494,
+          "n_wallet_market_rows": 1196,
+          "invested": 727492.28,
+          "returned": 686715.98,
+          "roi": -0.0561,
+          "roi_ci95": [
+            -0.244,
+            0.1562
+          ]
+        },
+        "solo": {
+          "n_markets": 1787,
+          "n_wallet_market_rows": 1787,
+          "invested": 1142415.25,
+          "returned": 1358063.09,
+          "roi": 0.1888,
+          "roi_ci95": [
+            -0.0257,
+            0.4871
+          ]
+        }
+      },
+      "disagreement_detail": {
+        "n_markets": 494,
+        "bigger_stake_win_rate": 0.4777
+      }
+    },
+    "market_mix": {
+      "market_type_mix": {
+        "solo": {
+          "n": 1786,
+          "pct": {
+            "moneyline": 0.4938,
+            "total": 0.2884,
+            "spread": 0.1825,
+            "nrfi": 0.0353
+          }
+        },
+        "overlap": {
+          "n": 761,
+          "pct": {
+            "moneyline": 0.9198,
+            "spread": 0.0407,
+            "total": 0.0394
+          }
+        }
+      },
+      "time_gap": {
+        "n": 267,
+        "median_minutes": 181.4,
+        "p25_minutes": 75.3,
+        "p75_minutes": 336.2
+      }
+    }
+  },
+  "2025": {
+    "label": "2025",
+    "overlap": {
+      "per_wallet": [
+        {
+          "wallet": "0x2934efa3cc0794953270262e9da00c04e21d0b51",
+          "n_markets": 405,
+          "n_with_overlap": 295,
+          "frac_overlap": 0.7284
+        },
+        {
+          "wallet": "0x681d7946e0280c6ec6562c7ce662e90812354cbf",
+          "n_markets": 178,
+          "n_with_overlap": 123,
+          "frac_overlap": 0.691
+        },
+        {
+          "wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
+          "n_markets": 396,
+          "n_with_overlap": 218,
+          "frac_overlap": 0.5505
+        },
+        {
+          "wallet": "0x985c0516200c5a2c76dde58917ce2c852afde5d2",
+          "n_markets": 206,
+          "n_with_overlap": 161,
+          "frac_overlap": 0.7816
+        },
+        {
+          "wallet": "0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d",
+          "n_markets": 296,
+          "n_with_overlap": 217,
+          "frac_overlap": 0.7331
+        },
+        {
+          "wallet": "0xa5dcb282cab760e31df1f3f5c18350731c95ec43",
+          "n_markets": 94,
+          "n_with_overlap": 79,
+          "frac_overlap": 0.8404
+        },
+        {
+          "wallet": "0xfc234be3c4c3568284a566613ba90033b9d98283",
+          "n_markets": 128,
+          "n_with_overlap": 86,
+          "frac_overlap": 0.6719
+        }
+      ],
+      "market_dist": {
+        "1": 524,
+        "2": 333,
+        "3+": 160
+      },
+      "per_wallet_game": [
+        {
+          "wallet": "0x2934efa3cc0794953270262e9da00c04e21d0b51",
+          "n_markets": 405,
+          "n_with_game_overlap": 306,
+          "frac_game_overlap": 0.7556
+        },
+        {
+          "wallet": "0x681d7946e0280c6ec6562c7ce662e90812354cbf",
+          "n_markets": 178,
+          "n_with_game_overlap": 143,
+          "frac_game_overlap": 0.8034
+        },
+        {
+          "wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
+          "n_markets": 396,
+          "n_with_game_overlap": 293,
+          "frac_game_overlap": 0.7399
+        },
+        {
+          "wallet": "0x985c0516200c5a2c76dde58917ce2c852afde5d2",
+          "n_markets": 206,
+          "n_with_game_overlap": 168,
+          "frac_game_overlap": 0.8155
+        },
+        {
+          "wallet": "0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d",
+          "n_markets": 296,
+          "n_with_game_overlap": 220,
+          "frac_game_overlap": 0.7432
+        },
+        {
+          "wallet": "0xa5dcb282cab760e31df1f3f5c18350731c95ec43",
+          "n_markets": 94,
+          "n_with_game_overlap": 81,
+          "frac_game_overlap": 0.8617
+        },
+        {
+          "wallet": "0xfc234be3c4c3568284a566613ba90033b9d98283",
+          "n_markets": 128,
+          "n_with_game_overlap": 103,
+          "frac_game_overlap": 0.8047
+        }
+      ],
+      "n_markets_total": 1017
+    },
+    "agreement": {
+      "n_markets_multi": 493,
+      "n_agree": 165,
+      "n_disagree": 328,
+      "agree_rate": 0.3347
+    },
+    "money": {
+      "buckets": {
+        "2_agree": {
+          "n_markets": 142,
+          "n_wallet_market_rows": 284,
+          "invested": 124292.01,
+          "returned": 139557.73,
+          "roi": 0.1228,
+          "roi_ci95": [
+            -0.0977,
+            0.3258
+          ]
+        },
+        "3+_agree": {
+          "n_markets": 22,
+          "n_wallet_market_rows": 68,
+          "invested": 106133.39,
+          "returned": 38767.77,
+          "roi": -0.6347,
+          "roi_ci95": [
+            -0.9329,
+            0.6612
+          ]
+        },
+        "disagree": {
+          "n_markets": 328,
+          "n_wallet_market_rows": 825,
+          "invested": 548556.75,
+          "returned": 521999.57,
+          "roi": -0.0484,
+          "roi_ci95": [
+            -0.304,
+            0.2159
+          ]
+        },
+        "solo": {
+          "n_markets": 525,
+          "n_wallet_market_rows": 525,
+          "invested": 335558.07,
+          "returned": 499528.13,
+          "roi": 0.4886,
+          "roi_ci95": [
+            -0.1852,
+            1.2032
+          ]
+        }
+      },
+      "disagreement_detail": {
+        "n_markets": 328,
+        "bigger_stake_win_rate": 0.4878
+      }
+    },
+    "market_mix": {
+      "market_type_mix": {
+        "solo": {
+          "n": 524,
+          "pct": {
+            "moneyline": 0.7252,
+            "total": 0.1756,
+            "spread": 0.0992
+          }
+        },
+        "overlap": {
+          "n": 493,
+          "pct": {
+            "moneyline": 0.9716,
+            "spread": 0.0142,
+            "total": 0.0142
+          }
+        }
+      },
+      "time_gap": {
+        "n": 165,
+        "median_minutes": 222.6,
+        "p25_minutes": 89.0,
+        "p75_minutes": 378.2
+      }
+    }
+  },
+  "2026": {
+    "label": "2026",
+    "overlap": {
+      "per_wallet": [
+        {
+          "wallet": "0x2934efa3cc0794953270262e9da00c04e21d0b51",
+          "n_markets": 189,
+          "n_with_overlap": 84,
+          "frac_overlap": 0.4444
+        },
+        {
+          "wallet": "0x681d7946e0280c6ec6562c7ce662e90812354cbf",
+          "n_markets": 101,
+          "n_with_overlap": 38,
+          "frac_overlap": 0.3762
+        },
+        {
+          "wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
+          "n_markets": 887,
+          "n_with_overlap": 171,
+          "frac_overlap": 0.1928
+        },
+        {
+          "wallet": "0x985c0516200c5a2c76dde58917ce2c852afde5d2",
+          "n_markets": 213,
+          "n_with_overlap": 99,
+          "frac_overlap": 0.4648
+        },
+        {
+          "wallet": "0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d",
+          "n_markets": 75,
+          "n_with_overlap": 37,
+          "frac_overlap": 0.4933
+        },
+        {
+          "wallet": "0xa5dcb282cab760e31df1f3f5c18350731c95ec43",
+          "n_markets": 219,
+          "n_with_overlap": 85,
+          "frac_overlap": 0.3881
+        },
+        {
+          "wallet": "0xfc234be3c4c3568284a566613ba90033b9d98283",
+          "n_markets": 161,
+          "n_with_overlap": 69,
+          "frac_overlap": 0.4286
+        }
+      ],
+      "market_dist": {
+        "1": 1262,
+        "2": 225,
+        "3+": 43
+      },
+      "per_wallet_game": [
+        {
+          "wallet": "0x2934efa3cc0794953270262e9da00c04e21d0b51",
+          "n_markets": 189,
+          "n_with_game_overlap": 134,
+          "frac_game_overlap": 0.709
+        },
+        {
+          "wallet": "0x681d7946e0280c6ec6562c7ce662e90812354cbf",
+          "n_markets": 101,
+          "n_with_game_overlap": 75,
+          "frac_game_overlap": 0.7426
+        },
+        {
+          "wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
+          "n_markets": 887,
+          "n_with_game_overlap": 491,
+          "frac_game_overlap": 0.5536
+        },
+        {
+          "wallet": "0x985c0516200c5a2c76dde58917ce2c852afde5d2",
+          "n_markets": 213,
+          "n_with_game_overlap": 166,
+          "frac_game_overlap": 0.7793
+        },
+        {
+          "wallet": "0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d",
+          "n_markets": 75,
+          "n_with_game_overlap": 49,
+          "frac_game_overlap": 0.6533
+        },
+        {
+          "wallet": "0xa5dcb282cab760e31df1f3f5c18350731c95ec43",
+          "n_markets": 219,
+          "n_with_game_overlap": 176,
+          "frac_game_overlap": 0.8037
+        },
+        {
+          "wallet": "0xfc234be3c4c3568284a566613ba90033b9d98283",
+          "n_markets": 161,
+          "n_with_game_overlap": 124,
+          "frac_game_overlap": 0.7702
+        }
+      ],
+      "n_markets_total": 1530
+    },
+    "agreement": {
+      "n_markets_multi": 268,
+      "n_agree": 102,
+      "n_disagree": 166,
+      "agree_rate": 0.3806
+    },
+    "money": {
+      "buckets": {
+        "2_agree": {
+          "n_markets": 94,
+          "n_wallet_market_rows": 188,
+          "invested": 66591.34,
+          "returned": 63625.75,
+          "roi": -0.0445,
+          "roi_ci95": [
+            -0.2954,
+            0.2062
+          ]
+        },
+        "3+_agree": {
+          "n_markets": 8,
+          "n_wallet_market_rows": 24,
+          "invested": 7934.82,
+          "returned": 6482.2,
+          "roi": -0.1831,
+          "roi_ci95": [
+            -0.7615,
+            0.4024
+          ]
+        },
+        "disagree": {
+          "n_markets": 166,
+          "n_wallet_market_rows": 371,
+          "invested": 178935.53,
+          "returned": 164716.42,
+          "roi": -0.0795,
+          "roi_ci95": [
+            -0.2075,
+            0.0457
+          ]
+        },
+        "solo": {
+          "n_markets": 1262,
+          "n_wallet_market_rows": 1262,
+          "invested": 806857.18,
+          "returned": 858534.96,
+          "roi": 0.064,
+          "roi_ci95": [
+            -0.02,
+            0.1402
+          ]
+        }
+      },
+      "disagreement_detail": {
+        "n_markets": 166,
+        "bigger_stake_win_rate": 0.4578
+      }
+    },
+    "market_mix": {
+      "market_type_mix": {
+        "solo": {
+          "n": 1262,
+          "pct": {
+            "moneyline": 0.3978,
+            "total": 0.3352,
+            "spread": 0.2171,
+            "nrfi": 0.0499
+          }
+        },
+        "overlap": {
+          "n": 268,
+          "pct": {
+            "moneyline": 0.8246,
+            "spread": 0.0896,
+            "total": 0.0858
+          }
+        }
+      },
+      "time_gap": {
+        "n": 102,
+        "median_minutes": 125.0,
+        "p25_minutes": 61.9,
+        "p75_minutes": 255.8
+      }
+    }
+  }
+}

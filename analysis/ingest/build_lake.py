@@ -39,7 +39,14 @@ import duckdb
 import pandas as pd
 
 from client import LAKE_DIR, RAW_DIR
-from derive import classify_market_type, derive_season, derive_winner, parse_token_ids
+from derive import (
+    classify_market_type,
+    classify_market_type_sport,
+    derive_season,
+    derive_season_sport,
+    derive_winner,
+    parse_token_ids,
+)
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -164,6 +171,94 @@ def _safe_float(v):
         return float(v)
     except (TypeError, ValueError):
         return None
+
+
+# ---------------------------------------------------------------------------
+# markets_<sport>.parquet (NFL/NBA, from Gamma raw events archived by
+# ingest_markets_sport.py). Mirrors build_events_and_markets()'s markets-row
+# structure, but classifies market_type via Gamma's sportsMarketType field
+# (classify_market_type_sport) and derives season via the sport-aware series/
+# date logic (derive_season_sport) instead of the MLB-specific versions.
+# derive_winner/parse_token_ids are sport-agnostic and reused unchanged.
+# No events_<sport>.parquet is built - only the markets table is needed
+# downstream (per the research-program spec for this phase).
+# ---------------------------------------------------------------------------
+def build_events_and_markets_sport(sport: str) -> pd.DataFrame:
+    events_path = RAW_DIR / f"markets_{sport}" / "events.jsonl"
+    raw_events = load_jsonl(events_path)
+    print(f"Loaded {len(raw_events)} raw events from {events_path}")
+
+    # De-dupe events by id (two sweeps - tag + legacy series - may overlap).
+    events_by_id: dict[str, dict] = {}
+    for ev in raw_events:
+        events_by_id[ev.get("id")] = ev
+    print(f"  {len(events_by_id)} unique events after de-dup")
+
+    market_rows = []
+    fallback_season_count = 0
+
+    for event in events_by_id.values():
+        event_id = event.get("id")
+        event_slug = event.get("slug")
+        markets = event.get("markets", []) or []
+
+        for market in markets:
+            cid = market.get("conditionId")
+            if not cid:
+                continue
+            winner, prices = derive_winner(market)
+            season, season_source = derive_season_sport(event, market, sport)
+            if season_source == "date_fallback":
+                fallback_season_count += 1
+            token_ids = parse_token_ids(market)
+            slug = market.get("slug") or ""
+            question = market.get("question") or ""
+            sports_market_type_raw = market.get("sportsMarketType")
+            market_type = classify_market_type_sport(sports_market_type_raw, slug, question)
+
+            volume = 0.0
+            try:
+                volume = float(market.get("volume") or 0)
+            except (TypeError, ValueError):
+                pass
+
+            outcomes_raw = market.get("outcomes", "[]")
+            outcomes = outcomes_raw if isinstance(outcomes_raw, str) else json.dumps(outcomes_raw)
+
+            market_rows.append({
+                "condition_id": cid,
+                "event_id": event_id,
+                "event_slug": event_slug,
+                "market_id": market.get("id"),
+                "slug": slug,
+                "question": question,
+                "market_type": market_type,
+                "sports_market_type_raw": sports_market_type_raw,
+                "game_start_time": market.get("gameStartTime"),
+                "outcomes": outcomes,
+                "outcome_prices_raw": ",".join(str(p) for p in prices) if prices else "",
+                "winning_outcome": winner,
+                "resolved": winner is not None,
+                "token_ids": ",".join(token_ids) if token_ids else "",
+                "volume": volume,
+                "liquidity": _safe_float(market.get("liquidity")),
+                "start_date": market.get("startDate"),
+                "end_date": market.get("endDate"),
+                "closed": bool(market.get("closed")),
+                "active": bool(market.get("active")),
+                "enable_order_book": bool(market.get("enableOrderBook")),
+                "neg_risk": bool(market.get("negRisk") or False),
+                "season": season,
+                "season_source": season_source,
+            })
+
+    markets_df = pd.DataFrame(market_rows)
+    if not markets_df.empty:
+        markets_df = markets_df.drop_duplicates(subset=["condition_id"], keep="last")
+
+    print(f"  {len(markets_df)} unique {sport} markets; "
+          f"{fallback_season_count} used the date fallback (no matching series)")
+    return markets_df
 
 
 # ---------------------------------------------------------------------------
@@ -396,6 +491,105 @@ def _build_trades_season_cached(season_dir: Path, manifest: dict) -> Path | None
     return cache_path
 
 
+def _build_trades_season_cached_sport(season_dir: Path, manifest: dict, sport: str) -> Path | None:
+    """Sport-path counterpart to _build_trades_season_cached(): same pass-1
+    normalization, but season is carried as VARCHAR (NBA season labels like
+    "2025-26" aren't castable to int, unlike MLB's int season) and cache/
+    manifest keys are namespaced per sport (trades_<sport>_<season_dir>) so
+    they never collide with MLB's trades_<season> keys. Kept as a parallel
+    function (rather than parameterizing _build_trades_season_cached) so the
+    MLB SQL stays byte-for-byte unchanged."""
+    season_dir_name = season_dir.name
+    sig = _dir_signature(season_dir)
+    manifest_key = f"trades_{sport}_{season_dir_name}"
+    cache_path = PARSED_CACHE_DIR / f"{manifest_key}.parquet"
+
+    if manifest.get(manifest_key) == sig and cache_path.exists():
+        return cache_path
+
+    if not any(season_dir.glob("*.jsonl")):
+        return None
+
+    glob_path = (season_dir / "*.jsonl").as_posix()
+    PARSED_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    tmp_out = cache_path.with_suffix(".tmp.parquet")
+    con = _duckdb_connect_tuned()
+    try:
+        con.execute(f"""
+            COPY (
+                SELECT
+                    COALESCE(condition_id, conditionId) AS condition_id,
+                    COALESCE(proxy_wallet, proxyWallet) AS proxy_wallet,
+                    side,
+                    TRY_CAST(size AS DOUBLE) AS size,
+                    TRY_CAST(price AS DOUBLE) AS price,
+                    COALESCE(token_id, asset) AS token_id,
+                    CASE WHEN id IS NOT NULL AND id != '' THEN id
+                         ELSE 'da_' || md5(
+                             COALESCE(transactionHash, '') || '|' || COALESCE(proxyWallet, '') || '|' ||
+                             COALESCE(timestamp, '') || '|' || COALESCE(asset, '') || '|' ||
+                             COALESCE(side, '') || '|' || COALESCE(size, '')
+                         )
+                    END AS trade_id,
+                    CASE WHEN id IS NOT NULL AND id != ''
+                         THEN TRY_CAST(timestamp AS TIMESTAMPTZ)
+                         ELSE to_timestamp(TRY_CAST(timestamp AS DOUBLE))::TIMESTAMPTZ
+                    END AS timestamp,
+                    CAST('{season_dir_name}' AS VARCHAR) AS season,
+                    CASE WHEN id IS NOT NULL AND id != '' THEN 'intel' ELSE 'data_api' END AS source
+                FROM read_json('{glob_path}', format='newline_delimited', columns={TRADE_JSON_COLUMNS!r})
+            ) TO '{tmp_out.as_posix()}' (FORMAT PARQUET)
+        """)
+    finally:
+        con.close()
+    os.replace(tmp_out, cache_path)
+    manifest[manifest_key] = sig
+    return cache_path
+
+
+def build_trades_sport(sport: str) -> Path:
+    """Sport-path counterpart to build_trades(): two-pass DuckDB rebuild of
+    trades_<sport>.parquet from raw/trades_<sport>/<season_dir>/*.jsonl.
+    season column is VARCHAR (see _build_trades_season_cached_sport)."""
+    trades_dir = RAW_DIR / f"trades_{sport}"
+    trades_path = LAKE_DIR / f"trades_{sport}.parquet"
+    if not trades_dir.exists():
+        print(f"No trades_{sport} raw data found")
+        return trades_path
+
+    manifest = _load_manifest()
+    season_cache_paths = []
+    for season_dir in sorted(p for p in trades_dir.iterdir() if p.is_dir()):
+        cache_path = _build_trades_season_cached_sport(season_dir, manifest, sport)
+        if cache_path is not None:
+            season_cache_paths.append(cache_path)
+    _save_manifest(manifest)
+
+    if not season_cache_paths:
+        print(f"No trades_{sport} records parsed")
+        return trades_path
+
+    glob_list = ", ".join(f"'{p.as_posix()}'" for p in season_cache_paths)
+    tmp_out = trades_path.with_suffix(".tmp.parquet")
+    con = _duckdb_connect_tuned()
+    try:
+        n_before = con.execute(f"SELECT count(*) FROM read_parquet([{glob_list}])").fetchone()[0]
+        con.execute(f"""
+            COPY (
+                SELECT DISTINCT condition_id, proxy_wallet, side, size, price,
+                                 token_id, trade_id, timestamp, season, source
+                FROM read_parquet([{glob_list}])
+            ) TO '{tmp_out.as_posix()}' (FORMAT PARQUET)
+        """)
+        n_after = con.execute(f"SELECT count(*) FROM read_parquet('{tmp_out.as_posix()}')").fetchone()[0]
+    finally:
+        con.close()
+    os.replace(tmp_out, trades_path)
+    print(f"Loaded {n_before} trades_{sport} rows ({n_after} unique after SELECT DISTINCT dedup, "
+          f"{n_before - n_after} duplicate rows deduped)")
+    return trades_path
+
+
 def build_trades() -> Path:
     """Two-pass DuckDB rebuild of trades.parquet. Writes the parquet itself
     (unlike the other build_* functions, it does NOT return a DataFrame to
@@ -511,16 +705,43 @@ def build_candles() -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------------
-def _parse_tables_arg(args: list[str]) -> set[str]:
+def _parse_tables_arg(args: list[str], default: set[str] | None = None) -> set[str]:
     for a in args:
         if a.startswith("--tables"):
             value = a.split("=", 1)[1] if "=" in a else args[args.index(a) + 1]
             return {t.strip() for t in value.split(",") if t.strip()}
-    return {"events", "markets", "schedule"}  # original Phase-0 default
+    return default if default is not None else {"events", "markets", "schedule"}  # original Phase-0 default
+
+
+def _parse_sport_arg(args: list[str]) -> str:
+    for a in args:
+        if a.startswith("--sport"):
+            return (a.split("=", 1)[1] if "=" in a else args[args.index(a) + 1]).strip()
+    return "mlb"
 
 
 def main() -> None:
     LAKE_DIR.mkdir(parents=True, exist_ok=True)
+    sport = _parse_sport_arg(sys.argv[1:])
+
+    if sport != "mlb":
+        # NFL/NBA path: markets_<sport>.parquet and/or trades_<sport>.parquet
+        # (no events/schedule/candles equivalent for these sports in this
+        # phase). Default (no --tables flag) stays markets-only, matching
+        # this path's original behavior.
+        tables = _parse_tables_arg(sys.argv[1:], default={"markets"})
+
+        if "markets" in tables:
+            markets_df = build_events_and_markets_sport(sport)
+            markets_path = LAKE_DIR / f"markets_{sport}.parquet"
+            markets_df.to_parquet(markets_path, index=False)
+            print(f"Wrote {markets_path} ({len(markets_df)} rows)")
+
+        if "trades" in tables:
+            trades_path = build_trades_sport(sport)  # writes trades_<sport>.parquet itself
+            print(f"Wrote {trades_path}")
+        return
+
     tables = _parse_tables_arg(sys.argv[1:])
 
     if "events" in tables or "markets" in tables:
