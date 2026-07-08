@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-07-07T09:32:27.810591+00:00",
+  "generated_at": "2026-07-08T02:09:24.227754+00:00",
   "args": {
     "sports": [
       "mlb",
-      "nfl"
+      "nfl",
+      "nba"
     ],
     "min_n": 50
   },
@@ -1259,15 +1260,15 @@
           },
           "external_screen": {
             "pseudonym": "Lilpump",
-            "lifetime_pnl": -2830.7587571883087,
+            "lifetime_pnl": -2830.7586905483195,
             "current_value": 1820.2249,
-            "last_trade": "2025-11-20T23:17:39+00:00",
-            "days_since_last_trade": 228,
+            "last_trade": "2025-11-22T05:45:33+00:00",
+            "days_since_last_trade": 227,
             "stale": true,
             "screen_verdict": "WARN",
             "notes": [
               "lifetime PnL $-2,831 is -45.3% of category profit $6,247 (< 25% threshold) -- category-hot-streak-inside-loser pattern",
-              "no trade in 228d (> 30d staleness threshold)"
+              "no trade in 227d (> 30d staleness threshold)"
             ]
           }
         }
@@ -1328,6 +1329,62 @@
         ]
       },
       "source": "analysis/cross_sport_winners.py generic pipeline (trades_nfl.parquet, markets_nfl.parquet)"
+    },
+    "nba": {
+      "sport": "nba",
+      "periods": [
+        "2024-25",
+        "2025-26"
+      ],
+      "min_n_floor": 50,
+      "relaxed_floor_used": false,
+      "funnel": {
+        "1_active_both_periods_n>=50": 59,
+        "2_positive_full_roi_both": 21,
+        "3_positive_pregame_roi_both": 17,
+        "4_not_bot_shaped": 1,
+        "5_median_notional>=20": 0,
+        "6_external_reality_screen": 0
+      },
+      "survivors": [],
+      "screened_out_wallets": [],
+      "walk_forward": {
+        "train_period": "2024-25",
+        "test_period": "2025-26",
+        "n_selected_train": 7,
+        "full_oos": {
+          "n_wallets": 3,
+          "n_markets": 800,
+          "invested": 147038.12,
+          "returned": 164307.62,
+          "roi_pooled": 0.1174,
+          "roi_ci95": [
+            -0.0328,
+            0.2757
+          ]
+        },
+        "pregame_oos": {
+          "n_wallets": 3,
+          "n_markets": 487,
+          "invested": 81187.96,
+          "returned": 97444.05,
+          "roi_pooled": 0.2002,
+          "roi_ci95": [
+            -0.0416,
+            0.4589
+          ]
+        },
+        "selected_wallets": [
+          "0x12cefd9414d74f82f3a72dc763b2a3f11d89a6ab",
+          "0x20881ddbb6a7e070c9dcd125dfbe15030dfb9c55",
+          "0x2b51107e8d030397ea728a794405ffbcf1d2e165",
+          "0xaeb50a7e23d833da8be30e69b55172d1f52858e2",
+          "0xc6827f892851a4ab86a1256543c35fd4fe4556eb",
+          "0xe9473a70f58272d3c8cbc31da1079fb0578f2cf3",
+          "0xfb79181a9d9dcaceda40803c0aeb55f6c58ec2c6"
+        ]
+      },
+      "source": "analysis/cross_sport_winners.py generic pipeline (trades_nba.parquet, markets_nba.parquet)"
     }
   },
   "cross_sport": {
@@ -1340,6 +1397,11 @@
       "hits": {
         "mlb_funnel_survivor->nfl_pregame_edge": [
           {
+            "wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
+            "n_markets_pregame": 59,
+            "roi_pregame": 0.1218
+          },
+          {
             "wallet": "0xfc234be3c4c3568284a566613ba90033b9d98283",
             "n_markets_pregame": 100,
             "roi_pregame": 0.1415
@@ -1348,11 +1410,6 @@
             "wallet": "0x681d7946e0280c6ec6562c7ce662e90812354cbf",
             "n_markets_pregame": 69,
             "roi_pregame": 0.0891
-          },
-          {
-            "wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
-            "n_markets_pregame": 59,
-            "roi_pregame": 0.1218
           }
         ]
       }
@@ -1773,19 +1830,20 @@
           },
           "external_screen": {
             "pseudonym": "Lilpump",
-            "lifetime_pnl": -2830.7587571883087,
+            "lifetime_pnl": -2830.7586905483195,
             "current_value": 1820.2249,
-            "last_trade": "2025-11-20T23:17:39+00:00",
-            "days_since_last_trade": 228,
+            "last_trade": "2025-11-22T05:45:33+00:00",
+            "days_since_last_trade": 227,
             "stale": true,
             "screen_verdict": "WARN",
             "notes": [
               "lifetime PnL $-2,831 is -45.3% of category profit $6,247 (< 25% threshold) -- category-hot-streak-inside-loser pattern",
-              "no trade in 228d (> 30d staleness threshold)"
+              "no trade in 227d (> 30d staleness threshold)"
             ]
           }
         }
-      ]
+      ],
+      "nba": []
     },
     "activity_overlap_matrix": {
       "mlb": {
@@ -1832,6 +1890,50 @@
             "n_markets_pregame": 100,
             "roi_pregame": 0.1415
           }
+        ],
+        "nba": [
+          {
+            "wallet": "0x2934efa3cc0794953270262e9da00c04e21d0b51",
+            "n_markets_full": 98,
+            "roi_full": -0.1153,
+            "n_markets_pregame": 98,
+            "roi_pregame": -0.1153
+          },
+          {
+            "wallet": "0x681d7946e0280c6ec6562c7ce662e90812354cbf",
+            "n_markets_full": 248,
+            "roi_full": 0.0096,
+            "n_markets_pregame": 188,
+            "roi_pregame": -0.0178
+          },
+          {
+            "wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad",
+            "n_markets_full": 427,
+            "roi_full": -0.0378,
+            "n_markets_pregame": 344,
+            "roi_pregame": -0.0747
+          },
+          {
+            "wallet": "0x985c0516200c5a2c76dde58917ce2c852afde5d2",
+            "n_markets_full": 0,
+            "roi_full": null,
+            "n_markets_pregame": 0,
+            "roi_pregame": null
+          },
+          {
+            "wallet": "0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d",
+            "n_markets_full": 10,
+            "roi_full": 0.1614,
+            "n_markets_pregame": 7,
+            "roi_pregame": -0.0546
+          },
+          {
+            "wallet": "0xfc234be3c4c3568284a566613ba90033b9d98283",
+            "n_markets_full": 187,
+            "roi_full": -0.0961,
+            "n_markets_pregame": 177,
+            "roi_pregame": -0.0945
+          }
         ]
       },
       "nfl": {
@@ -1843,7 +1945,20 @@
             "n_markets_pregame": 962,
             "roi_pregame": -0.0319
           }
+        ],
+        "nba": [
+          {
+            "wallet": "0xdc4bc68529c164cfe402ae1215876badc02a5a92",
+            "n_markets_full": 554,
+            "roi_full": -0.0293,
+            "n_markets_pregame": 533,
+            "roi_pregame": -0.0323
+          }
         ]
+      },
+      "nba": {
+        "mlb": [],
+        "nfl": []
       }
     }
   },

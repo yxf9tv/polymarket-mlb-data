@@ -40,10 +40,17 @@ bot/stake threshold constants verbatim (BOT_TWO_SIDED_MAX=0.20,
 BOT_ENTROPY_MAX=0.95 recalibrated threshold, BOT_MIN_MEDIAN_GAP_S=60s,
 MIN_MEDIAN_FILL_NOTIONAL=$20) -- nothing here re-derives or forks that logic.
 
-Heavy scans (trades_<sport>.parquet) go through DuckDB for the stake/median-notional
-queries per the project's memory-guidance convention; the sport trades files are
-small enough (tens of MB even at full-sweep scale) to reconstruct positions on in
-pandas directly, same as persistent_winners.py does for MLB's pregame_fills.parquet.
+Heavy scans (trades_<sport>.parquet) go through DuckDB for the stake/median-notional queries
+per the project's memory-guidance convention. At full-sweep scale trades_<sport>.parquet is
+NOT small (NBA: 22.8M rows / 303,613 wallets / ~4.1GB -- OOM-killed a naive full-pandas-load
+position reconstruction at 16GB RAM), so this pipeline never loads the full trades table into
+pandas: build_candidate_shortlist() computes, per sport, a loose but SUPERSET wallet
+prefilter directly in DuckDB (distinct-market-touch counts per period, floor-thresholded,
+plus cross-sport reference wallets), and load_sport_trades_for_wallets() pushes
+`WHERE proxy_wallet IN (shortlist)` into the parquet scan so only that shortlist's rows (a
+few thousand wallets, not hundreds of thousands) ever become a pandas frame. Position
+reconstruction then runs in pandas on that small frame exactly as before, same as
+persistent_winners.py does for MLB's pregame_fills.parquet.
 
 Writes:
   data/year_round_traders.json
@@ -157,6 +164,87 @@ def median_fill_notional_df(trades: pd.DataFrame) -> pd.DataFrame:
     return out.rename(columns={"proxy_wallet": "wallet", "notional": "median_notional"})
 
 
+def _wallet_touch_counts_by_period(sport: str, periods: list) -> dict:
+    """DuckDB-only per-wallet distinct-condition_id counts (ANY fill, ANY timing) per period,
+    computed straight off trades_<sport>.parquet -- no pandas materialization of the full
+    table. A wallet's true 'n settled PRE-GAME markets in this period' (the real funnel stage-1
+    stat) can only be <= this ANY-fill count, so thresholding on it is a valid SUPERSET
+    prefilter: it can only admit extra wallets, never drop one that could pass the real,
+    later-computed criterion."""
+    path = LAKE_DIR / f"trades_{sport}.parquet"
+    con = duckdb.connect()
+    out = {}
+    for p in periods:
+        skey = _season_key(sport, p)
+        q = f"""
+            SELECT proxy_wallet AS wallet, count(DISTINCT condition_id) AS n_markets_any
+            FROM read_parquet('{path.as_posix()}')
+            WHERE season = '{skey}'
+            GROUP BY proxy_wallet
+        """
+        out[p] = con.execute(q).fetchdf()
+    con.close()
+    return out
+
+
+def build_candidate_shortlist(sport: str, periods: list, floor: int, reference_wallets: set[str]) -> set[str]:
+    """The pre-reconstruction candidate shortlist (OOM fix -- see module docstring): union of
+    (a) wallets touching >= `floor` distinct markets (any fill) in BOTH periods -- a superset
+    of the main funnel's stage-1 pool -- (b) wallets touching >= `floor` in period[0] alone --
+    a superset of the walk-forward variant's train-only selection pool, which needs no
+    period[1] activity at all -- and (c) `reference_wallets` (MLB survivors + near-miss
+    candidates), unioned in unconditionally so the cross-sport activity-overlap matrix can
+    still report their at-any-n activity in this sport even if they don't clear the floor here.
+    `floor` should be the LOWEST floor this run could ever apply (i.e. min(min_n,
+    RELAXED_MIN_N)) so the shortlist stays a valid superset even if the funnel relaxes its
+    floor mid-run."""
+    counts = _wallet_touch_counts_by_period(sport, periods)
+    sets_by_period = {p: set(counts[p][counts[p]["n_markets_any"] >= floor]["wallet"]) for p in periods}
+    both_periods = set.intersection(*sets_by_period.values()) if sets_by_period else set()
+    period0_only = sets_by_period.get(periods[0], set())
+    shortlist = both_periods | period0_only | set(reference_wallets)
+    print(f"  [{sport}] candidate prefilter (floor={floor}, any-fill distinct-market count): "
+          f"both-periods={len(both_periods)}, period0-only={len(period0_only)}, "
+          f"+{len(reference_wallets)} cross-sport reference wallets -> shortlist={len(shortlist)} wallets total")
+    return shortlist
+
+
+def load_sport_trades_for_wallets(sport: str, wallets: set[str]) -> pd.DataFrame:
+    """DuckDB-filtered read of trades_<sport>.parquet, restricting to `wallets` INSIDE the
+    parquet scan (a JOIN against a registered wallet frame, not a pandas .isin() after a full
+    load) -- this is the fix for the NBA OOM (22.8M rows / 303,613 wallets was too much for
+    trader_metrics-style pandas position reconstruction on a 16GB box; restricting up front
+    keeps the resulting pandas frame to a few thousand wallets' worth of rows)."""
+    path = LAKE_DIR / f"trades_{sport}.parquet"
+    con = duckdb.connect()
+    con.execute("SET TimeZone='UTC'")  # DuckDB fetches TIMESTAMPTZ in local tz by default otherwise
+    if not wallets:
+        out = con.execute(f"SELECT * FROM read_parquet('{path.as_posix()}') LIMIT 0").fetchdf()
+        con.close()
+        return out
+    wdf = pd.DataFrame({"wallet": sorted(wallets)})
+    con.register("wdf", wdf)
+    q = f"""
+        SELECT t.* FROM read_parquet('{path.as_posix()}') t
+        JOIN wdf ON t.proxy_wallet = wdf.wallet
+    """
+    out = con.execute(q).fetchdf()
+    con.close()
+    return out
+
+
+def sport_total_market_count(sport: str) -> int:
+    """Cheap full-parquet distinct-market count (DuckDB aggregate scan, no pandas
+    materialization) -- used only to detect the dry-run smoke-test parquets, independent of
+    whatever candidate shortlist is in play."""
+    con = duckdb.connect()
+    n = con.execute(
+        f"SELECT count(DISTINCT condition_id) FROM read_parquet('{(LAKE_DIR / f'trades_{sport}.parquet').as_posix()}')"
+    ).fetchone()[0]
+    con.close()
+    return int(n)
+
+
 def portfolio_pooled(wm: pd.DataFrame) -> dict:
     if wm.empty:
         return dict(n_wallets=0, n_markets=0, invested=0.0, returned=0.0,
@@ -176,10 +264,13 @@ def _safe_score(score) -> float:
 # ---------------------------------------------------------------------------
 # NFL / NBA generic pipeline (mirrors persistent_winners.py's funnel structure)
 # ---------------------------------------------------------------------------
-def load_sport_lake(sport: str) -> dict:
-    trades = pd.read_parquet(LAKE_DIR / f"trades_{sport}.parquet")
+def load_sport_lake(sport: str, wallets: set[str]) -> dict:
+    """markets_<sport>.parquet loads in full (small, tens of MB); trades_<sport>.parquet loads
+    ONLY for `wallets` (see load_sport_trades_for_wallets) -- this is the OOM fix, see module
+    docstring."""
+    trades = load_sport_trades_for_wallets(sport, wallets)
     markets = pd.read_parquet(LAKE_DIR / f"markets_{sport}.parquet")
-    print(f"  [{sport}] trades={len(trades)} rows, {trades['condition_id'].nunique()} markets, "
+    print(f"  [{sport}] trades (shortlisted)={len(trades)} rows, {trades['condition_id'].nunique()} markets, "
           f"{trades['proxy_wallet'].nunique()} wallets, seasons={sorted(trades['season'].unique().tolist())}")
     print(f"  [{sport}] markets={len(markets)} rows")
     return {"trades": trades, "markets": markets}
@@ -293,10 +384,12 @@ def walk_forward_sport(sport: str, trades: pd.DataFrame, token_winner: pd.DataFr
     }
 
 
-def run_generic_sport(sport: str, min_n: int) -> tuple[dict, dict]:
+def run_generic_sport(sport: str, min_n: int, reference_wallets: set[str] | None = None) -> tuple[dict, dict]:
     print(f"\n{'=' * 78}\nSport: {sport.upper()}\n{'=' * 78}")
     periods = SPORT_PERIODS[sport]
-    lake = load_sport_lake(sport)
+    prefilter_floor = min(min_n, RELAXED_MIN_N)
+    shortlist = build_candidate_shortlist(sport, periods, prefilter_floor, reference_wallets or set())
+    lake = load_sport_lake(sport, shortlist)
     trades, markets = lake["trades"], lake["markets"]
     token_winner = tm.build_token_winner_map(markets)
     cutoff = build_cutoff_map(markets)
@@ -457,6 +550,22 @@ def run_generic_sport(sport: str, min_n: int) -> tuple[dict, dict]:
     }
     ctx = {"trades": trades, "markets": markets, "token_winner": token_winner, "cutoff": cutoff}
     return output, ctx
+
+
+def load_mlb_reference_wallets() -> set[str]:
+    """Cross-sport reference wallets for the candidate shortlist / activity-overlap matrix:
+    MLB's own funnel survivors PLUS its near-miss candidates (analysis/rescan_near_miss.py),
+    read directly from data/persistent_winners.json if it exists -- independent of whether
+    'mlb' is in THIS invocation's --sports list, so an nfl/nba-only run still asks 'does an MLB
+    winner also show up here.' Returns empty if the file doesn't exist yet (e.g. a fresh
+    nfl/nba-only dry run before MLB has ever been generated)."""
+    if not MLB_JSON_PATH.exists():
+        return set()
+    with open(MLB_JSON_PATH) as f:
+        mlb = json.load(f)
+    survivors = {r["wallet"].lower() for r in mlb.get("survivors", [])}
+    near_miss = {r["wallet"].lower() for r in mlb.get("near_miss_candidates", [])}
+    return survivors | near_miss
 
 
 # ---------------------------------------------------------------------------
@@ -864,15 +973,17 @@ def main() -> None:
     outputs: dict[str, dict] = {}
     ctxs: dict[str, dict] = {}
     smoke_sports: set[str] = set()
+    reference_wallets = load_mlb_reference_wallets()
 
     for s in sports:
         if s == "mlb":
             outputs["mlb"] = run_mlb(args.min_n)
+            reference_wallets = load_mlb_reference_wallets()  # refresh: run_mlb() may have just generated the json
         else:
-            out, ctx = run_generic_sport(s, args.min_n)
+            out, ctx = run_generic_sport(s, args.min_n, reference_wallets)
             outputs[s] = out
             ctxs[s] = ctx
-            if ctx["trades"]["condition_id"].nunique() < 50:
+            if sport_total_market_count(s) < 50:
                 smoke_sports.add(s)
 
     all_wallets = sorted({r["wallet"] for s in outputs for r in outputs[s]["survivors"]})

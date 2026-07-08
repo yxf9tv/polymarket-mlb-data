@@ -1,6 +1,6 @@
 # Phase 4 Report — Cross-Sport Year-Round Traders (MLB / NFL / NBA)
 
-Run date: 2026-07-07. Pipeline: `analysis/cross_sport_winners.py --sports mlb,nfl --min-n 50`.
+Run date: 2026-07-08. Pipeline: `analysis/cross_sport_winners.py --sports mlb,nfl,nba --min-n 50`.
 
 ## Per-sport methodology (generalizes analysis/persistent_winners.py's MLB funnel)
 
@@ -67,6 +67,31 @@ Source: analysis/cross_sport_winners.py generic pipeline (trades_nfl.parquet, ma
 
 **Verdict: NOT SUPPORTED** (at least one OOS ROI's 95% CI excludes zero: no).
 
+## NBA — periods 2024-25 vs 2025-26 (winter)
+
+Source: analysis/cross_sport_winners.py generic pipeline (trades_nba.parquet, markets_nba.parquet)
+
+| funnel stage | n wallets |
+|---|---:|
+| 1_active_both_periods_n>=50 | 59 |
+| 2_positive_full_roi_both | 21 |
+| 3_positive_pregame_roi_both | 17 |
+| 4_not_bot_shaped | 1 |
+| 5_median_notional>=20 | 0 |
+| 6_external_reality_screen | 0 |
+
+### NBA survivors: 0 wallets
+
+Zero wallets survive all five criteria for this sport this run.
+
+### NBA walk-forward: select on 2024-25 only, measure 2025-26 OOS
+
+- **7 wallets** selected on 2024-25-only criteria.
+- 2025-26 OOS full ROI: **+11.7%** (95% CI -3.3% to +27.6%), n=800 markets / 3 wallets.
+- 2025-26 OOS pre-game ROI: **+20.0%** (95% CI -4.2% to +45.9%), n=487 markets / 3 wallets.
+
+**Verdict: NOT SUPPORTED** (at least one OOS ROI's 95% CI excludes zero: no).
+
 ## Cross-sport join
 
 ### Tier 1 — multi-sport winners (strict: funnel-passing in >=2 sports)
@@ -76,9 +101,9 @@ Source: analysis/cross_sport_winners.py generic pipeline (trades_nfl.parquet, ma
 **Strict Tier 1 was empty -- relaxed tier applied** (funnel-passing in sport A AND positive pre-game ROI with n>=30 pooled (all seasons) in sport B):
 
 - **mlb_funnel_survivor->nfl_pregame_edge**: 3 wallet(s)
+  - `0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad`: n_pregame=59, roi_pregame=+12.2%
   - `0xfc234be3c4c3568284a566613ba90033b9d98283`: n_pregame=100, roi_pregame=+14.1%
   - `0x681d7946e0280c6ec6562c7ce662e90812354cbf`: n_pregame=69, roi_pregame=+8.9%
-  - `0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad`: n_pregame=59, roi_pregame=+12.2%
 
 ### Tier 2 — single-sport specialists (top funnel survivors per sport)
 
@@ -93,6 +118,8 @@ Source: analysis/cross_sport_winners.py generic pipeline (trades_nfl.parquet, ma
 **NFL** (fall): 1 listed
 - `0xdc4bc68529c164cfe402ae1215876badc02a5a92` combined_score=-0.1105
 
+**NBA** (winter): 0 listed
+
 ### Activity overlap matrix (each sport's survivors, activity in every OTHER sport)
 
 **MLB survivors' activity in NFL:**
@@ -106,11 +133,36 @@ Source: analysis/cross_sport_winners.py generic pipeline (trades_nfl.parquet, ma
 | `0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d` | 2 | -8.0% | 1 | -100.0% |
 | `0xfc234be3c4c3568284a566613ba90033b9d98283` | 102 | +19.0% | 100 | +14.1% |
 
+**MLB survivors' activity in NBA:**
+
+| wallet | n_full | roi_full | n_pregame | roi_pregame |
+|---|---:|---:|---:|---:|
+| `0x2934efa3cc0794953270262e9da00c04e21d0b51` | 98 | -11.5% | 98 | -11.5% |
+| `0x681d7946e0280c6ec6562c7ce662e90812354cbf` | 248 | +1.0% | 188 | -1.8% |
+| `0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad` | 427 | -3.8% | 344 | -7.5% |
+| `0x985c0516200c5a2c76dde58917ce2c852afde5d2` | 0 | n/a | 0 | n/a |
+| `0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d` | 10 | +16.1% | 7 | -5.5% |
+| `0xfc234be3c4c3568284a566613ba90033b9d98283` | 187 | -9.6% | 177 | -9.4% |
+
 **NFL survivors' activity in MLB:**
 
 | wallet | n_full | roi_full | n_pregame | roi_pregame |
 |---|---:|---:|---:|---:|
 | `0xdc4bc68529c164cfe402ae1215876badc02a5a92` | 1039 | -2.6% | 962 | -3.2% |
+
+**NFL survivors' activity in NBA:**
+
+| wallet | n_full | roi_full | n_pregame | roi_pregame |
+|---|---:|---:|---:|---:|
+| `0xdc4bc68529c164cfe402ae1215876badc02a5a92` | 554 | -2.9% | 533 | -3.2% |
+
+**NBA survivors' activity in MLB:**
+
+(no survivors to check)
+
+**NBA survivors' activity in NFL:**
+
+(no survivors to check)
 
 ## Copyability panel per finalist
 
@@ -134,5 +186,5 @@ Minutes-to-game-start (or minutes-to-first-pitch for MLB) distribution, per surv
 ## Command to run once the real sweeps land
 
 ```
-.venv/bin/python3 analysis/cross_sport_winners.py --sports mlb,nfl --min-n 50
+.venv/bin/python3 analysis/cross_sport_winners.py --sports mlb,nfl,nba --min-n 50
 ```
