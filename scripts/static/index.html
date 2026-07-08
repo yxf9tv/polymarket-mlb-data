@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MLB Live Sentiment</title>
-<link rel="stylesheet" href="/static/styles.css?v=6">
+<link rel="stylesheet" href="/static/styles.css?v=7">
 </head>
 <body>
 <div class="app">
@@ -26,6 +26,7 @@
     <button class="tab" data-tab="traders" onclick="switchTab('traders')">Traders</button>
     <button class="tab" data-tab="tracking" onclick="switchTab('tracking')">Tracking</button>
     <button class="tab" data-tab="backtest" onclick="switchTab('backtest')">Backtest</button>
+    <button class="tab" data-tab="copy" onclick="switchTab('copy')">Copy</button>
   </nav>
 
   <!-- LIVE TAB -->
@@ -110,7 +111,13 @@
     <div class="bt-section" id="btBands"></div>
     <div class="bt-section" id="btDetails"></div>
   </div>
+
+  <!-- COPY TAB -->
+  <div class="tab-content" id="tab-copy">
+    <div class="stats-row" id="copyStats"></div>
+    <div class="table-wrap" id="copyTable"></div>
+  </div>
 </div>
-<script src="/static/app.js?v=12"></script>
+<script src="/static/app.js?v=13"></script>
 </body>
 </html>

@@ -375,6 +375,48 @@ def get_recommendations():
         return json.load(f)
 
 
+@app.get("/api/copy")
+def get_copy():
+    """Return copy-trading ledger summary + recent signals (scripts/copy_watch.py)."""
+    path = DATA_DIR / "copy_ledger.json"
+    if not path.exists():
+        return {"error": "no copy ledger yet", "hint": "Run scripts/copy_watch.py --once first"}
+    with open(path) as f:
+        ledger = json.load(f)
+    signals = ledger.get("signals", [])
+    settled = [s for s in signals if s.get("status") in ("won", "lost")]
+    staked = [s for s in settled if s.get("paper_stake", 0) > 0]
+    total_pnl = round(sum(s.get("pnl") or 0 for s in staked), 2)
+    total_staked = round(sum(s.get("paper_stake", 0) for s in staked), 2)
+    roi = round(total_pnl / total_staked, 4) if total_staked else 0.0
+    latencies = [s["detection_latency_s"] for s in signals if s.get("detection_latency_s") is not None]
+    mean_latency = round(sum(latencies) / len(latencies), 1) if latencies else 0.0
+    slippages = [
+        (s["executable_ask"] - s["their_price"]) / s["their_price"]
+        for s in signals
+        if s.get("executable_ask") is not None and s.get("their_price")
+    ]
+    mean_slippage = round(sum(slippages) / len(slippages), 4) if slippages else 0.0
+    recent = sorted(signals, key=lambda s: s.get("ts_detected", ""), reverse=True)[:100]
+    return {
+        "generated_at": ledger.get("generated_at"),
+        "last_cycle_at": ledger.get("last_cycle_at"),
+        "summary": {
+            "total": len(signals),
+            "settled": len(settled),
+            "pending": sum(1 for s in signals if s.get("status") == "pending"),
+            "skipped_sell": sum(1 for s in signals if s.get("status") == "skipped_sell"),
+            "conflicts": sum(1 for s in signals if s.get("conflict")),
+            "total_staked": total_staked,
+            "paper_pnl": total_pnl,
+            "roi": roi,
+            "mean_detection_latency_s": mean_latency,
+            "mean_ask_slippage": mean_slippage,
+        },
+        "signals": recent,
+    }
+
+
 @app.get("/api/live/poll")
 def trigger_poll():
     """Run the poll script as a subprocess (blocks until the poll finishes)."""

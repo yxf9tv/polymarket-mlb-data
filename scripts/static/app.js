@@ -95,6 +95,7 @@ function switchTab(name) {
   if (name==="traders") renderTraders();
   if (name==="tracking") renderTracking();
   if (name==="backtest") renderBacktest();
+  if (name==="copy") renderCopy();
 }
 
 function switchOTab(name) {
@@ -654,4 +655,65 @@ function renderBacktest() {
       </div>`;
   });
 }
+// ── Copy (Copy-Trading Paper Console) ───────────────────────────────────
+function renderCopy() {
+  api("/api/copy").then(data=>{
+    if (!data || data.error) {
+      document.getElementById("copyStats").innerHTML="";
+      document.getElementById("copyTable").innerHTML=`<div style="padding:40px;text-align:center;color:var(--text2)">
+        ${data&&data.hint ? data.hint : "No copy-watch data yet."}</div>`;
+      return;
+    }
+    let s=data.summary||{};
+    document.getElementById("copyStats").innerHTML=`
+      <div class="stat-card"><div class="num">${fmtNum(s.total)}</div><div class="label">Signals</div></div>
+      <div class="stat-card"><div class="num">${fmtNum(s.settled)}</div><div class="label">Settled</div></div>
+      <div class="stat-card"><div class="num">${fmtNum(s.pending)}</div><div class="label">Pending</div></div>
+      <div class="stat-card"><div class="num">${fmtNum(s.conflicts)}</div><div class="label">Conflicts (stood down)</div></div>
+      <div class="stat-card"><div class="num">${fmtDollar(s.total_staked)}</div><div class="label">Staked</div></div>
+      <div class="stat-card ${s.paper_pnl>=0?'text-green':'text-red'}"><div class="num">${fmtDollar(s.paper_pnl)}</div><div class="label">Paper P&amp;L</div></div>
+      <div class="stat-card ${s.roi>=0?'text-green':'text-red'}"><div class="num">${fmtPct(s.roi)}</div><div class="label">ROI (executable)</div></div>
+      <div class="stat-card"><div class="num">${(s.mean_detection_latency_s||0).toFixed(0)}s</div><div class="label">Mean Latency</div></div>
+      <div class="stat-card"><div class="num">${fmtPct(s.mean_ask_slippage)}</div><div class="label">Mean Ask Slippage</div></div>`;
+
+    let signals=data.signals||[];
+    if (!signals.length) {
+      document.getElementById("copyTable").innerHTML='<div style="padding:20px;text-align:center;color:var(--text2)">No signals recorded yet. Run scripts/copy_watch.py --once or --loop.</div>';
+      return;
+    }
+    let statusTag = (st)=>{
+      if (st==="won") return '<span class="tag tag-clean">won</span>';
+      if (st==="lost") return '<span class="tag tag-flag">lost</span>';
+      if (st==="skipped_sell") return '<span class="tag tag-other">sell fill</span>';
+      return '<span class="tag tag-other">pending</span>';
+    };
+    document.getElementById("copyTable").innerHTML = `<table>
+      <thead><tr><th>Detected</th><th>Trader</th><th>Tier</th><th>Market</th><th>Outcome</th>
+      <th>Their Px</th><th>Our Ask</th><th>Stake</th><th>Conflict</th><th>Status</th><th>P&amp;L</th></tr></thead>
+      ${signals.map(sig=>{
+        let t=(sig.ts_detected||"").slice(11,19);
+        let conflictCell = sig.conflict
+          ? `<span class="tag tag-flag" title="${(sig.conflict_with||[]).map(c=>c.pseudonym).join(', ')}">conflict</span>`
+          : (sig.stand_down_reason==="sell_fill" ? '<span class="tag tag-other">sell</span>'
+             : sig.stand_down_reason==="no_pricing" ? '<span class="tag tag-other">no ask</span>'
+             : '<span class="tag tag-clean">solo</span>');
+        let pnlCell = sig.pnl!=null ? `<span class="${sig.pnl>=0?'text-green':'text-red'}">${fmtDollar(sig.pnl)}</span>` : "-";
+        return `<tr>
+          <td>${t} UTC</td>
+          <td>${sig.pseudonym||fmtWallet(sig.wallet)}</td>
+          <td>${sig.tier}</td>
+          <td style="max-width:220px;overflow:hidden;text-overflow:ellipsis" title="${sig.slug}">${fmtSlug(sig.slug)}</td>
+          <td>${sig.outcome||"-"} <span style="color:var(--text2)">(${sig.side})</span></td>
+          <td>${sig.their_price!=null?sig.their_price.toFixed(2):"-"}</td>
+          <td>${sig.executable_ask!=null?sig.executable_ask.toFixed(2):"-"}</td>
+          <td>${fmtDollar(sig.paper_stake)}</td>
+          <td>${conflictCell}</td>
+          <td>${statusTag(sig.status)}</td>
+          <td>${pnlCell}</td>
+        </tr>`;
+      }).join("")}
+    </table>`;
+  });
+}
+
 init();

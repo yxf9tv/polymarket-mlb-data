@@ -1,0 +1,12 @@
+{
+  "_comment": "Tracked wallets for the copy-trading paper console (scripts/copy_watch.py). Tier 1 = the 6 persistent-winner survivors (data/persistent_winners.json, screened_out wallet excluded). Tier 2 = paper-only near-miss candidate, not promoted -- watched but flagged distinctly.",
+  "wallets": [
+    {"wallet": "0x87531c465a5a729850e1e2c4fd4af3dcb87d85ad", "pseudonym": "Trotz.85", "tier": 1, "sports": ["mlb"]},
+    {"wallet": "0x985c0516200c5a2c76dde58917ce2c852afde5d2", "pseudonym": "AnEventHorizon", "tier": 1, "sports": ["mlb"]},
+    {"wallet": "0x681d7946e0280c6ec6562c7ce662e90812354cbf", "pseudonym": "GreatAgain28", "tier": 1, "sports": ["mlb"]},
+    {"wallet": "0x2934efa3cc0794953270262e9da00c04e21d0b51", "pseudonym": "cleoclaudiu", "tier": 1, "sports": ["mlb"]},
+    {"wallet": "0xfc234be3c4c3568284a566613ba90033b9d98283", "pseudonym": "FishCrypto", "tier": 1, "sports": ["mlb"]},
+    {"wallet": "0x9a7f417c09c2d14f7b425b4bd38e9d6311084b5d", "pseudonym": "Radahn-131", "tier": 1, "sports": ["mlb"]},
+    {"wallet": "0x6a32a31f2b28c31c016c6a222f2942240d8d0086", "pseudonym": "0x6a32...0086 (unnamed, paper-only)", "tier": 2, "sports": ["mlb"]}
+  ]
+}
